@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Generated imagery pipeline — see brand-assets/scripts/
+brand-assets/generated/
+brand-assets/scripts/.venv/
+brand-assets/scripts/__pycache__/
+
+# Claude design intake/pack artifacts — keep local, not in repo
+claude-design-intake/
+claude-design-pack/
+Ascent-Aviation-Claude-Design-*.zip
+

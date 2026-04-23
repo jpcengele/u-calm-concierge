@@ -1,0 +1,75 @@
+# Hostinger / Apache config for a Vite + React-Router SPA.
+#
+# This file is copied into dist/ by the GitHub Actions workflow and uploaded
+# via FTP to Hostinger's public_html. It does three things:
+#   1. Rewrites all unknown paths to /index.html so client-side routing works
+#      (e.g. /en/services doesn't 404 on a hard refresh).
+#   2. Sets long cache headers for hashed build assets (Vite fingerprints
+#      these, so caching forever is safe).
+#   3. Forces index.html to never cache, so new deploys are picked up
+#      immediately rather than waiting for a stale bundle reference to
+#      expire.
+
+# -----------------------------------------------------------------------------
+# 1. SPA fallback
+# -----------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # If the request is for a real file or directory, serve it as-is.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Otherwise hand the request to index.html so React Router can resolve it.
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 2. Long cache for fingerprinted build output
+# -----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|woff2?|ttf|otf|eot|svg|png|jpe?g|gif|webp|avif|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # index.html must never be cached so new deploys propagate immediately.
+  <FilesMatch "^index\.html$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 3. Security niceties
+# -----------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Force HTTPS (Hostinger issues a free Let's Encrypt cert per domain and
+# subdomain; enable SSL first in hPanel → SSL before turning this on).
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# -----------------------------------------------------------------------------
+# 4. MIME + compression
+# -----------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>

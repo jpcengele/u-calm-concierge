@@ -1,0 +1,85 @@
+name: Deploy to Hostinger
+
+# Builds the Vite app in CI (Hostinger Premium/Business shared hosting cannot
+# run `npm run build` server-side) and FTP-uploads the dist/ folder into the
+# Hostinger public_html directory.
+#
+# Required GitHub repository secrets (set in Settings → Secrets and variables)
+#   HOSTINGER_FTP_HOST
+#   HOSTINGER_FTP_USER          (DOT separator — e.g. u603183136.ucalmstaging)
+#   HOSTINGER_FTP_PASSWORD
+#
+# Stage 3 adds:
+#   VITE_SUPABASE_ANON_KEY      (secret — mapped to VITE_SUPABASE_PUBLISHABLE_KEY
+#                                at inject time to match client.ts)
+#
+# Required GitHub repository variables (not secrets)
+#   VITE_SUPABASE_URL           (Stage 3)
+#   HOSTINGER_FTP_DIR           (/ for chrooted staging; /public_html/ for apex)
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '**.md'
+      - 'LICENSE'
+      - '.gitignore'
+      - 'u-calm-concierge-brand-assets/**'
+      - '.github/ISSUE_TEMPLATE/**'
+  workflow_dispatch: {}
+
+concurrency:
+  group: hostinger-deploy
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          # Stage 3: once Supabase is provisioned, both env vars below must be
+          # set in the repo's GitHub Actions secrets/variables. See
+          # WEBSITE_BUILD_PLAYBOOK.md §14d for the naming trap — the var name
+          # on the left MUST match what src/integrations/supabase/client.ts
+          # reads (VITE_SUPABASE_PUBLISHABLE_KEY). During Stage 1 these are
+          # simply absent; the scaffold has no Supabase client yet, so the
+          # build does not require them.
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+      - name: Copy .htaccess into dist
+        run: cp public/.htaccess dist/.htaccess
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: ${{ vars.HOSTINGER_FTP_DIR || '/public_html/' }}
+          protocol: ftps
+          port: 21
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            .well-known/**

@@ -1,0 +1,80 @@
+{
+  "brand": {
+    "name": "U-CALM Concierge",
+    "shortName": "U-CALM",
+    "strapline": "Consider it done."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "cta": {
+    "speakSpecialist": "Speak with a specialist",
+    "exploreServices": "Explore our services",
+    "getInTouch": "Get in touch"
+  },
+  "home": {
+    "eyebrow": "A quiet concierge house",
+    "headline": "Restored peace of mind.",
+    "subheadline": "A named specialist, a thorough plan, and nothing shouted. Consider it done.",
+    "proof": {
+      "specialist": {
+        "label": "Specialist",
+        "value": "One, named"
+      },
+      "notice": {
+        "label": "Notice window",
+        "value": "Hours, not days"
+      },
+      "hours": {
+        "label": "Available",
+        "value": "Day and night"
+      },
+      "discretion": {
+        "label": "Discretion",
+        "value": "Assumed"
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "headline": "Lifestyle, handled.",
+    "intro": "From daily logistics to month-long projects, the work is carried by one person who knows your account. The rest happens in the background.",
+    "placeholder": "Detailed service descriptions follow in the next build."
+  },
+  "about": {
+    "eyebrow": "The house",
+    "headline": "A small team, a quiet standard.",
+    "intro": "U-CALM is a lifestyle-management house built around the belief that good service is mostly invisible. We take on a limited number of members and keep it that way.",
+    "placeholder": "The longer about copy — origin, team, working principles — follows in the next build."
+  },
+  "contact": {
+    "eyebrow": "How to reach us",
+    "headline": "Start with a conversation.",
+    "intro": "Tell us briefly what you need. We will respond personally, and we will not pass you to a queue.",
+    "emailLabel": "Email",
+    "emailValue": "hello@u-calm.com",
+    "placeholder": "The full contact form goes live in Stage 3 once the backend is provisioned."
+  },
+  "footer": {
+    "tagline": "Consider it done.",
+    "rights": "© {{year}} U-CALM Concierge. All rights reserved.",
+    "registeredInfo": "A U-CALM house brand.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Français",
+    "it": "Italiano"
+  },
+  "notFound": {
+    "title": "Not found",
+    "body": "That page does not exist. Return to the home page.",
+    "back": "Back to home"
+  }
+}

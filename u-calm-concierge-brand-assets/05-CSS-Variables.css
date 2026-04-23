@@ -1,0 +1,427 @@
+/* =============================================================
+   U-CALM — Design System (Master)
+   --------------------------------------------------------------
+   Drop this file into any stylesheet. All colour tokens are HSL
+   triplets (no wrapper, no commas) so they compose with opacity
+   via hsl(var(--token) / <alpha>).
+
+   This is the MASTER brand. Sub-brand overrides (U-Calm Aviation,
+   Cool CALM) can be layered on top of this file with a
+   [data-brand="aviation"] or [data-brand="cool-calm"] selector.
+   See the parent brand book for sub-brand overrides.
+   ============================================================= */
+
+/* -------------------------------------------------------------
+   Typography — Gill Sans body, Cormorant Garamond display
+   Gill Sans is system-installed on most Mac/iOS devices. For web
+   delivery on Windows/Android, we fall through to Lato (closest
+   free match) or Inter (safest universal fallback).
+   If you license Gill Sans for web (Monotype), swap in @font-face
+   declarations here.
+   ------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+:root {
+  /* --- Surfaces ----------------------------------------------- */
+  --background:            210 25% 99%;    /* Cloud White */
+  --foreground:            211 34% 17%;    /* Still Navy */
+  --card:                    0 0% 100%;
+  --card-foreground:       211 34% 17%;
+  --popover:                 0 0% 100%;
+  --popover-foreground:    211 34% 17%;
+  --linen:                  44 23% 93%;    /* Warm alt surface */
+
+  /* --- Brand: Primary (Serene Teal) --------------------------- */
+  --primary:               189 55% 51%;    /* #3BB5C7 — the U mark */
+  --primary-foreground:      0 0% 100%;
+  --primary-deep:          187 56% 38%;    /* Hover / body links */
+  --primary-soft:          187 48% 83%;    /* Washes */
+
+  /* --- Brand: Secondary (Warm Champagne) ---------------------- */
+  --secondary:              48 37% 61%;    /* #BCB17A */
+  --secondary-foreground:  211 34% 17%;
+  --secondary-light:        48 44% 82%;
+
+  /* --- Text hierarchy ----------------------------------------- */
+  --muted:                 210 14% 92%;    /* Whisper border / surface */
+  --muted-foreground:      213 11% 47%;    /* Harbour Grey */
+
+  /* --- System ------------------------------------------------- */
+  --destructive:             8 56% 63%;    /* Soft Terracotta */
+  --destructive-foreground:  0 0% 100%;
+  --success:               144 17% 58%;    /* Quiet Sage */
+  --warning:                38 47% 60%;    /* Muted Amber */
+  --border:                210 14% 92%;
+  --input:                 210 14% 92%;
+  --ring:                  189 55% 51%;
+  --radius:                14px;
+
+  /* --- Gradients ---------------------------------------------- */
+  --gradient-primary:   linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-soft)) 100%);
+  --gradient-champagne: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-light)) 100%);
+  --gradient-calm:      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(187 50% 96%) 100%);
+  --gradient-horizon:   linear-gradient(180deg,
+                          hsl(var(--primary-soft)) 0%,
+                          hsl(var(--background)) 60%,
+                          hsl(var(--linen)) 100%);
+
+  /* --- Shadows (always soft) ---------------------------------- */
+  --shadow-calm:    0 10px 40px -10px hsl(var(--primary) / 0.15);
+  --shadow-float:   0 20px 60px -20px hsl(211 34% 17% / 0.12);
+  --shadow-whisper: 0 2px 8px hsl(211 34% 17% / 0.04);
+
+  /* --- Motion (slow, human) ----------------------------------- */
+  --transition-calm: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-soft: all 0.3s ease-out;
+
+  /* --- Typography --------------------------------------------- */
+  --font-sans:  'Gill Sans', 'Gill Sans MT', 'Gill Sans Nova', 'Seravek', 'Lato', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', 'Didot', Georgia, 'Times New Roman', serif;
+
+  /* --- Scale (optional — many teams prefer fluid clamp()) ----- */
+  --step-hero:   clamp(3rem,    6vw, 6rem);       /* H1 */
+  --step-title:  clamp(2.25rem, 4vw, 3.5rem);     /* H2 */
+  --step-head:   clamp(1.5rem,  2.5vw, 2.25rem);  /* H3 */
+  --step-sub:    clamp(1.125rem, 1.6vw, 1.5rem);  /* H4 */
+  --step-body:   1.0625rem;                       /* 17px */
+  --step-small:  0.875rem;                        /* 14px */
+}
+
+/* -------------------------------------------------------------
+   Dark mode — Deep Night
+   ------------------------------------------------------------- */
+.dark,
+:root[data-theme="dark"] {
+  --background:            210 46% 10%;    /* Deep Night */
+  --foreground:            210 27% 96%;
+  --card:                  210 38% 14%;
+  --card-foreground:       210 27% 96%;
+  --popover:               210 38% 14%;
+  --popover-foreground:    210 27% 96%;
+  --linen:                 210 25% 22%;
+
+  --primary:               189 55% 51%;    /* Serene Teal stays constant */
+  --primary-foreground:    210 46% 10%;
+  --primary-deep:          189 55% 61%;
+  --primary-soft:          187 48% 30%;
+
+  --secondary:              48 37% 61%;
+  --secondary-foreground:  210 46% 10%;
+  --secondary-light:        48 28% 30%;
+
+  --muted:                 210 25% 22%;
+  --muted-foreground:      210 14% 70%;
+
+  --destructive:             8 56% 63%;
+  --destructive-foreground:  0 0% 100%;
+  --border:                210 25% 22%;
+  --input:                 210 25% 22%;
+  --ring:                  189 55% 51%;
+
+  --gradient-calm:    linear-gradient(180deg, hsl(var(--background)) 0%, hsl(210 38% 14%) 100%);
+  --gradient-horizon: linear-gradient(180deg,
+                        hsl(189 40% 20%) 0%,
+                        hsl(var(--background)) 100%);
+
+  --shadow-calm:    0 10px 40px -10px hsl(189 55% 51% / 0.2);
+  --shadow-float:   0 20px 60px -20px hsl(0 0% 0% / 0.4);
+  --shadow-whisper: 0 2px 8px hsl(0 0% 0% / 0.3);
+}
+
+/* -------------------------------------------------------------
+   Base typography
+   ------------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-feature-settings: "rlig" 1, "calt" 1, "liga" 1;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.005em;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  line-height: 1.15;
+  color: hsl(var(--foreground));
+}
+h1 { font-weight: 300; font-size: var(--step-hero);  letter-spacing: -0.01em; }
+h2 { font-weight: 400; font-size: var(--step-title); letter-spacing: -0.005em; }
+h3 { font-weight: 500; font-size: var(--step-head); }
+
+h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+h4 { font-size: var(--step-sub); }
+h5 { font-size: 1.125rem; }
+h6 {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+p  { font-size: var(--step-body); line-height: 1.65; color: hsl(var(--foreground)); }
+.lead { font-size: 1.25rem; font-weight: 300; line-height: 1.5; color: hsl(var(--foreground)); }
+small, .caption { font-size: var(--step-small); color: hsl(var(--muted-foreground)); }
+
+a {
+  color: hsl(var(--primary-deep));
+  text-decoration: none;
+  transition: var(--transition-soft);
+}
+a:hover { color: hsl(var(--primary)); }
+
+strong { font-weight: 700; }
+em     { font-style: italic; }
+
+::selection {
+  background: hsl(var(--primary-soft));
+  color: hsl(var(--foreground));
+}
+
+/* -------------------------------------------------------------
+   Layout primitives
+   ------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+@media (max-width: 768px) {
+  .container { padding: 0 1.25rem; }
+}
+
+.section {
+  padding-block: 6rem;
+}
+@media (max-width: 768px) {
+  .section { padding-block: 3rem; }
+}
+
+/* -------------------------------------------------------------
+   Signature components
+   ------------------------------------------------------------- */
+
+/* Primary CTA — pill-shaped, never shouts */
+.btn-calm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 0.875rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-calm);
+}
+.btn-calm:hover {
+  background: hsl(var(--primary-deep));
+  box-shadow: var(--shadow-calm);
+  transform: scale(1.02);
+}
+
+/* Champagne CTA — premium, member, Aviation */
+.btn-champagne {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-champagne);
+  color: hsl(var(--secondary-foreground));
+  padding: 0.875rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-calm);
+}
+.btn-champagne:hover {
+  box-shadow: var(--shadow-calm);
+  transform: scale(1.02);
+}
+
+/* Ghost / outline */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: hsl(var(--primary-deep));
+  border: 1px solid hsl(var(--primary));
+  padding: 0.8125rem 1.9375rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: var(--transition-calm);
+}
+.btn-outline:hover {
+  background: hsl(var(--primary-soft) / 0.3);
+  color: hsl(var(--primary-deep));
+}
+
+/* Calm card — soft lift, no heavy borders */
+.card-calm {
+  background: hsl(var(--card));
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow-whisper);
+  transition: var(--transition-calm);
+}
+.card-calm:hover {
+  box-shadow: var(--shadow-calm);
+  transform: translateY(-2px);
+}
+
+/* Linen card — warm alt surface */
+.card-linen {
+  background: hsl(var(--linen));
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: none;
+  border: 1px solid hsl(var(--secondary-light) / 0.5);
+}
+
+/* Hero horizon wash */
+.hero-horizon {
+  background: var(--gradient-horizon);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Hairline rule — echoes the one in the logo */
+.rule-hairline {
+  display: block;
+  width: 4rem;
+  height: 1px;
+  background: hsl(var(--muted-foreground));
+  margin: 1.5rem 0;
+}
+.rule-hairline--center {
+  margin-inline: auto;
+}
+
+/* Eyebrow label (H6-style) */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.75rem;
+}
+
+/* The tagline — small-caps italic serif, logo-echo */
+.tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-variant: small-caps;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Focus ring — always brand teal */
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Form fields */
+.field {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: var(--step-body);
+  color: hsl(var(--foreground));
+  transition: var(--transition-soft);
+}
+.field::placeholder { color: hsl(var(--muted-foreground)); }
+.field:focus {
+  border-color: hsl(var(--primary));
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.15);
+}
+
+/* -------------------------------------------------------------
+   Animations — slow, breathing
+   ------------------------------------------------------------- */
+@keyframes fade-soft {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1);     opacity: 1;   }
+  50%      { transform: scale(1.015); opacity: 0.9; }
+}
+@keyframes drift {
+  from { transform: translateX(-2%); }
+  to   { transform: translateX(2%); }
+}
+
+.animate-fade-soft { animation: fade-soft 1s ease-out forwards; }
+.animate-breathe   { animation: breathe 4s ease-in-out infinite; }
+.animate-drift     { animation: drift 8s ease-in-out infinite alternate; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* -------------------------------------------------------------
+   Utility bits
+   ------------------------------------------------------------- */
+.text-muted     { color: hsl(var(--muted-foreground)); }
+.text-primary   { color: hsl(var(--primary-deep)); }
+.text-champagne { color: hsl(var(--secondary)); }
+
+.bg-linen      { background: hsl(var(--linen)); }
+.bg-mist       { background: hsl(var(--primary-soft) / 0.4); }
+.bg-champagne  { background: hsl(var(--secondary-light)); }
+
+/* The U mark — if rendering the mark as type, use this class */
+.u-mark {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 6rem;
+  line-height: 1;
+  color: hsl(var(--primary));
+  letter-spacing: -0.02em;
+  transform: scaleY(1.15); /* elongate to match brand U */
+  display: inline-block;
+  transform-origin: bottom;
+}

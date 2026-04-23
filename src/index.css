@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================================================
+   U-CALM Concierge — design system
+   Source of truth for all colour, typography, and motion tokens.
+   Tokens are HSL triplets (no wrapper, no commas) so they compose
+   with opacity via hsl(var(--token) / <alpha>).
+   ============================================================= */
+
+@layer base {
+  :root {
+    /* --- Surfaces ----------------------------------------------- */
+    --background: 210 25% 99%;       /* Cloud White — slightly cooler than pure white */
+    --foreground: 211 34% 17%;       /* Still Navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 211 34% 17%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 211 34% 17%;
+
+    --linen: 44 23% 93%;              /* Warm alt surface */
+
+    /* --- Primary: Serene Teal (the brand's tuning fork) --------- */
+    --primary: 189 55% 51%;            /* #3BB5C7 */
+    --primary-foreground: 0 0% 100%;
+    --primary-deep: 187 56% 38%;       /* Hover / body links */
+    --primary-soft: 187 48% 83%;       /* Washes */
+    --primary-light: 189 55% 65%;
+    --primary-glow: 189 55% 75%;
+
+    /* --- Secondary: Warm Champagne (decorative only) ----------- */
+    --secondary: 48 37% 61%;           /* #BCB17A */
+    --secondary-foreground: 211 34% 17%;
+    --secondary-light: 48 44% 82%;
+
+    /* --- Accent — champagne alias for layout continuity -------- */
+    --accent: 48 37% 61%;
+    --accent-foreground: 211 34% 17%;
+    --accent-light: 48 44% 82%;
+
+    /* --- Gold — maps to champagne on U-CALM Concierge ---------- */
+    --gold: 48 37% 61%;
+    --gold-foreground: 211 34% 17%;
+
+    /* --- Forest — tinted black for overlays -------------------- */
+    --forest: 211 34% 17%;             /* Still Navy used as tinted black */
+
+    /* --- Text hierarchy ---------------------------------------- */
+    --muted: 210 14% 92%;
+    --muted-foreground: 213 11% 47%;   /* Harbour Grey */
+
+    /* --- System ------------------------------------------------ */
+    --destructive: 8 56% 63%;          /* Soft Terracotta */
+    --destructive-foreground: 0 0% 100%;
+    --success: 144 17% 58%;            /* Quiet Sage */
+    --warning: 38 47% 60%;             /* Muted Amber */
+
+    --border: 210 14% 92%;
+    --input: 210 14% 92%;
+    --ring: 189 55% 51%;
+
+    --radius: 14px;
+
+    /* --- Gradients (forest→aubergine-equivalent for overlays) -- */
+    --gradient-primary:   linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-soft)) 100%);
+    --gradient-champagne: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary-light)) 100%);
+    --gradient-calm:      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(187 50% 96%) 100%);
+    --gradient-horizon:   linear-gradient(180deg,
+                            hsl(var(--primary-soft)) 0%,
+                            hsl(var(--background)) 60%,
+                            hsl(var(--linen)) 100%);
+    --gradient-overlay:   linear-gradient(180deg,
+                            hsl(var(--forest) / 0) 35%,
+                            hsl(var(--forest) / 0.75) 100%);
+
+    /* --- Shadows (always soft) --------------------------------- */
+    --shadow-calm:    0 10px 40px -10px hsl(var(--primary) / 0.15);
+    --shadow-float:   0 20px 60px -20px hsl(211 34% 17% / 0.12);
+    --shadow-whisper: 0 2px 8px hsl(211 34% 17% / 0.04);
+
+    /* --- Motion ------------------------------------------------ */
+    --transition-calm: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --transition-soft: all 0.3s ease-out;
+  }
+
+  .dark {
+    --background: 210 46% 10%;
+    --foreground: 210 27% 96%;
+    --card: 210 38% 14%;
+    --card-foreground: 210 27% 96%;
+    --popover: 210 38% 14%;
+    --popover-foreground: 210 27% 96%;
+    --linen: 210 25% 22%;
+
+    --primary: 189 55% 51%;
+    --primary-foreground: 210 46% 10%;
+    --primary-deep: 189 55% 61%;
+    --primary-soft: 187 48% 30%;
+    --primary-light: 189 55% 60%;
+    --primary-glow: 189 55% 70%;
+
+    --secondary: 48 37% 61%;
+    --secondary-foreground: 210 46% 10%;
+    --secondary-light: 48 28% 30%;
+
+    --accent: 48 37% 61%;
+    --accent-foreground: 210 46% 10%;
+    --accent-light: 48 28% 30%;
+
+    --gold: 48 37% 61%;
+    --gold-foreground: 210 46% 10%;
+
+    --forest: 211 34% 17%;
+
+    --muted: 210 25% 22%;
+    --muted-foreground: 210 14% 70%;
+
+    --destructive: 8 56% 63%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 210 25% 22%;
+    --input: 210 25% 22%;
+    --ring: 189 55% 51%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Gill Sans Nova', 'Seravek', 'Lato', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1, "liga" 1;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', 'Didot', Georgia, serif;
+    letter-spacing: -0.005em;
+    line-height: 1.15;
+  }
+  h1 { font-weight: 300; }
+  h2 { font-weight: 400; }
+  h3 { font-weight: 500; }
+}

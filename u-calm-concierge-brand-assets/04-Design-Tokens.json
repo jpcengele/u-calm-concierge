@@ -1,0 +1,167 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "brand": {
+    "name": "U-CALM",
+    "acronym": "Concierge And Lifestyle Management",
+    "tagline": "Consider it done.",
+    "soul": "Restored peace of mind.",
+    "differentiator": "The only concierge in Ticino designed around peace of mind, not status.",
+    "homeMarket": "Lugano, Canton Ticino, Switzerland",
+    "founded": 2013,
+    "founders": ["JP Engele", "Alon Goldreich"],
+    "parentBrand": null,
+    "subBrands": ["U-Calm Aviation", "Cool CALM"]
+  },
+  "color": {
+    "primary": {
+      "DEFAULT":   { "hex": "#3BB5C7", "hsl": "189 55% 51%", "rgb": "59, 181, 199", "description": "Serene Teal — the 'U' mark, primary CTAs, links" },
+      "deep":      { "hex": "#2A8A98", "hsl": "187 56% 38%", "rgb": "42, 138, 152",  "description": "Deep Teal — hover states, body links, small text" },
+      "soft":      { "hex": "#BEE3E9", "hsl": "187 48% 83%", "rgb": "190, 227, 233", "description": "Mist Teal — washes, card hovers, section fills" },
+      "foreground":{ "hex": "#FFFFFF", "hsl": "0 0% 100%",   "rgb": "255, 255, 255", "description": "Text on Serene Teal" }
+    },
+    "secondary": {
+      "DEFAULT":   { "hex": "#BCB17A", "hsl": "48 37% 61%",  "rgb": "188, 177, 122", "description": "Warm Champagne — premium accents, frames, Aviation sub-brand" },
+      "light":     { "hex": "#E4DDBE", "hsl": "48 44% 82%",  "rgb": "228, 221, 190", "description": "Champagne Mist — soft premium surface" },
+      "foreground":{ "hex": "#1C2B3A", "hsl": "211 34% 17%", "rgb": "28, 43, 58",    "description": "Text on Champagne" }
+    },
+    "neutral": {
+      "navy":       { "hex": "#1C2B3A", "hsl": "211 34% 17%", "rgb": "28, 43, 58",    "description": "Still Navy — body text, headlines" },
+      "harbour":    { "hex": "#6B7785", "hsl": "213 11% 47%", "rgb": "107, 119, 133", "description": "Harbour Grey — tagline, captions, muted text" },
+      "background": { "hex": "#FBFCFD", "hsl": "210 25% 99%", "rgb": "251, 252, 253", "description": "Cloud White — default page bg (not pure white)" },
+      "linen":      { "hex": "#F3F1EA", "hsl": "44 23% 93%",  "rgb": "243, 241, 234", "description": "Linen — alt section, warm card bg" },
+      "border":     { "hex": "#E6EAEE", "hsl": "210 14% 92%", "rgb": "230, 234, 238", "description": "Whisper — borders, dividers, inputs" }
+    },
+    "semantic": {
+      "destructive": { "hex": "#D6776A", "hsl": "8 56% 63%",   "description": "Soft Terracotta — quieter than standard red" },
+      "success":     { "hex": "#7FA68F", "hsl": "144 17% 58%", "description": "Quiet Sage — muted confirm" },
+      "warning":     { "hex": "#C9A66B", "hsl": "38 47% 60%",  "description": "Muted Amber — warnings, on-brand with champagne" },
+      "ring":        { "hsl": "189 55% 51%", "description": "Focus ring — always Serene Teal" }
+    },
+    "darkMode": {
+      "background": { "hex": "#0E1A26", "hsl": "210 46% 10%", "description": "Deep Night" },
+      "foreground": { "hex": "#F1F5F8", "hsl": "210 27% 96%" },
+      "card":       { "hsl": "210 38% 14%" },
+      "muted":      { "hsl": "210 25% 22%" },
+      "border":     { "hsl": "210 25% 22%" },
+      "primary":    { "hsl": "189 55% 51%", "description": "Serene Teal stays constant — brand tuning fork" }
+    },
+    "forbidden": {
+      "description": "Colours explicitly off-brand — never introduce these",
+      "list": ["red", "orange", "neon", "vivid yellow", "hot pink", "pure black #000", "pure white #FFF as page bg"]
+    }
+  },
+  "gradient": {
+    "primary":     "linear-gradient(135deg, #3BB5C7 0%, #BEE3E9 100%)",
+    "champagne":   "linear-gradient(135deg, #BCB17A 0%, #E4DDBE 100%)",
+    "calm":        "linear-gradient(180deg, #FBFCFD 0%, #EEF6F7 100%)",
+    "horizon":     "linear-gradient(180deg, #BEE3E9 0%, #FBFCFD 60%, #F3F1EA 100%)",
+    "heroOverlay": "linear-gradient(180deg, rgba(14,26,38,0.0) 0%, rgba(14,26,38,0.35) 100%)"
+  },
+  "typography": {
+    "fontFamily": {
+      "sans":  "'Gill Sans', 'Gill Sans MT', 'Gill Sans Nova', 'Seravek', 'Lato', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "serif": "'Cormorant Garamond', 'Playfair Display', 'Didot', Georgia, 'Times New Roman', serif"
+    },
+    "usage": {
+      "body":     "sans (Gill Sans) — the reading workhorse",
+      "display":  "serif (Cormorant Garamond) — H1/H2, editorial, wordmark",
+      "headings": "serif H1–H3, sans H4–H6",
+      "ui":       "sans, 500–700 weight",
+      "numerals": "sans tabular for data; serif for editorial display numbers"
+    },
+    "weights": {
+      "sans": { "light": 300, "regular": 400, "medium": 500, "bold": 700 },
+      "serif": { "light": 300, "regular": 400, "medium": 500, "semibold": 600, "bold": 700 }
+    },
+    "scale": {
+      "h1":    { "size": "56-96px",  "weight": 300, "tracking": "-1%",    "lineHeight": 1.1,  "family": "serif" },
+      "h2":    { "size": "40-56px",  "weight": 400, "tracking": "-0.5%",  "lineHeight": 1.2,  "family": "serif" },
+      "h3":    { "size": "28-36px",  "weight": 500, "tracking": "normal", "lineHeight": 1.3,  "family": "serif" },
+      "h4":    { "size": "20-24px",  "weight": 700, "tracking": "+1%",    "lineHeight": 1.4,  "family": "sans" },
+      "h5":    { "size": "18-20px",  "weight": 700, "tracking": "+1%",    "lineHeight": 1.4,  "family": "sans" },
+      "h6":    { "size": "12-14px",  "weight": 700, "tracking": "+15%",   "lineHeight": 1.4,  "family": "sans", "case": "UPPERCASE" },
+      "lead":  { "size": "20px",     "weight": 300, "tracking": "normal", "lineHeight": 1.5,  "family": "sans" },
+      "body":  { "size": "16-18px",  "weight": 400, "lineHeight": 1.65, "family": "sans" },
+      "small": { "size": "13-14px",  "weight": 400, "lineHeight": 1.5,  "family": "sans" },
+      "button":{ "size": "14-16px",  "weight": 700, "tracking": "+5%",    "lineHeight": 1.0,  "family": "sans" },
+      "nav":   { "size": "14px",     "weight": 500, "case": "sentence",   "family": "sans" },
+      "tagline":{ "size": "10-12px", "weight": 400, "tracking": "+20%",   "family": "serif", "style": "italic small-caps" }
+    },
+    "rhythm": {
+      "bodyLineHeight": 1.65,
+      "principle": "Generous leading reinforces calm. If copy feels long, cut copy before tightening leading."
+    }
+  },
+  "radius": {
+    "sm":      "8px",
+    "md":      "12px",
+    "lg":      "14px",
+    "xl":      "20px",
+    "pill":    "999px",
+    "default": "14px"
+  },
+  "shadow": {
+    "calm":    "0 10px 40px -10px rgba(59, 181, 199, 0.15)",
+    "float":   "0 20px 60px -20px rgba(28, 43, 58, 0.12)",
+    "whisper": "0 2px 8px rgba(28, 43, 58, 0.04)"
+  },
+  "motion": {
+    "transition": {
+      "calm": "all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)",
+      "soft": "all 0.3s ease-out"
+    },
+    "hoverScale": 1.02,
+    "keyframes": {
+      "fade-soft": { "duration": "1s",  "easing": "ease-out" },
+      "breathe":   { "duration": "4s",  "easing": "ease-in-out", "iteration": "infinite" },
+      "drift":     { "duration": "8s",  "easing": "ease-in-out", "iteration": "infinite alternate" }
+    },
+    "principles": [
+      "Slower than reflex — let the user feel it",
+      "No bounces, shimmers, sparkles, elastic springs",
+      "Hover scale never above 1.02",
+      "Prefer opacity and position over scale and rotation"
+    ]
+  },
+  "layout": {
+    "containerMaxWidth": "1280px",
+    "containerPaddingDesktop": "2.5rem",
+    "containerPaddingMobile":  "1.25rem",
+    "sectionPaddingDesktop":   "6rem",
+    "sectionPaddingMobile":    "3rem",
+    "gridGutter":              { "cards": "32px", "sections": "48px" },
+    "breakpoints": {
+      "sm": "640px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px"
+    }
+  },
+  "logo": {
+    "primaryMaster": "logos/u-calm-logo-master.png",
+    "monoMaster":    "logos/u-calm-logo-mono.jpg",
+    "aviationLockup":"logos/u-calm-aviation-logo.png",
+    "sourceVector":  "logos/source-files/u-calm-logo.pdf",
+    "sourcePsd":     "logos/source-files/u-calm-logo.psd",
+    "culturalRoot":  "logos/u-calm-and-carry-on-poster.jpg",
+    "minHeight":     { "fullLockup": "72px", "uMark": "32px", "favicon": "16px" },
+    "clearSpace":    "equal to the height of the 'CONSIDER IT DONE' tagline on all sides",
+    "variants":      ["master two-tone", "mono black", "all-white reversed", "all-teal"]
+  },
+  "voice": {
+    "tagline":       "Consider it done.",
+    "soul":          "Restored peace of mind.",
+    "tone":          "Calm, competent, bilingual, discreet, warm but formal",
+    "sentenceShape": "Short. Declarative. British in cadence.",
+    "spelling":      "British English preferred; Italian where audience demands",
+    "forbidden":     ["exclamation marks", "emojis", "ALL CAPS (except small caps)", "the word 'luxury'", "superlatives: ultimate, best, world-class"]
+  },
+  "iconography": {
+    "style":     "Line, single-weight 1.5px, rounded terminals",
+    "library":   "Lucide (lucide.dev) — matches stroke discipline",
+    "forbidden": ["filled icons", "coloured icons", "mascot icons", "emoji in place of icons"]
+  },
+  "tokens": {
+    "note": "All colours expressed as HSL triplets (no hsl() wrapper, no commas) so they can be composed with opacity via hsl(var(--token) / 0.5) in CSS."
+  }
+}
