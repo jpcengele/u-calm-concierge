@@ -7,6 +7,7 @@ const ASPECT_DIMENSIONS: Record<BrandAspect, AspectDimensions> = {
   "16:9": { width: 1920, height: 1080 },
   "1:1":  { width: 1600, height: 1600 },
   "3:4":  { width: 1500, height: 2000 },
+  "21:9": { width: 2100, height: 900 },
 };
 
 type CommonProps = {

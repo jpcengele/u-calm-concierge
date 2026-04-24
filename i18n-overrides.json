@@ -1,0 +1,27 @@
+{
+  "_comment": "Brand-voice translations that override machine translation. Add a key here when DeepL's output loses the brand's cadence. Script uses these verbatim. Structure mirrors en.json but ONLY contains keys that need override — unmentioned keys go through DeepL.",
+  "de": {
+    "brand.strapline": "Erledigt.",
+    "footer.tagline": "Erledigt.",
+    "home.signature.body": "Der Teil der Woche, vor dem Sie sich gefürchtet haben, ist vor dem Frühstück abgeschlossen. Eine einzige handgeschriebene Zeile auf der Konsole. Keine E-Mail, kein Folgeformular. So sieht „Erledigt.“ wirklich aus.",
+    "home.signature.headline": "Eine cremefarbene Notiz auf Walnussholz. Nichts unterschrieben, nichts versprochen — einfach erledigt.",
+    "contact.closing.headline": "Schultern, einen Millimeter.",
+    "about.acronymEcho.body": "Ultimate. Concierge. And. Lifestyle. Management. Fünf schlichte Wörter, die zusammen ein einfaches Versprechen geben: Ihr Leben, gut geführt, damit Sie es nicht müssen."
+  },
+  "fr": {
+    "brand.strapline": "Considérez que c'est fait.",
+    "footer.tagline": "Considérez que c'est fait.",
+    "home.signature.body": "La partie de la semaine que vous redoutiez est close avant le petit-déjeuner. Une seule ligne manuscrite sur la console. Pas d'e-mail, pas de formulaire de suivi. Voilà à quoi ressemble vraiment « Considérez que c'est fait. »",
+    "home.signature.headline": "Un mot crème sur le noyer. Rien de signé, rien de promis — simplement fait.",
+    "contact.closing.headline": "Les épaules, d'un millimètre.",
+    "about.acronymEcho.body": "Ultimate. Concierge. And. Lifestyle. Management. Cinq mots simples qui, mis ensemble, promettent une chose simple : votre vie, bien menée, pour que vous n'ayez pas à la mener."
+  },
+  "it": {
+    "brand.strapline": "Consideralo fatto.",
+    "footer.tagline": "Consideralo fatto.",
+    "home.signature.body": "La parte della settimana che temevi è chiusa prima di colazione. Una sola riga scritta a mano sulla consolle. Nessuna e-mail, nessun modulo di conferma. È così che «Consideralo fatto.» appare davvero.",
+    "home.signature.headline": "Un biglietto crema sul noce. Nulla firmato, nulla promesso — semplicemente fatto.",
+    "contact.closing.headline": "Le spalle, di un millimetro.",
+    "about.acronymEcho.body": "Ultimate. Concierge. And. Lifestyle. Management. Cinque parole semplici che, tenute insieme, promettono una cosa semplice: la sua vita, condotta bene, perché lei non debba condurla."
+  }
+}

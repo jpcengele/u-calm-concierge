@@ -8,6 +8,12 @@ import Home from "./pages/Index";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import CoolCalm from "./pages/CoolCalm";
+import WhoWeServe from "./pages/WhoWeServe";
+import PersonaExpat from "./pages/PersonaExpat";
+import PersonaTicinese from "./pages/PersonaTicinese";
+import PersonaCorporate from "./pages/PersonaCorporate";
+import PersonaVisitor from "./pages/PersonaVisitor";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +28,12 @@ const App = () => (
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route path="services" element={<Services />} />
+            <Route path="who-we-serve" element={<WhoWeServe />} />
+            <Route path="expat" element={<PersonaExpat />} />
+            <Route path="ticinese" element={<PersonaTicinese />} />
+            <Route path="corporate" element={<PersonaCorporate />} />
+            <Route path="visitor" element={<PersonaVisitor />} />
+            <Route path="cool-calm" element={<CoolCalm />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

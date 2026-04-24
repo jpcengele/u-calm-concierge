@@ -1,13 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { BrandImage } from "@/components/brand/BrandImage";
-import { PAGE_HEROES } from "@/brand/imagery";
+import { PAGE_HEROES, CONTACT_EDITORIAL, SEASONAL_BANK } from "@/brand/imagery";
 import { brand } from "@/brand/config";
 
-/**
- * Contact page — Stage 3 will wire the inquiry form to
- * supabase.functions.invoke("submit-contact"). Until then this page
- * surfaces the inquiry email directly.
- */
 const Contact = () => {
   const { t } = useTranslation();
   return (
@@ -24,6 +19,24 @@ const Contact = () => {
           <h1 className="mt-3 font-serif text-4xl md:text-6xl font-light text-background">
             {t("contact.headline")}
           </h1>
+        </div>
+      </section>
+
+      {/* Opening — spring magnolia */}
+      <section className="bg-linen">
+        <div className="container py-20 grid md:grid-cols-2 gap-10 items-center">
+          <BrandImage id={SEASONAL_BANK.springMagnolia} className="w-full rounded-lg overflow-hidden" />
+          <div>
+            <p className="eyebrow text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
+              {t("contact.opening.eyebrow")}
+            </p>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
+              {t("contact.opening.headline")}
+            </h2>
+            <p className="mt-4 text-foreground/80 leading-relaxed">
+              {t("contact.opening.body")}
+            </p>
+          </div>
         </div>
       </section>
 
@@ -45,6 +58,44 @@ const Contact = () => {
         <p className="mt-8 italic text-muted-foreground text-sm">
           {t("contact.placeholder")}
         </p>
+      </section>
+
+      {/* First conversation */}
+      <section className="bg-background">
+        <div className="container py-20 grid md:grid-cols-2 gap-10 items-center">
+          <div className="md:order-2">
+            <BrandImage id={CONTACT_EDITORIAL.one} className="w-full rounded-lg overflow-hidden" />
+          </div>
+          <div className="md:order-1">
+            <p className="eyebrow text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
+              {t("contact.firstConversation.eyebrow")}
+            </p>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
+              {t("contact.firstConversation.headline")}
+            </h2>
+            <p className="mt-4 text-foreground/80 leading-relaxed">
+              {t("contact.firstConversation.body")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Closing — returning home */}
+      <section className="bg-linen">
+        <div className="container py-20 grid md:grid-cols-2 gap-10 items-center">
+          <BrandImage id={SEASONAL_BANK.returningHome} className="w-full rounded-lg overflow-hidden" />
+          <div>
+            <p className="eyebrow text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
+              {t("contact.closing.eyebrow")}
+            </p>
+            <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
+              {t("contact.closing.headline")}
+            </h2>
+            <p className="mt-4 text-foreground/80 leading-relaxed">
+              {t("contact.closing.body")}
+            </p>
+          </div>
+        </div>
       </section>
     </>
   );
