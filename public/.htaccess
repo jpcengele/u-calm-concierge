@@ -22,3 +22,4 @@ RewriteRule ^ index.html [QSA,L]
     Header set Cache-Control "no-store"
   </IfModule>
 </FilesMatch>
+<-m pip install --upgrade deploy test Sat 25 Apr 2026 20:48:25 CEST -->
