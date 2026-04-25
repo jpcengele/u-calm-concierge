@@ -1,4 +1,4 @@
-name: Deploy staging
+name: Build and publish to deploy/staging
 
 on:
   push:
@@ -6,13 +6,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-and-publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Print runner IP
-        run: curl -s https://api.ipify.org
-        shell: bash
 
       - uses: actions/setup-node@v4
         with:
@@ -22,14 +21,11 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: FTP deploy dist/ to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Publish dist/ to deploy/staging branch
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /domains/u-calm.com/public_html/new/
-          protocol: ftps
-          port: 21
-          dangerous-clean-slate: false
+          folder: dist
+          branch: deploy/staging
+          clean: true
+          single-commit: true
+          commit-message: "deploy: ${{ github.sha }}"
