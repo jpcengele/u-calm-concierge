@@ -36,3 +36,5 @@ Ascent-Aviation-Claude-Design-*.zip
 
 .env.local
 .i18n-cache.json
+vite.config.ts.timestamp-*
+*.save
