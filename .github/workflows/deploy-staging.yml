@@ -27,5 +27,5 @@ jobs:
           folder: dist
           branch: deploy/staging
           clean: true
-          single-commit: true
+          single-commit: false
           commit-message: "deploy: ${{ github.sha }}"
