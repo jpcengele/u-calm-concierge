@@ -75,11 +75,6 @@ const Contact = () => {
       <section className="container py-20 max-w-2xl">
         <p className="text-lg text-foreground/85 leading-relaxed">{t("contact.intro")}</p>
 
-        {/* Deploy verification stamp — remove after staging cycle proven. */}
-        <p className="mt-2 text-xs text-muted-foreground font-mono">
-          build: 2026-05-02 · state: {state}
-        </p>
-
         {state === "success" ? (
           <div className="mt-10 rounded-lg border border-border bg-card p-8 shadow-whisper">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-champagne">
@@ -157,10 +152,6 @@ const Contact = () => {
             </button>
           </form>
         )}
-
-        <p className="mt-8 italic text-muted-foreground text-sm">
-          {t("contact.placeholder")}
-        </p>
       </section>
 
       <section className="bg-background">
