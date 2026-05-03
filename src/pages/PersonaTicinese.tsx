@@ -3,8 +3,17 @@ import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, PERSONA_EDITORIAL, SEASONAL_BANK } from "@/brand/imagery";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
 
 const PersonaTicinese = () => {
+  useDocumentMeta({
+    title: "Per la famiglia ticinese | U-CALM Concierge",
+    description:
+      "Per famiglie ticinesi affermate — concierge che parla la lingua locale, conosce le case, le scuole, i ristoranti, gli artigiani, e tiene tutto in continuità. La stessa mano, da una generazione all'altra.",
+    canonical: canonical("/ticinese"),
+    jsonLd: [ORGANIZATION_JSONLD],
+  });
+
   const { t } = useTranslation();
   return (
     <>

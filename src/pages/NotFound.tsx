@@ -1,8 +1,16 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useDocumentMeta, canonical } from "@/lib/useDocumentMeta";
 
 const NotFound = () => {
+  useDocumentMeta({
+    title: "Page not found — U-CALM Concierge",
+    description:
+      "The page you were looking for has moved, or never existed. Return to U-CALM, or open a quiet conversation with the desk.",
+    canonical: canonical("/"),
+  });
+
   const { t } = useTranslation();
   return (
     <section className="container py-24 text-center">

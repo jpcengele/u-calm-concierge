@@ -2,8 +2,31 @@ import { useTranslation } from "react-i18next";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, ABOUT_SCENES, SEASONAL_BANK } from "@/brand/imagery";
 import { brand } from "@/brand/config";
+import {
+  useDocumentMeta,
+  canonical,
+  ORGANIZATION_JSONLD,
+  LOCALBUSINESS_JSONLD,
+} from "@/lib/useDocumentMeta";
 
 const About = () => {
+  useDocumentMeta({
+    title: "About — A house in Lugano | U-CALM Concierge",
+    description:
+      "U-CALM was founded in Lugano in 2013 around a single proposition: that the membership relationship between a member and their concierge should be the only relationship a member has to think about. The acronym is the architecture: Considered, Anticipated, Looked-after, Mannered.",
+    canonical: canonical("/about"),
+    jsonLd: [
+      ORGANIZATION_JSONLD,
+      LOCALBUSINESS_JSONLD,
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        url: "https://u-calm.com/about",
+        about: { "@id": "https://u-calm.com/#desk" },
+      },
+    ],
+  });
+
   const { t } = useTranslation();
   return (
     <>

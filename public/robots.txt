@@ -1,14 +1,35 @@
-User-agent: Googlebot
+# U-CALM Concierge — robots.txt
+#
+# A small, member-referral-oriented public surface. All routes are
+# legitimately indexable; the sitemap pointer below is what search
+# engines actually need.
+
+User-agent: *
 Allow: /
 
-User-agent: Bingbot
-Allow: /
+# Citation-friendly bots cite back; mass scrapers without citation are blocked.
+User-agent: GPTBot
+Disallow: /
 
-User-agent: Twitterbot
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: FacebookBot
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: Twitterbot
 Allow: /
+
+Sitemap: https://u-calm.com/sitemap.xml

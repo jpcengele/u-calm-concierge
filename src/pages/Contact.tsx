@@ -4,10 +4,33 @@ import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, CONTACT_EDITORIAL, SEASONAL_BANK } from "@/brand/imagery";
 import { brand } from "@/brand/config";
 import { supabase } from "@/integrations/supabase/client";
+import {
+  useDocumentMeta,
+  canonical,
+  ORGANIZATION_JSONLD,
+  LOCALBUSINESS_JSONLD,
+} from "@/lib/useDocumentMeta";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
 const Contact = () => {
+  useDocumentMeta({
+    title: "Contact — Open a quiet conversation | U-CALM Concierge",
+    description:
+      "Write to the U-CALM concierge desk in Lugano. A named specialist responds within the working day, in the language you wrote to us in. Twenty-four hours, three-hundred-and-sixty-five days. hello@u-calm.com.",
+    canonical: canonical("/contact"),
+    jsonLd: [
+      ORGANIZATION_JSONLD,
+      LOCALBUSINESS_JSONLD,
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        url: "https://u-calm.com/contact",
+        about: { "@id": "https://u-calm.com/#desk" },
+      },
+    ],
+  });
+
   const { t } = useTranslation();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

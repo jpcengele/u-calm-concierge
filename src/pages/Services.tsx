@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, SERVICES_SCENES, SEASONAL_BANK, byId } from "@/brand/imagery";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
 
 const TILE_SLUGS = [
   "phone",
@@ -13,6 +14,14 @@ const TILE_SLUGS = [
 ] as const;
 
 const Services = () => {
+  useDocumentMeta({
+    title: "Services — Considered, thorough, quiet | U-CALM Concierge",
+    description:
+      "The breadth of work the desk arranges: phone-line concierge, ground and household, relocations and first nights, corporate, travel and events, aviation (through U-Calm Aviation), and Cool CALM. One named concierge, one file, one statement.",
+    canonical: canonical("/services"),
+    jsonLd: [ORGANIZATION_JSONLD],
+  });
+
   const { t } = useTranslation();
 
   const tiles = TILE_SLUGS.map((slug) => ({

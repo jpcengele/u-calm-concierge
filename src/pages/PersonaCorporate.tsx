@@ -3,8 +3,17 @@ import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, PERSONA_EDITORIAL, byId } from "@/brand/imagery";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
 
 const PersonaCorporate = () => {
+  useDocumentMeta({
+    title: "For the executive between cities | U-CALM Concierge",
+    description:
+      "Diary, travel, household, family logistics, school logistics — held by one named concierge so the executive's working week doesn't fragment across providers. Twenty-four hours, three-hundred-and-sixty-five days.",
+    canonical: canonical("/corporate"),
+    jsonLd: [ORGANIZATION_JSONLD],
+  });
+
   const { t } = useTranslation();
   return (
     <>

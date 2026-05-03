@@ -2,10 +2,19 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, byId } from "@/brand/imagery";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
 
 const PERSONA_SLUGS = ["expat", "ticinese", "corporate", "visitor"] as const;
 
 const WhoWeServe = () => {
+  useDocumentMeta({
+    title: "Who we serve — Members of the house | U-CALM Concierge",
+    description:
+      "Four registers of member: the expatriate making Switzerland home; the established Ticinese family; the corporate executive between cities; the visitor staying long. One desk, four working languages, one continuous arrangement.",
+    canonical: canonical("/who-we-serve"),
+    jsonLd: [ORGANIZATION_JSONLD],
+  });
+
   const { t } = useTranslation();
 
   const personas = PERSONA_SLUGS.map((slug) => ({

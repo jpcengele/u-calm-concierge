@@ -3,10 +3,35 @@ import { Link } from "react-router-dom";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, HOME_EDITORIAL, SEASONAL_BANK, byId } from "@/brand/imagery";
 import { Button } from "@/components/ui/button";
+import {
+  useDocumentMeta,
+  canonical,
+  ORGANIZATION_JSONLD,
+  LOCALBUSINESS_JSONLD,
+} from "@/lib/useDocumentMeta";
 
 const PERSONA_SLUGS = ["expat", "ticinese", "corporate", "visitor"] as const;
 
 const Home = () => {
+  useDocumentMeta({
+    title: "U-CALM Concierge — Consider it done. | Lifestyle management, Lugano",
+    description:
+      "U-CALM is a quiet concierge and lifestyle-management house. The flight, the household, the table, the school run, the Tuesday supper — all arranged by one named concierge, on one itinerary, in one voice. From Lugano, in four working languages.",
+    canonical: canonical("/"),
+    jsonLd: [
+      ORGANIZATION_JSONLD,
+      LOCALBUSINESS_JSONLD,
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "U-CALM Concierge",
+        url: "https://u-calm.com",
+        inLanguage: ["en", "it", "fr", "de"],
+        publisher: { "@id": "https://u-calm.com/#desk" },
+      },
+    ],
+  });
+
   const { t } = useTranslation();
   const proofPoints = t("home.proof", { returnObjects: true }) as Record<
     string,

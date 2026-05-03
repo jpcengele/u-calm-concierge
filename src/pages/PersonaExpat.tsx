@@ -3,8 +3,17 @@ import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, PERSONA_EDITORIAL, SEASONAL_BANK } from "@/brand/imagery";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
 
 const PersonaExpat = () => {
+  useDocumentMeta({
+    title: "For the expatriate making Switzerland home | U-CALM Concierge",
+    description:
+      "Relocation, residency, schools, the household, the bilingual everyday. The desk holds the new arrival's first year — and the next ten — in English, Italian, French, German.",
+    canonical: canonical("/expat"),
+    jsonLd: [ORGANIZATION_JSONLD],
+  });
+
   const { t } = useTranslation();
   return (
     <>

@@ -3,8 +3,17 @@ import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, PERSONA_EDITORIAL, byId } from "@/brand/imagery";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
 
 const PersonaVisitor = () => {
+  useDocumentMeta({
+    title: "For the visitor staying long | U-CALM Concierge",
+    description:
+      "A concierge for the seasonal resident, the second-home owner, the long-stay visitor. The villa is opened, the table is held, the local knowledge is on file — visit after visit, year after year.",
+    canonical: canonical("/visitor"),
+    jsonLd: [ORGANIZATION_JSONLD],
+  });
+
   const { t } = useTranslation();
   return (
     <>

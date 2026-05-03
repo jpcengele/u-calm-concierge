@@ -3,8 +3,17 @@ import { BrandImage } from "@/components/brand/BrandImage";
 import { byId, PAGE_HEROES, SERVICES_SCENES, SEASONAL_BANK } from "@/brand/imagery";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
 
 const CoolCalm = () => {
+  useDocumentMeta({
+    title: "Cool CALM — restorative arrangements | U-CALM Concierge",
+    description:
+      "Cool CALM is the restorative service-line within U-CALM. Quiet retreats, considered downtime, and the arrangements that make rest actually rest. Held with the same continuity the rest of the membership receives.",
+    canonical: canonical("/cool-calm"),
+    jsonLd: [ORGANIZATION_JSONLD],
+  });
+
   const { t } = useTranslation();
   return (
     <>
