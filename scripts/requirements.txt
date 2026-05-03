@@ -1,0 +1,2 @@
+deepl>=1.17
+python-dotenv>=1.0

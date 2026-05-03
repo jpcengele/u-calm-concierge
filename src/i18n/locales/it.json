@@ -1,1 +1,252 @@
-{}
+{
+  "brand": {
+    "name": "U-CALM Concierge",
+    "shortName": "U-CALM",
+    "expansion": "Ultimate Concierge and Lifestyle Management",
+    "strapline": "Consideralo fatto."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Servizi",
+    "whoWeServe": "A chi ci rivolgiamo",
+    "coolCalm": "Cool CALM",
+    "about": "Chi siamo",
+    "contact": "Contatti"
+  },
+  "cta": {
+    "speakSpecialist": "Parla con uno specialista",
+    "exploreServices": "Scopri i nostri servizi",
+    "getInTouch": "Mettiti in contatto",
+    "readMore": "Leggi di più",
+    "readOurStory": "Leggi la nostra storia",
+    "openConversation": "Avvia una conversazione",
+    "planWeekend": "Programma un weekend",
+    "briefOnArrival": "Affidaci un arrivo",
+    "openCoolCalm": "Avvia una conversazione Cool CALM",
+    "enterCoolCalm": "Entra in Cool CALM",
+    "readCoolCalm": "Scopri Cool CALM",
+    "backToHome": "Torna alla home"
+  },
+  "home": {
+    "eyebrow": "Una casa di concierge discreta",
+    "headline": "Serenità ritrovata.",
+    "subheadline": "Un referente dedicato, un piano curato, nulla di strillato. Consideralo fatto.",
+    "proof": {
+      "specialist": { "label": "Referente", "value": "Uno, con nome" },
+      "notice": { "label": "Preavviso", "value": "Ore, non giorni" },
+      "hours": { "label": "Reperibile", "value": "Giorno e notte" },
+      "discretion": { "label": "Discrezione", "value": "Scontata" }
+    },
+    "signature": {
+      "eyebrow": "Come finisce, nella maggior parte dei mattini",
+      "headline": "Un biglietto crema sul noce. Nulla firmato, nulla promesso — semplicemente fatto.",
+      "body": "La parte della settimana che temevi è chiusa prima di colazione. Una sola riga scritta a mano sulla consolle. Nessuna e-mail, nessun modulo di conferma. È così che «Consideralo fatto.» appare davvero."
+    },
+    "whoWeServe": {
+      "eyebrow": "A chi ci rivolgiamo",
+      "headline": "Quattro modi di avere una giornata tranquilla.",
+      "intro": "U-CALM è una casa al servizio delle persone — quattro vite riconoscibili, una sola abitudine: condurre ciascuna in silenzio."
+    },
+    "midsummer": {
+      "eyebrow": "19:30, fine luglio",
+      "headline": "Il tavolo apparecchiato, gli ospiti alla ringhiera.",
+      "body": "Una terrazza ticinese nel tepore della sera. Due sedie tirate, una caraffa perlata di condensa fresca, il lago oltre. Siete arrivati venti minuti fa, e tutto era già pronto."
+    },
+    "winter": {
+      "eyebrow": "17:15, gennaio",
+      "headline": "Luce di camino, e il cane già addormentato.",
+      "body": "Uno chalet a Saanen custodito attraverso i mesi più quieti. Il fuoco acceso, gli scarponi asciutti, la spesa riposta — la casa d'inverno che chiamiamo Cool CALM."
+    },
+    "coolCalmEntry": {
+      "eyebrow": "Sottomarchio stagionale",
+      "headline": "Cool CALM — la casa d'inverno."
+    }
+  },
+  "services": {
+    "eyebrow": "Cosa facciamo",
+    "headline": "La vita, custodita.",
+    "intro": "Dalla logistica quotidiana ai progetti che durano un mese, il lavoro è seguito da una sola persona che conosce la sua posizione. Il resto avviene in secondo piano.",
+    "tiles": {
+      "phone": { "title": "Concierge telefonico", "blurb": "Una sola linea, discreta. La telefonata che rimandavi è fatta, il modulo firmato, la domanda risposta — senza che raggiunga mai la sua giornata." },
+      "ground": { "title": "Concierge di presenza", "blurb": "Ritiri, consegne, appuntamenti, commissioni di casa. La porta è aperta, il pacco è ritirato, l'arrangiamento è semplicemente lì al suo arrivo." },
+      "relocations": { "title": "Trasferimenti", "blurb": "Dal primo appartamento vuoto al mattino in cui tutto è sistemato. Le pratiche, l'allestimento, i riti discreti di una nuova vita ben condotta." },
+      "corporate": { "title": "Aziende", "blurb": "Consigli, dirigenti in visita, incontri fuori sede. La sala è pronta, la hall è calma, l'ospite è accolto dal marciapiede in avanti." },
+      "travelEvents": { "title": "Viaggi & eventi", "blurb": "Un tavolo apparecchiato, una camera prenotata, un programma tenuto. Cena per due, weekend in famiglia, evento privato — il piano regge, non deve farlo lei." },
+      "aviation": { "title": "Aviation (sottomarchio)", "blurb": "Il tragitto fino al piazzale, la consegna all'aeromobile, l'auto all'arrivo. U-CALM Aviation è il nostro marchio affine per voli e trasferimenti." },
+      "coolCalm": { "title": "Cool CALM (inverno)", "blurb": "La casa d'inverno alpina — preparazione chalet, scarponi che asciugano, bevande calde in mani guantate. Il nostro servizio di concierge invernale stagionale." }
+    },
+    "disruption": {
+      "eyebrow": "Quando i piani cambiano",
+      "headline": "L'arrangiamento non crolla. Viene semplicemente tenuto.",
+      "body": "Un portico luganese sotto una pioggia improvvisa. L'ombrello già aperto, il pacco crema sulla panchina asciutta, il membro non ancora arrivato. Un disguido temuto è già stato assorbito — e a lei non è mai stato chiesto di fare nulla."
+    },
+    "dinnerLaid": {
+      "eyebrow": "19:45, fine aprile",
+      "headline": "Dalla porta al tavolo.",
+      "body": "Tre coperti su lino bianco-nuvola, asparagi precoci in una ciotola di ceramica, il gatto sul davanzale che osserva la strada. Una sedia già tirata fuori. Ogni servizio U-CALM termina in una stanza come questa — nulla di trionfale, tutto in ordine."
+    }
+  },
+  "about": {
+    "eyebrow": "La casa",
+    "headline": "Un piccolo team, uno standard silenzioso.",
+    "intro": "U-CALM è una casa di lifestyle management fondata sulla convinzione che un buon servizio sia in gran parte invisibile. Accogliamo un numero limitato di membri e lo manteniamo tale.",
+    "newYear": {
+      "eyebrow": "07:45, 1° gennaio",
+      "headline": "Dove l'anno comincia.",
+      "body": "Parco Ciani alla prima luce. Monte Brè ancora una sagoma. Una sciarpa crema piegata su una panchina vuota. Tredici anni dopo la prima conversazione qui, la stessa mano tiene ancora la stessa linea."
+    },
+    "parcoCiani": {
+      "eyebrow": "Il lago, l'ora",
+      "headline": "Lugano, dove tutto è iniziato.",
+      "body": "Fondata nel 2013 in un mattino al Parco Ciani. Una conversazione tra un membro con troppe commissioni temute e due persone che decisero semplicemente di togliergliele dalle mani."
+    },
+    "founding": {
+      "eyebrow": "2013",
+      "headline": "Dove il primo numero fu risposto.",
+      "body": "Un piccolo tavolino da caffè, due tazze, due sedie. La conversazione che divenne U-CALM. L'abitudine di rispondere al telefono, di portare a termine la commissione, di chiudere il cerchio in silenzio — custodita da allora."
+    },
+    "acronymSection": { "eyebrow": "Cosa significa U-CALM" },
+    "christmas": {
+      "eyebrow": "24 dicembre, 18:00",
+      "headline": "Anche le settimane calme hanno un coperto apparecchiato.",
+      "body": "La casa si è ritirata. Il tavolo è apparecchiato per quattro — pino e ortensia secca, acqua versata, un biglietto bianco infilato sotto il coperto più vicino. U-CALM è la ragione per cui la stanza è pronta prima che lo siano le persone."
+    },
+    "acronymEcho": {
+      "eyebrow": "Le quattro lettere silenziose",
+      "headline": "Cinque parole, un'abitudine.",
+      "body": "Ultimate. Concierge. And. Lifestyle. Management. Cinque parole semplici che, tenute insieme, promettono una cosa semplice: la sua vita, condotta bene, perché lei non debba condurla."
+    },
+    "household": {
+      "title": "La casa, tenuta insieme.",
+      "body": "Il guardaroba della biancheria, il colletto stirato, i fiori per il tavolo. Le piccole cose che fanno sentire una casa curata."
+    },
+    "team": {
+      "title": "Il team, di passaggio.",
+      "body": "Un piccolo ufficio luganese, tre profili quieti al lavoro. Mai il volto della casa — il lavoro della casa."
+    }
+  },
+  "coolCalm": {
+    "eyebrow": "Un sottomarchio stagionale",
+    "headline": "Cool CALM — la casa d'inverno discreta.",
+    "subheadline": "Pietra fredda della Val Verzasca, luce di camino a Saanen, scarponi da sci che asciugano sul portascarpe. L'abitudine U-CALM, adattata all'inverno.",
+    "intro": "Cool CALM è il modo in cui U-CALM custodisce uno chalet tra dicembre e marzo. Un concierge sul posto, il fuoco già acceso, gli scarponi asciutti, la spesa consegnata, la prenotazione tenuta. Arrivate in una casa che è stata custodita — non preparata di corsa.",
+    "chaletKept": {
+      "eyebrow": "18:45, Saanen",
+      "headline": "Luce di camino, non conta degli ospiti.",
+      "body": "Un fuoco che lavora, un plaid di cashmere crema sul bracciolo del divano, il cane addormentato sul tappeto. Lo chalet è una casa, non un albergo — lo trattiamo così."
+    },
+    "mountainHabit": {
+      "eyebrow": "Abitudine di montagna",
+      "headline": "Gli scarponi, la tazza calda, la porta aperta.",
+      "body": "Dopo la giornata di sci, una casa calda. Prima degli ospiti della sera, un tavolo apparecchiato. Tra i due, un'ora silenziosa senza nulla da fare — perché tutto è fatto."
+    },
+    "offSeason": {
+      "eyebrow": "21:00, luglio — la casa tra le stagioni",
+      "headline": "Anche fuori stagione, la casa è custodita.",
+      "body": "Lo chalet all'ora blu in luglio, un plaid di lino crema piegato sulla sedia del terrazzo, finestre calde sull'altra sponda. I membri invernali arrivano in una casa che non è mai stata chiusa — soltanto in quieta attesa."
+    },
+    "closing": {
+      "eyebrow": "Nelle ore silenziose",
+      "headline": "Il fuoco, il libro, il cane tranquillo."
+    }
+  },
+  "contact": {
+    "eyebrow": "Come raggiungerci",
+    "headline": "Cominciamo con una conversazione.",
+    "intro": "Ci dica brevemente di cosa ha bisogno. Risponderemo personalmente, mai da una coda.",
+    "emailLabel": "E-mail",
+    "emailValue": "hello@u-calm.com",
+    "placeholder": "Il modulo di contatto completo sarà online nella fase 3, una volta predisposto il backend.",
+    "opening": {
+      "eyebrow": "08:40, metà marzo",
+      "headline": "La porta si apre, semplicemente. La conversazione comincia.",
+      "body": "Un pallido bocciolo di magnolia su un ramo spoglio, la soglia Serene Teal che cattura la prima luce. I membri vengono a U-CALM nel momento in cui la loro lista pesa di più — e lasciano la prima telefonata con una lista già più corta."
+    },
+    "firstConversation": {
+      "eyebrow": "Come cominciamo",
+      "headline": "Una porta, un taccuino, una conversazione quieta.",
+      "body": "Iniziamo con una chiamata di 30 minuti. Lei ci racconta cosa c'è sulla sua lista da troppo tempo. Noi le diciamo come la chiuderemmo. Nulla è affrettato; nulla viene promesso che non possiamo mantenere."
+    },
+    "closing": {
+      "eyebrow": "18:30, inizio novembre",
+      "headline": "Le spalle, di un millimetro.",
+      "body": "La prova di tutta questa casa: quando un membro varca la porta al crepuscolo e vede l'appartamento già caldo, le lampade accese, il biglietto quieto sulla consolle — le sue spalle si abbassano di un millimetro? Se sì, abbiamo fatto il nostro lavoro. Avvii una conversazione, e lo scopra."
+    }
+  },
+  "whoWeServe": {
+    "eyebrow": "A chi ci rivolgiamo",
+    "headline": "Quattro modi di avere una giornata tranquilla.",
+    "intro": "U-CALM è una casa al servizio delle persone — quattro vite riconoscibili, una sola abitudine: condurre ciascuna in silenzio. Legga quella che le somiglia, o quella che sta per diventare.",
+    "personas": {
+      "expat": { "kicker": "Sarah — l'expat", "title": "Sistemata, non ancora a casa.", "blurb": "Famiglia internazionale che si trasferisce in Ticino. La lingua, la scuola, i permessi, i vicini. Le togliamo l'amministrazione della settimana, perché la sua famiglia debba solo arrivare." },
+      "ticinese": { "kicker": "Giovanni — il Ticinese", "title": "La villa di famiglia, dopo Milano.", "blurb": "Tornato a sud dopo decenni in uno studio milanese. Casa multigenerazionale, estati al lago, una biblioteca che sta finalmente ordinando. Custodiamo la complessità silenziosa." },
+      "corporate": { "kicker": "HR aziendale", "title": "L'arrivo dell'executive.", "blurb": "Un socio in visita, un consiglio fuori sede, il primo mese di un direttore trasferito. Dall'aeroporto all'appartamento, dalla sala al ristorante. Discreto, documentato, consegnato." },
+      "visitor": { "kicker": "Il visitatore", "title": "Un weekend pensato.", "blurb": "Un weekend a Lugano tra Londra e altrove. L'hotel, il lago, il ristorante, il pomeriggio semplicemente tenuto aperto per lei." }
+    },
+    "closing": {
+      "eyebrow": "L'ora prima degli ospiti",
+      "headline": "Qualunque porta, la stessa quiete.",
+      "body": "Quattro vite molto diverse, un'ora molto riconoscibile — la stanza nella luce del tardo pomeriggio, la poltrona da lettura, il libro chiuso già posato, gli ospiti non ancora arrivati. Quell'ora, è ciò che U-CALM vende. Ha solo l'aspetto di case diverse."
+    }
+  },
+  "personas": {
+    "expat": {
+      "kicker": "Sarah — l'expat",
+      "headline": "Sistemata, non ancora a casa.",
+      "subhead": "Nuova a Lugano. La famiglia è qui, i mobili sono arrivati, e una piccola pila di cose silenziosamente importanti attende in una lingua che sta ancora imparando.",
+      "intro1": "Una famiglia internazionale, in pieno trasferimento o appena sistemata — da Londra, Francoforte, Dubai, New York. TASIS o Franklin University Switzerland per i figli, un quartiere semi-familiare, un marito che ancora fa il pendolare. La casa funziona; l'amministrazione che la fa funzionare, no.",
+      "intro2": "Entriamo come la seconda mano silenziosa. Moduli bilingui da compilare, rinnovi di permessi, corrispondenza scolastica, la telefonata in italiano che rimanda. Ogni settimana una lista più corta, ogni mese una casa più calma.",
+      "schoolRun": { "eyebrow": "Giovedì, 08:12", "headline": "Il marciapiede della scuola.", "body": "Un avviso bilingue lasciato vuoto sulla consolle. Una mano adulta che posa una mela crema sullo zainetto. Nessun bambino nell'inquadratura — il bambino è già a scuola, perché abbiamo compilato il modulo martedì scorso." },
+      "monday": { "eyebrow": "Lunedì, 07:20", "headline": "Le scarpe sono pronte. Il modulo è stato firmato martedì scorso.", "body": "Un paio di scarpe da scuola lucidate su uno zerbino di sisal, un piccolo zaino, un avviso vuoto sulla consolle. Il mattino che si sfilacciava è semplicemente fatto. Il bambino non è nell'inquadratura. Nemmeno il panico." }
+    },
+    "ticinese": {
+      "kicker": "Giovanni — il Ticinese",
+      "headline": "La villa di famiglia, dopo Milano.",
+      "subhead": "Tornato a sud dopo tre decenni in uno studio dall'altra parte delle Alpi. La casa è del nonno. Le abitudini sono le sue. L'aiuto deve sembrare che sia sempre appartenuto a questi luoghi.",
+      "intro1": "Un ticinese tornato — o un locale che non è mai partito. Casa multigenerazionale, estati al lago, una biblioteca che sta finalmente ordinando, una madre al piano di sotto. Il rapporto con il concierge non gli è nuovo; la versione che sopravvive alla vita moderna, sì.",
+      "intro2": "Teniamo la complessità silenziosa — l'appuntamento dal medico per la nonna, la trattoria dove andava col padre, il vignaiolo di Mendrisio, lo spazzacamino, il giardiniere che parla solo dialetto. Nulla di nuovo; nulla perso.",
+      "gandria": { "eyebrow": "Domenica, Gandria", "headline": "Gli occhiali del nonno, il gatto sul davanzale.", "body": "Una cucina con scaffali di noce, un ricettario aperto al risotto della domenica, un gatto tigrato che osserva il vicolo. La spesa della settimana è già fatta, la ricetta della nonna ritirata, il muratore prenotato per il muro del terrazzo. Lei cucina, noi teniamo il resto." },
+      "nonnaRoom": { "eyebrow": "16:30, fine ottobre — la stanza della nonna", "headline": "Luce ambra, il gatto sul plaid.", "body": "Una poltrona da lettura blu-petrolio profondo nell'ambra del pomeriggio, un plaid antracite che scivola dal bracciolo, il tigrato già addormentato. La stanza di lettura di famiglia, custodita come è sempre stata — perché non l'abbiamo mai lasciata scivolare." },
+      "cobbles": { "eyebrow": "10:15, domenica — ciottoli di Gandria", "headline": "Un levriero, un passo avanti.", "body": "Muri di pietra calda, un'imposta blu-petrolio, foglie di castagno sul selciato. Il cane cammina senza guinzaglio perché la casa ha tempo per quest'ora adesso — perché abbiamo tolto lunedì-venerdì dal tavolo." }
+    },
+    "corporate": {
+      "kicker": "HR aziendale",
+      "headline": "L'arrivo dell'executive.",
+      "subhead": "Un socio in visita, un direttore trasferito, un consiglio fuori sede. La persona a Lugano che fa in modo che nessuno di loro debba ricordarsi di nulla, tranne la riunione.",
+      "intro1": "Studi finanziari e family office ticinesi, dirigenti in visita da Zurigo, Ginevra, Londra, Singapore. Team HR e assistenti di direzione hanno bisogno di un partner sul posto a cui si possa affidare la giornata di un principal. Siamo quel partner.",
+      "intro2": "Dal piazzale all'appartamento. Dalla sala al ristorante. Un'auto, un dossier stampato (o non stampato), una cena discreta per tre mai annunciata. Discreto, documentato, consegnato — e invisibile a tutti tranne al viaggiatore.",
+      "boardroom": { "eyebrow": "Lugano, 09:15", "headline": "Sala riunioni, fuori sede affidato.", "body": "La sala è pronta, la borsa di pelle è al piede della sedia, l'acqua è versata, lo schermo è spento. Il fuori sede ci è stato affidato; il suo team arriva e comincia la riunione." },
+      "kerb": { "eyebrow": "08:00, il marciapiede", "headline": "L'auto è già accesa. La porta è socchiusa.", "body": "Una berlina nero opaco al marciapiede, un polsino di lana antracite sulla maniglia, un cane di casa tranquillo al piede. Il principal non è ancora uscito — ma quando lo farà, le prossime quattro ore della sua giornata sono già decise." },
+      "breakfast": { "eyebrow": "07:15, l'appartamento", "headline": "Arrivo, la colazione aspetta già.", "body": "Un'isola di noce, una singola tazzina di porcellana di caffè nero, un tovagliolo crema, un rametto di eucalipto. Una mano in un polsino antracite posa semplicemente il vassoio. L'executive non sa nemmeno che sia mai stata una domanda." }
+    },
+    "visitor": {
+      "kicker": "Il visitatore",
+      "headline": "Un weekend pensato.",
+      "subhead": "Non il residente e non il turista. Un weekend a Lugano tra un luogo dove lavora e un altro dove vive, tenuto in silenzio da qualcuno sul posto.",
+      "intro1": "Un anniversario. Un lungo venerdì-lunedì. Una breve sosta tra Milano e Zurigo. Vuole il tavolo giusto all'ora giusta, il lago nella sua luce migliore, il pomeriggio semplicemente tenuto aperto. Non vuole un autista con il berretto che le parla dei vigneti.",
+      "intro2": "Disegniamo la forma del weekend — le prenotazioni, i tempi, l'ora silenziosa senza nulla in programma — e siamo su una sola linea quieta quando il piano ha bisogno di un piccolo aggiustamento. Calore di itinerario, non patina d'hotel.",
+      "firstLight": { "eyebrow": "06:45, sopra il lago", "headline": "Prima luce al giorno del weekend.", "body": "Monte San Salvatore nel pallido primo sole, nebbia sull'acqua, una sdraio di teak con una pelle d'agnello piegata, una tazzina di porcellana sul vassoio. Lei non è ancora sveglia. Il weekend sì." },
+      "suite": { "eyebrow": "Camera 214, 15:00", "headline": "La suite, sistemata.", "body": "Una valigia di pelle aperta, lino piegato dentro, un biglietto crema sulla scrivania. Il tavolo per due è prenotato per le otto. Il pomeriggio è suo." }
+    }
+  },
+  "footer": {
+    "tagline": "Consideralo fatto.",
+    "description": "Una sola linea quieta, e la lista si accorcia. Avvii una prima conversazione — 30 minuti, nessuna presunzione, interamente al suo ritmo.",
+    "rights": "© {{year}} U-CALM Concierge. Tutti i diritti riservati.",
+    "registeredInfo": "Un marchio della casa U-CALM.",
+    "privacy": "Privacy",
+    "terms": "Termini"
+  },
+  "language": {
+    "label": "Lingua",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Français",
+    "it": "Italiano"
+  },
+  "notFound": {
+    "title": "Non trovato",
+    "body": "Questa pagina non esiste. Torna alla home.",
+    "back": "Torna alla home"
+  }
+}

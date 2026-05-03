@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="U-CALM Concierge — Consider it done.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAF7F2"/>
+      <stop offset="1" stop-color="#F3F1EA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Champagne hairline frame -->
+  <rect x="60" y="60" width="1080" height="510" fill="none" stroke="#BCB17A" stroke-width="1" opacity="0.55"/>
+
+  <!-- U-mark on the left -->
+  <g transform="translate(220 215)" fill="none" stroke="#3BB5C7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="0" y1="0" x2="0" y2="120"/>
+    <line x1="100" y1="0" x2="100" y2="120"/>
+    <path d="M 0 120 C 0 195, 100 195, 100 120"/>
+  </g>
+
+  <!-- Wordmark stack: U-CALM (teal) + CONCIERGE (champagne) -->
+  <g transform="translate(420 250)">
+    <text x="0" y="0"
+          font-family="'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif"
+          font-size="120" font-weight="300" letter-spacing="14" fill="#3BB5C7">U-CALM</text>
+    <text x="0" y="80"
+          font-family="'Cormorant Garamond', 'Playfair Display', Georgia, 'Times New Roman', serif"
+          font-size="56" font-weight="300" letter-spacing="14" fill="#BCB17A">CONCIERGE</text>
+  </g>
+
+  <!-- Strapline + ground description -->
+  <text x="600" y="500" text-anchor="middle"
+        font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif"
+        font-size="36" font-style="italic" font-weight="300" fill="#1C2B3A" opacity="0.9">
+    Consider it done.
+  </text>
+  <text x="600" y="540" text-anchor="middle"
+        font-family="'Lato', Arial, sans-serif"
+        font-size="14" font-weight="400" letter-spacing="6" fill="#6B7785">
+    LIFESTYLE  ·  CONCIERGE  ·  LUGANO
+  </text>
+</svg>
