@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="U-CALM Concierge">
+  <!-- U-mark in Serene Teal on Ivory — concierge palette -->
+  <rect width="64" height="64" rx="6" fill="#FAF7F2"/>
+  <g fill="none" stroke="#3BB5C7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="22" y1="14" x2="22" y2="42"/>
+    <line x1="42" y1="14" x2="42" y2="42"/>
+    <path d="M 22 42 C 22 52, 42 52, 42 42"/>
+  </g>
+</svg>
