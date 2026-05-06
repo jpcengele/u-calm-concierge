@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { ArrowUpRight } from "lucide-react";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { PAGE_HEROES, SERVICES_SCENES, SEASONAL_BANK, byId } from "@/brand/imagery";
 import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
@@ -54,22 +55,55 @@ const Services = () => {
 
       <section className="container pb-24">
         <div className="grid md:grid-cols-2 gap-10">
-          {tiles.map((tile) => (
-            <article key={tile.slug} className="group">
-              <div className="overflow-hidden rounded-lg">
-                <BrandImage
-                  image={byId(tile.slot)}
-                  className="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                />
-              </div>
-              <h3 className="mt-5 font-serif text-2xl font-normal text-foreground">
-                {tile.title}
-              </h3>
-              <p className="mt-2 text-foreground/75 leading-relaxed">
-                {tile.blurb}
-              </p>
-            </article>
-          ))}
+          {tiles.map((tile) => {
+            const isAviation = tile.slug === "aviation";
+            const inner = (
+              <>
+                <div className="overflow-hidden rounded-lg">
+                  <BrandImage
+                    image={byId(tile.slot)}
+                    className="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+                <h3 className="mt-5 font-serif text-2xl font-normal text-foreground inline-flex items-center gap-2">
+                  {tile.title}
+                  {isAviation && (
+                    <ArrowUpRight
+                      className="h-5 w-5 text-primary-deep transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      aria-hidden="true"
+                    />
+                  )}
+                </h3>
+                <p className="mt-2 text-foreground/75 leading-relaxed">
+                  {tile.blurb}
+                </p>
+              </>
+            );
+
+            // Aviation is the sister brand and lives at its own site —
+            // the whole tile becomes an external link to u-calmaviation.com.
+            // Other tiles are static descriptions; the concierge handles
+            // those requests directly, so no per-tile link is needed.
+            if (isAviation) {
+              return (
+                <a
+                  key={tile.slug}
+                  href="https://u-calmaviation.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-deep focus-visible:ring-offset-4 rounded-lg"
+                  aria-label={`${tile.title} — visit U-Calm Aviation (opens in a new tab)`}
+                >
+                  {inner}
+                </a>
+              );
+            }
+            return (
+              <article key={tile.slug} className="group">
+                {inner}
+              </article>
+            );
+          })}
         </div>
       </section>
 
