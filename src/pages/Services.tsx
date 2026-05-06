@@ -65,18 +65,22 @@ const Services = () => {
                     className="w-full aspect-[4/5] object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                   />
                 </div>
-                <h3 className="mt-5 font-serif text-2xl font-normal text-foreground inline-flex items-center gap-2">
+                <h3 className="mt-5 font-serif text-2xl font-normal text-foreground">
                   {tile.title}
-                  {isAviation && (
-                    <ArrowUpRight
-                      className="h-5 w-5 text-primary-deep transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      aria-hidden="true"
-                    />
-                  )}
                 </h3>
                 <p className="mt-2 text-foreground/75 leading-relaxed">
                   {tile.blurb}
                 </p>
+                {isAviation && (
+                  <span className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary-deep px-5 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-primary-deep group-hover:bg-primary-deep group-hover:text-background transition-colors">
+                    Visit U-Calm Aviation
+                    <ArrowUpRight
+                      className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      strokeWidth={1.75}
+                      aria-hidden="true"
+                    />
+                  </span>
+                )}
               </>
             );
 
