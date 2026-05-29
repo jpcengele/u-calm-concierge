@@ -9,18 +9,19 @@ Allow: /
 
 # Citation-friendly bots cite back; mass scrapers without citation are blocked.
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: anthropic-ai
-Disallow: /
+Allow: /
 
 User-agent: ClaudeBot
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+# Common Crawl is a bulk dataset scraper that doesn't cite — stays blocked.
+User-agent: CCBot
 Disallow: /
 
 User-agent: FacebookBot

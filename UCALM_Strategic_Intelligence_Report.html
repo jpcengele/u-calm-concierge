@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The U-CALM Corridor — Strategic Intelligence Report 2026</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+    @bottom-right {
+      content: counter(page);
+      font-family: Georgia, serif;
+      font-size: 9pt;
+      color: #5C6B7A;
+    }
+    @bottom-left {
+      content: "U-CALM · Strategic Intelligence · May 2026";
+      font-family: Georgia, serif;
+      font-size: 9pt;
+      color: #5C6B7A;
+      font-style: italic;
+    }
+  }
+  @page cover {
+    margin: 0;
+    @bottom-right { content: ""; }
+    @bottom-left { content: ""; }
+  }
+  .cover { page: cover; }
+
+  :root {
+    --deep-teal: #2A8A98;
+    --mist-teal: #7FB8C2;
+    --champagne: #C8AC8A;
+    --champagne-soft: #E4D4BC;
+    --linen: #F3EFE8;
+    --navy: #1C2B3A;
+    --navy-soft: #2D3F52;
+    --grey: #E5E0D9;
+    --grey-text: #5C6B7A;
+    --cream: #FAF7F2;
+    --primary-deep: #1F6F7B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: var(--navy);
+    background: var(--cream);
+    line-height: 1.55;
+    font-size: 10.5pt;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  h1 { font-size: 32pt; letter-spacing: -0.01em; }
+  h2 { font-size: 22pt; margin-top: 22pt; margin-bottom: 10pt; }
+  h3 { font-size: 15pt; margin-top: 14pt; margin-bottom: 6pt; color: var(--primary-deep); }
+  h4 { font-size: 11pt; margin-top: 10pt; margin-bottom: 4pt; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--primary-deep); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+
+  p { margin: 0 0 8pt 0; }
+  .lead { font-size: 12pt; color: var(--navy-soft); margin-bottom: 14pt; line-height: 1.6; }
+
+  .eyebrow {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary-deep);
+    font-weight: 700;
+    margin-bottom: 6pt;
+  }
+
+  .page-break { page-break-before: always; }
+  .no-break { page-break-inside: avoid; }
+
+  /* COVER */
+  .cover {
+    background:
+      linear-gradient(135deg, #1C2B3A 0%, #1F6F7B 60%, #2A8A98 100%);
+    color: var(--cream);
+    page-break-after: always;
+    min-height: 250mm;
+  }
+  .cover-inner {
+    padding: 40mm 20mm 30mm 20mm;
+  }
+  .cover .mark {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 9pt;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--champagne);
+    font-weight: 700;
+  }
+  .cover h1 {
+    color: var(--cream);
+    font-size: 44pt;
+    line-height: 1.1;
+    max-width: 78%;
+    margin-top: 18mm;
+    font-weight: 300;
+  }
+  .cover .sub {
+    color: var(--champagne-soft);
+    font-style: italic;
+    font-size: 16pt;
+    margin-top: 14mm;
+    max-width: 70%;
+  }
+  .cover .meta {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 9pt;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+    border-top: 1px solid rgba(250,247,242,0.3);
+    padding-top: 12pt;
+    width: 60%;
+  }
+  .cover .meta div { margin-bottom: 4pt; }
+
+  /* TOC */
+  .toc { padding: 0; }
+  .toc-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted var(--grey);
+    padding: 9pt 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+  }
+  .toc-item .num {
+    color: var(--primary-deep);
+    font-weight: 700;
+    width: 30pt;
+  }
+  .toc-item .title { flex: 1; color: var(--navy); }
+  .toc-item .page { color: var(--grey-text); font-style: italic; }
+
+  /* SECTIONS */
+  section.report { padding: 0; }
+  .section-header {
+    border-top: 3px solid var(--primary-deep);
+    padding-top: 6pt;
+    margin-bottom: 10pt;
+  }
+
+  /* CALLOUTS */
+  .callout {
+    background: var(--linen);
+    border-left: 3px solid var(--champagne);
+    padding: 10pt 14pt;
+    margin: 12pt 0;
+    font-style: italic;
+    color: var(--navy-soft);
+  }
+  .callout strong { color: var(--primary-deep); font-style: normal; }
+  .callout.deep {
+    background: var(--navy);
+    color: var(--cream);
+    border-left-color: var(--champagne);
+    font-style: normal;
+  }
+  .callout.deep .eyebrow { color: var(--champagne); }
+  .callout.deep strong { color: var(--champagne); }
+
+  /* STAT GRID */
+  .stat-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12pt -4pt;
+  }
+  .stat {
+    flex: 0 0 23%;
+    margin: 4pt 1%;
+    background: var(--linen);
+    padding: 10pt 8pt;
+    border-top: 2px solid var(--primary-deep);
+  }
+  .stat .num {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22pt;
+    color: var(--primary-deep);
+    font-weight: 500;
+    line-height: 1;
+    display: block;
+    margin-bottom: 4pt;
+  }
+  .stat .lbl {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 7.5pt;
+    color: var(--grey-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.3;
+  }
+
+  /* TWO COLUMN */
+  .two-col {
+    column-count: 2;
+    column-gap: 14pt;
+    margin: 8pt 0;
+  }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10pt 0;
+    font-size: 9.5pt;
+  }
+  th, td {
+    text-align: left;
+    padding: 7pt 8pt;
+    border-bottom: 1px solid var(--grey);
+    vertical-align: top;
+  }
+  th {
+    background: var(--linen);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--primary-deep);
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-deep);
+  }
+  td.num { font-family: 'Cormorant Garamond', Georgia, serif; color: var(--primary-deep); font-weight: 500; }
+
+  /* SWOT */
+  .swot {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12pt -4pt;
+  }
+  .swot-cell {
+    flex: 0 0 48%;
+    margin: 4pt 1%;
+    padding: 14pt;
+    color: var(--cream);
+  }
+  .swot-cell h3 { color: var(--cream); font-size: 18pt; margin-bottom: 8pt; }
+  .swot-cell .eyebrow { color: rgba(250,247,242,0.7); }
+  .swot-cell ul { padding-left: 14pt; }
+  .swot-cell li { margin-bottom: 5pt; font-size: 9.5pt; line-height: 1.45; }
+  .swot-s { background: linear-gradient(160deg, #2A8A98 0%, #1F6F7B 100%); }
+  .swot-w { background: linear-gradient(160deg, #C8AC8A 0%, #A88F6F 100%); color: var(--navy); }
+  .swot-w h3 { color: var(--navy); } .swot-w .eyebrow { color: rgba(28,43,58,0.7); }
+  .swot-o { background: linear-gradient(160deg, #1C2B3A 0%, #2D3F52 100%); }
+  .swot-t { background: linear-gradient(160deg, #6B4F3E 0%, #4D3A2D 100%); }
+
+  /* BAR CHART */
+  .bar-chart { margin: 12pt 0; }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6pt;
+    font-size: 9pt;
+  }
+  .bar-row .lbl { flex: 0 0 110pt; }
+  .bar-row .bar-bg { flex: 1; margin: 0 6pt; }
+  .bar-row .val { flex: 0 0 70pt; }
+  .bar-row .lbl { color: var(--navy); font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9pt; }
+  .bar-row .bar-bg {
+    height: 14pt;
+    background: var(--grey);
+    position: relative;
+    border-radius: 1pt;
+  }
+  .bar-row .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--mist-teal) 0%, var(--primary-deep) 100%);
+    border-radius: 1pt;
+  }
+  .bar-row .val {
+    text-align: right;
+    color: var(--primary-deep);
+    font-weight: 600;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* SOURCES */
+  .sources {
+    font-size: 8.5pt;
+    color: var(--grey-text);
+    line-height: 1.5;
+  }
+  .sources li { margin-bottom: 4pt; }
+
+  /* DIVIDER */
+  .divider {
+    text-align: center;
+    color: var(--champagne);
+    margin: 14pt 0;
+    font-size: 14pt;
+    letter-spacing: 0.5em;
+  }
+
+  /* SVG containers */
+  .figure {
+    background: var(--cream);
+    padding: 6pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+  }
+  .figure .caption {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 8pt;
+    color: var(--grey-text);
+    font-style: italic;
+    margin-top: 4pt;
+    text-align: center;
+  }
+  .figure .fig-title {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--primary-deep);
+    font-weight: 700;
+    margin-bottom: 4pt;
+    text-align: center;
+  }
+
+  /* PRICING SCALE */
+  .price-scale { display: flex; align-items: center; padding: 6pt 0; border-bottom: 1px dotted var(--grey); font-size: 9pt; }
+  .price-scale .tier { flex: 0 0 60pt; }
+  .price-scale .desc { flex: 1; padding: 0 8pt; }
+  .price-scale .pr { flex: 0 0 90pt; }
+  .price-scale .tier { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 700; color: var(--primary-deep); font-size: 8pt; text-transform: uppercase; letter-spacing: 0.08em; }
+  .price-scale .desc { color: var(--navy); }
+  .price-scale .pr { font-family: 'Cormorant Garamond', Georgia, serif; color: var(--primary-deep); text-align: right; font-weight: 500; }
+
+  blockquote {
+    border-left: 3px solid var(--champagne);
+    padding: 4pt 0 4pt 12pt;
+    margin: 8pt 0;
+    font-style: italic;
+    color: var(--navy-soft);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 12pt;
+  }
+  blockquote cite { display: block; font-size: 9pt; color: var(--grey-text); margin-top: 4pt; font-style: normal; font-family: 'Helvetica Neue', Arial, sans-serif; }
+</style>
+</head>
+<body>
+
+<!-- ========== COVER ========== -->
+<div class="cover">
+  <div class="cover-inner">
+    <div>
+      <div class="mark">U-CALM · Strategic Intelligence</div>
+    </div>
+    <div>
+      <h1>The U-CALM Corridor</h1>
+      <p class="sub">A 360° read on the UHNW concierge market, the wealth migration of 2025–26, and what it means for the house and its aviation line.</p>
+    </div>
+    <div class="meta">
+      <div><strong>Prepared for</strong> Jean-Pierre Engele</div>
+      <div><strong>Subject</strong> Lugano · Milan · London — the corridor and its market</div>
+      <div><strong>Date</strong> 12 May 2026</div>
+      <div><strong>Classification</strong> Internal — strategic baseline</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== TOC ========== -->
+<section class="report">
+  <div class="eyebrow">Contents</div>
+  <h2>What this report holds.</h2>
+  <p class="lead">A consolidated view of the wealth landscape U-CALM operates in, drawn from the largest peacetime migration of private wealth on record and from primary observation by those serving it.</p>
+  <div class="toc">
+    <div class="toc-item"><span class="num">00</span><span class="title">Executive summary</span><span class="page">3</span></div>
+    <div class="toc-item"><span class="num">I</span><span class="title">The wealth migration of 2025–26</span><span class="page">5</span></div>
+    <div class="toc-item"><span class="num">II</span><span class="title">The three-cities corridor — Lugano · Milan · London</span><span class="page">8</span></div>
+    <div class="toc-item"><span class="num">III</span><span class="title">The concierge industry — sizing, players, structure</span><span class="page">11</span></div>
+    <div class="toc-item"><span class="num">IV</span><span class="title">The aviation crossover</span><span class="page">14</span></div>
+    <div class="toc-item"><span class="num">V</span><span class="title">Client segmentation and demand signals</span><span class="page">16</span></div>
+    <div class="toc-item"><span class="num">VI</span><span class="title">SWOT — U-CALM and U-Calm Aviation</span><span class="page">18</span></div>
+    <div class="toc-item"><span class="num">VII</span><span class="title">Strategic recommendations</span><span class="page">20</span></div>
+    <div class="toc-item"><span class="num">VIII</span><span class="title">Pricing and operational framework</span><span class="page">22</span></div>
+    <div class="toc-item"><span class="num">IX</span><span class="title">Sources and methodology</span><span class="page">24</span></div>
+  </div>
+</section>
+
+<!-- ========== EXECUTIVE SUMMARY ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">00 · Executive summary</div>
+    <h2>The thesis, in one page.</h2>
+  </div>
+  <p class="lead">U-CALM has positioned itself, before the data made it obvious, in the path of the largest peacetime movement of private wealth on record.</p>
+
+  <div class="stat-grid">
+    <div class="stat"><span class="num">142,000</span><span class="lbl">Millionaires relocated across borders in 2025 (Henley)</span></div>
+    <div class="stat"><span class="num">−16,500</span><span class="lbl">Net UK millionaire outflow in 2025</span></div>
+    <div class="stat"><span class="num">+3,600</span><span class="lbl">New HNWI arrivals in Italy in 2025</span></div>
+    <div class="stat"><span class="num">€300k</span><span class="lbl">Italian flat-tax annual cap (from 1 Jan 2026)</span></div>
+  </div>
+
+  <h3>Five things this report establishes.</h3>
+  <p><strong>One.</strong> The UK is shedding HNWI population at an unprecedented rate following the 6 April 2025 abolition of the non-dom regime. The wealth is flowing primarily to Italy, Switzerland, the UAE and the United States. Within Europe, Milan is the largest single beneficiary; Lugano and Ticino are quietly expanding.</p>
+  <p><strong>Two.</strong> The Lugano–Milan–London corridor U-CALM has chosen as its home geography sits inside the largest aviation traffic triangle in Europe (35% of European charter activity flows through London–Paris–Geneva, of which Lugano sits adjacent and Milan is one of the busiest spokes).</p>
+  <p><strong>Three.</strong> The concierge industry serving these UHNWIs is dominated by 25-year-old multinational platforms (Quintessentially, Ten, John Paul Group) and one closer peer (Knightsbridge Circle — London-only, invitation-only, $800m average client net worth). The structural gap is the small, regional, multi-decade-relationship concierge house with native multilingual coverage — the brief U-CALM occupies.</p>
+  <p><strong>Four.</strong> Demand inside the corridor is concentrated in foreign-wealth families (90%+ of UHNWI concierge spend); domestic generational wealth ("old money") is a small and price-sensitive segment. This is decisive for who U-CALM should target and how.</p>
+  <p><strong>Five.</strong> Three demand lines are growing materially faster than the base concierge market: aviation crossover (9.89% CAGR Europe charter), executive protection (London street-crime + general security anxiety), and adjacent UK-schooling concierge (six-figure tutor packages routine). U-Calm Aviation already covers two of these (aviation, protection). The third (school placements) sits as a possible adjacency.</p>
+
+  <div class="callout deep">
+    <div class="eyebrow">Strategic conclusion</div>
+    <strong>U-CALM's brand position is not a niche bet against a declining market.</strong> It is a quiet, well-timed entry into the fastest-moving private-wealth corridor in Europe, with a voice register that is structurally underserved at this scale. The remaining work is operational — getting in front of the right introducers, holding pricing discipline, and resisting the multinational-platform pull toward over-promising at the expense of restraint.
+  </div>
+</section>
+
+<!-- ========== PART I — WEALTH MIGRATION ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part I</div>
+    <h2>The wealth migration of 2025–26.</h2>
+  </div>
+  <p class="lead">In 2025, 142,000 millionaires moved their primary residence across an international border — the largest peacetime migration of private wealth on record. Henley &amp; Partners forecasts 165,000 in 2026.</p>
+
+  <h3>What is moving, and why.</h3>
+  <p>The 2025 figure represents not just the wealthy choosing to relocate for lifestyle reasons but a structural movement responding to three converging policy shifts. The UK's abolition of the non-dom regime on 6 April 2025 — replaced by a four-year Foreign Income and Gains relief that ends in residence-based taxation thereafter — has been the single largest push factor. The Henley analysis attributes roughly $91.8 billion in liquid assets to the UK outflow alone. Switzerland's continued forfait fiscal regime, Italy's flat-tax-for-new-residents (€200,000/year through end-2025, €300,000 from 1 January 2026), Portugal's selective NHR successor, and the UAE's zero-income-tax framework form the principal magnetic pull.</p>
+
+  <div class="figure no-break">
+    <div class="fig-title">Figure 1 · Where UK and global wealth is flowing — 2025</div>
+    <svg viewBox="0 0 700 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <defs>
+        <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <polygon points="0,0 10,3 0,6" fill="#2A8A98"/>
+        </marker>
+        <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+          <polygon points="0,0 10,3 0,6" fill="#C8AC8A"/>
+        </marker>
+      </defs>
+      <rect x="0" y="0" width="700" height="360" fill="#F3EFE8"/>
+
+      <!-- Origin: UK -->
+      <circle cx="180" cy="100" r="42" fill="#1C2B3A" opacity="0.9"/>
+      <text x="180" y="98" text-anchor="middle" fill="#FAF7F2" font-family="Georgia" font-size="14">UK</text>
+      <text x="180" y="115" text-anchor="middle" fill="#C8AC8A" font-family="Helvetica" font-size="9">−16,500 HNWI</text>
+
+      <!-- Destinations -->
+      <circle cx="430" cy="60" r="38" fill="#2A8A98"/>
+      <text x="430" y="58" text-anchor="middle" fill="#FAF7F2" font-family="Georgia" font-size="13">Italy</text>
+      <text x="430" y="72" text-anchor="middle" fill="#FAF7F2" font-family="Helvetica" font-size="8">+3,600</text>
+
+      <circle cx="540" cy="130" r="40" fill="#2A8A98"/>
+      <text x="540" y="128" text-anchor="middle" fill="#FAF7F2" font-family="Georgia" font-size="13">UAE</text>
+      <text x="540" y="142" text-anchor="middle" fill="#FAF7F2" font-family="Helvetica" font-size="8">+9,800</text>
+
+      <circle cx="600" cy="210" r="38" fill="#1F6F7B"/>
+      <text x="600" y="208" text-anchor="middle" fill="#FAF7F2" font-family="Georgia" font-size="13">USA</text>
+      <text x="600" y="222" text-anchor="middle" fill="#FAF7F2" font-family="Helvetica" font-size="8">+7,500</text>
+
+      <circle cx="420" cy="250" r="36" fill="#7FB8C2"/>
+      <text x="420" y="248" text-anchor="middle" fill="#1C2B3A" font-family="Georgia" font-size="13">Switzerland</text>
+      <text x="420" y="262" text-anchor="middle" fill="#1C2B3A" font-family="Helvetica" font-size="8">+1,500</text>
+
+      <circle cx="290" cy="290" r="32" fill="#C8AC8A"/>
+      <text x="290" y="288" text-anchor="middle" fill="#1C2B3A" font-family="Georgia" font-size="12">Portugal</text>
+      <text x="290" y="302" text-anchor="middle" fill="#1C2B3A" font-family="Helvetica" font-size="8">+1,400</text>
+
+      <!-- Arrows -->
+      <path d="M 215 87 Q 320 60 392 60" stroke="#2A8A98" stroke-width="3" fill="none" marker-end="url(#arrow1)"/>
+      <path d="M 220 105 Q 380 115 502 130" stroke="#2A8A98" stroke-width="2.5" fill="none" marker-end="url(#arrow1)"/>
+      <path d="M 220 120 Q 410 200 562 210" stroke="#2A8A98" stroke-width="2.5" fill="none" marker-end="url(#arrow1)"/>
+      <path d="M 200 138 Q 310 220 384 250" stroke="#2A8A98" stroke-width="2" fill="none" marker-end="url(#arrow1)"/>
+      <path d="M 185 142 Q 230 230 260 285" stroke="#C8AC8A" stroke-width="1.5" fill="none" marker-end="url(#arrow2)"/>
+
+      <!-- Title strip -->
+      <text x="20" y="335" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">Net HNWI relocation flows, 2025. Sized roughly to volume. UK = principal source; Italy &amp; Switzerland = principal European destinations.</text>
+    </svg>
+    <div class="caption">Source: Henley &amp; Partners Private Wealth Migration Report 2025</div>
+  </div>
+
+  <h3>The composition of the move.</h3>
+  <p>The departing UK cohort is not predominantly British. It is the long-resident international wealth that established UK domicile under the non-dom rules over the previous three decades — Russian, Indian, Middle Eastern, Eastern European, and increasingly Chinese families. Their assets are typically diversified across multiple jurisdictions already; their lifestyle infrastructure (Mayfair flat, Cotswolds country house, children at British boarding schools) does not necessarily move with them. The result is a class of UHNWIs who now hold European residency in Milan, Lugano, Monaco, Lisbon or Athens, but retain operational ties to London. They fly between residences. They keep two or three concierge files. They want one voice across them.</p>
+
+  <p>This is the exact member profile U-CALM was built to serve. The brand's "held in the same English voice across three cities" positioning is not aspirational copy; it describes the operational need of an addressable population in the tens of thousands.</p>
+
+  <div class="callout">
+    The departing London non-dom is not an anomaly. Henley names <strong>165,000 projected millionaire relocations for 2026</strong>, with Italy, the UAE, Switzerland and the US as the leading destinations and the UK as the largest single source.
+  </div>
+</section>
+
+<!-- ========== PART II — THREE CITIES ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part II</div>
+    <h2>The three-cities corridor.</h2>
+  </div>
+  <p class="lead">Lugano, Milan and London do not sit accidentally together. They form a single living corridor for a specific kind of family — English-speaking, internationally mobile, with multiple residences, fluent in moving across tax jurisdictions, and unwilling to deal with a different concierge brand in each city.</p>
+
+  <div class="figure no-break">
+    <div class="fig-title">Figure 2 · The U-CALM corridor</div>
+    <svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <rect x="0" y="0" width="700" height="320" fill="#F3EFE8"/>
+
+      <!-- corridor band -->
+      <path d="M 530 90 Q 380 145 280 180 Q 220 200 130 240" stroke="#C8AC8A" stroke-width="20" fill="none" opacity="0.25"/>
+      <path d="M 530 90 Q 380 145 280 180 Q 220 200 130 240" stroke="#2A8A98" stroke-width="2" fill="none" stroke-dasharray="4,3"/>
+
+      <!-- London -->
+      <circle cx="130" cy="240" r="48" fill="#1C2B3A"/>
+      <text x="130" y="232" text-anchor="middle" fill="#FAF7F2" font-family="Georgia" font-size="16">London</text>
+      <text x="130" y="250" text-anchor="middle" fill="#C8AC8A" font-family="Helvetica" font-size="9">4,750 UHNWI</text>
+      <text x="130" y="264" text-anchor="middle" fill="#7FB8C2" font-family="Helvetica" font-size="8">FBO: Farnborough · City · Biggin · Luton</text>
+
+      <!-- Lugano -->
+      <circle cx="380" cy="155" r="42" fill="#2A8A98"/>
+      <text x="380" y="148" text-anchor="middle" fill="#FAF7F2" font-family="Georgia" font-size="16">Lugano</text>
+      <text x="380" y="164" text-anchor="middle" fill="#C8AC8A" font-family="Helvetica" font-size="9">Desk · base</text>
+      <text x="380" y="178" text-anchor="middle" fill="#FAF7F2" font-family="Helvetica" font-size="8">FBO: LSZA</text>
+
+      <!-- Milan -->
+      <circle cx="530" cy="90" r="44" fill="#1F6F7B"/>
+      <text x="530" y="82" text-anchor="middle" fill="#FAF7F2" font-family="Georgia" font-size="16">Milan</text>
+      <text x="530" y="100" text-anchor="middle" fill="#C8AC8A" font-family="Helvetica" font-size="9">+17 billionaires</text>
+      <text x="530" y="114" text-anchor="middle" fill="#FAF7F2" font-family="Helvetica" font-size="8">115,000 millionaires</text>
+
+      <!-- distance markers -->
+      <text x="270" y="200" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">~870 km · 1h flight</text>
+      <text x="450" y="120" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">~80 km · 25min</text>
+
+      <!-- legend -->
+      <text x="20" y="305" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">The desk is in Lugano. Milan is 25 minutes by helicopter or 1 hour by car. London is 1 hour by Light/Mid-size jet from LSZA. The corridor is held by the same English-speaking specialists, in the same file.</text>
+    </svg>
+  </div>
+
+  <h3>Lugano · Ticino.</h3>
+  <p>Lugano is Switzerland's third banking centre after Zürich and Geneva. The city sits in Italian-speaking Ticino, with a culture that bridges Swiss governance and Italian sensibility. The forfait fiscal (lump-sum) tax regime in Ticino sets a cantonal minimum of CHF 400,000 with effective rates of 13–17%; the 2026 federal floor is CHF 435,000. Lugano-Agno (LSZA) is the only Swiss city aerodrome with a private FBO inside its own valley, providing direct light- and mid-jet access from London, Paris, Frankfurt, Madrid in a single hour. Henley names Lugano specifically as one of the "expanding wealth hubs" alongside Zug, Dubai, Florida, Lisbon, Milan, Athens Riviera and St Julian's.</p>
+
+  <p>What this means for U-CALM: the desk's home is in a tax-attractive, banking-rich, Italian-speaking-cultured city that is itself a destination for foreign wealth. The Italian-speaking specialist coverage is the deepest of any concierge house in the corridor. No London competitor can replicate this geographic-and-cultural base.</p>
+
+  <h3>Milan · Italy.</h3>
+  <p>Milan has been the largest single beneficiary of the post-2025 wealth migration. Named relocators in 2025 include Richard Gnodde (vice-chair Goldman Sachs), Nassef Sawiris (Egypt's richest man, Aston Villa co-owner), Bart Becht (former Reckitt Benckiser CEO). The city now hosts an estimated 17 billionaires and 115,000 millionaires — close to London and Paris on wealth density. The flat-tax regime — €200,000/year through end-2025, €300,000 from 1 January 2026 — has anchored a long-tail population grandfathered into the lower rate for the full 15-year term.</p>
+
+  <p>What this means for U-CALM: the Milan English-speaking community is large, growing, recently relocated from London, and underserved by quiet concierge houses that hold flights and ground together. Direct calls to Milan answered in English by a named specialist — the position the brand explicitly carved on the Three Cities page — is a distinctive offer in this segment.</p>
+
+  <h3>London · the recomposition.</h3>
+  <p>London is not dying. Knight Frank's 2025 Wealth Report shows London prime residential prices broadly stable through 2024–25, and dollar-denominated housing has become more accessible to incoming Middle Eastern and Asian buyers (a $1m budget now buys 43 m² in London, up from 23 m² a decade ago). London still hosts the densest UHNWI infrastructure in Europe — legal, banking, art-market, schooling, social-season events — and remains the operational hub members fly into for boards, dinners and family schools.</p>
+
+  <p>What this means for U-CALM: the London leg of the corridor is not a residence offer; it is a holding offer. Mayfair concierge integration via the parent house, Farnborough / London City / Biggin Hill / Luton for arrivals, helicopter into Battersea on request — the Aviation site language already describes this correctly.</p>
+
+  <div class="figure no-break">
+    <div class="fig-title">Figure 3 · UHNWI density by city, 2025</div>
+    <div class="bar-chart">
+      <div class="bar-row"><span class="lbl">London</span><span class="bar-bg"><span class="bar-fill" style="width:100%"></span></span><span class="val">4,750</span></div>
+      <div class="bar-row"><span class="lbl">Zürich</span><span class="bar-bg"><span class="bar-fill" style="width:37%"></span></span><span class="val">1,775</span></div>
+      <div class="bar-row"><span class="lbl">Geneva</span><span class="bar-bg"><span class="bar-fill" style="width:25%"></span></span><span class="val">~1,200</span></div>
+      <div class="bar-row"><span class="lbl">Milan (HNW total)</span><span class="bar-bg"><span class="bar-fill" style="width:85%; background:linear-gradient(90deg,#C8AC8A,#A88F6F);"></span></span><span class="val">~115k</span></div>
+      <div class="bar-row"><span class="lbl">Lugano (banking)</span><span class="bar-bg"><span class="bar-fill" style="width:20%"></span></span><span class="val">expanding</span></div>
+    </div>
+    <div class="caption">UHNWI = $30M+. Milan figure is total HNW; not directly comparable to UHNWI columns but indicative of wealth density. Source: Altrata World Ultra Wealth 2025, Knight Frank, Henley.</div>
+  </div>
+</section>
+
+<!-- ========== PART III — CONCIERGE INDUSTRY ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part III</div>
+    <h2>The concierge industry — sizing, players, structure.</h2>
+  </div>
+  <p class="lead">A market growing at 8.6–8.7% CAGR, structurally consolidating around a handful of multinational platforms, with one invitation-only peer and a wide-open gap for the regional multi-decade-relationship house.</p>
+
+  <div class="stat-grid">
+    <div class="stat"><span class="num">$1.45bn</span><span class="lbl">Global luxury concierge market, 2025 (membership-defined)</span></div>
+    <div class="stat"><span class="num">8.7%</span><span class="lbl">Forecast CAGR through 2030</span></div>
+    <div class="stat"><span class="num">15.5%</span><span class="lbl">London concierge demand growth (Knight Frank 2023 → 2024)</span></div>
+    <div class="stat"><span class="num">510,810</span><span class="lbl">Global UHNWI population, H1 2025 (+31% to 2030)</span></div>
+  </div>
+
+  <h3>The five players that matter, and where they sit.</h3>
+
+  <table>
+    <thead>
+      <tr><th>House</th><th>Position</th><th>Pricing</th><th>Where U-CALM differs</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Quintessentially</strong><br><span style="font-size:8pt;color:#5C6B7A">Founded 2000 · 60+ offices · 1,500 specialists</span></td>
+        <td>Mass-luxury membership platform. Average client net worth $36m.</td>
+        <td class="num">£7,000–£27,500<br>+ VAT / year</td>
+        <td>Multi-relationship factory, not a house. No personal specialist, no file continuity. Voice is corporate-luxury.</td>
+      </tr>
+      <tr>
+        <td><strong>Ten Lifestyle Group</strong><br><span style="font-size:8pt;color:#5C6B7A">PLC · B2B2C model, sold to banks/card programmes</span></td>
+        <td>Outsourced concierge desk behind premium credit cards.</td>
+        <td class="num">Bundled in card fee</td>
+        <td>Channel partner, not a member relationship. Often what members assume "concierge" means until they have a real one.</td>
+      </tr>
+      <tr>
+        <td><strong>John Paul Group</strong><br><span style="font-size:8pt;color:#5C6B7A">Acquired by Accor 2016 · 1,000 concierges · 12 offices</span></td>
+        <td>Hotel-group adjacency. Travel-led concierge.</td>
+        <td class="num">Mostly B2B</td>
+        <td>Hotel-shaped service register. Less suited to multi-residence multi-jurisdiction members.</td>
+      </tr>
+      <tr>
+        <td><strong>Knightsbridge Circle</strong><br><span style="font-size:8pt;color:#5C6B7A">Founded 2012 · &lt; 60 members · invitation-only</span></td>
+        <td>Closest spiritual peer. Avg client net worth $800m.</td>
+        <td class="num">up to $50,000<br>/ year</td>
+        <td>London-only. Centred on access (events, restaurants). U-CALM is rooted in lived residences across three cities, not London access.</td>
+      </tr>
+      <tr>
+        <td><strong>U-CALM</strong><br><span style="font-size:8pt;color:#5C6B7A">Founded 2013 Lugano · introduction only · undisclosed scale</span></td>
+        <td>Multi-decade-relationship house. English voice across Lugano-Milan-London. Aviation, ground, protection on one file.</td>
+        <td class="num">Bespoke<br>(not published)</td>
+        <td>Only house that holds the Italian-speaking-cultured Lugano base + English specialist coverage across the Italian flat-tax cohort.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="figure no-break">
+    <div class="fig-title">Figure 4 · Competitive positioning — scale × intimacy</div>
+    <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <rect x="0" y="0" width="700" height="400" fill="#F3EFE8"/>
+      <!-- axes -->
+      <line x1="80" y1="350" x2="650" y2="350" stroke="#1C2B3A" stroke-width="1.5"/>
+      <line x1="80" y1="50" x2="80" y2="350" stroke="#1C2B3A" stroke-width="1.5"/>
+      <!-- axis labels -->
+      <text x="365" y="380" text-anchor="middle" fill="#1C2B3A" font-family="Helvetica" font-size="10" font-weight="bold">SCALE  →  number of members served</text>
+      <text x="40" y="200" text-anchor="middle" fill="#1C2B3A" font-family="Helvetica" font-size="10" font-weight="bold" transform="rotate(-90, 40, 200)">RELATIONSHIP DEPTH  →</text>
+
+      <!-- quadrant labels -->
+      <text x="200" y="80" fill="#5C6B7A" font-family="Helvetica" font-size="9" font-style="italic">small house · deep relationship</text>
+      <text x="430" y="80" fill="#5C6B7A" font-family="Helvetica" font-size="9" font-style="italic">platform · still personal</text>
+      <text x="200" y="335" fill="#5C6B7A" font-family="Helvetica" font-size="9" font-style="italic">boutique · transactional</text>
+      <text x="430" y="335" fill="#5C6B7A" font-family="Helvetica" font-size="9" font-style="italic">mass-market · brand-only</text>
+
+      <!-- Players -->
+      <!-- U-CALM -->
+      <circle cx="160" cy="120" r="22" fill="#2A8A98"/>
+      <text x="160" y="124" text-anchor="middle" fill="#FAF7F2" font-family="Georgia" font-size="9">U-CALM</text>
+
+      <!-- Knightsbridge Circle -->
+      <circle cx="200" cy="100" r="18" fill="#1C2B3A"/>
+      <text x="200" y="103" text-anchor="middle" fill="#FAF7F2" font-family="Helvetica" font-size="7">KsC</text>
+
+      <!-- Quintessentially -->
+      <circle cx="510" cy="200" r="34" fill="#C8AC8A"/>
+      <text x="510" y="195" text-anchor="middle" fill="#1C2B3A" font-family="Helvetica" font-size="9">Quint-</text>
+      <text x="510" y="208" text-anchor="middle" fill="#1C2B3A" font-family="Helvetica" font-size="9">essentially</text>
+
+      <!-- Ten -->
+      <circle cx="590" cy="290" r="32" fill="#7FB8C2"/>
+      <text x="590" y="294" text-anchor="middle" fill="#1C2B3A" font-family="Helvetica" font-size="9">Ten</text>
+
+      <!-- John Paul -->
+      <circle cx="430" cy="260" r="22" fill="#1F6F7B" opacity="0.7"/>
+      <text x="430" y="264" text-anchor="middle" fill="#FAF7F2" font-family="Helvetica" font-size="8">John Paul</text>
+
+      <!-- BIG ARROW pointing to gap -->
+      <text x="105" y="170" fill="#1F6F7B" font-family="Helvetica" font-size="8" font-style="italic">The U-CALM</text>
+      <text x="105" y="183" fill="#1F6F7B" font-family="Helvetica" font-size="8" font-style="italic">space:</text>
+      <text x="105" y="196" fill="#1F6F7B" font-family="Helvetica" font-size="8" font-style="italic">small + deep +</text>
+      <text x="105" y="209" fill="#1F6F7B" font-family="Helvetica" font-size="8" font-style="italic">multi-city.</text>
+
+      <!-- annotations -->
+      <text x="245" y="103" fill="#5C6B7A" font-family="Helvetica" font-size="7" font-style="italic">London-only</text>
+      <text x="558" y="195" fill="#5C6B7A" font-family="Helvetica" font-size="7" font-style="italic">60+ offices</text>
+    </svg>
+    <div class="caption">Bubble size approximately to operational scale. Knightsbridge Circle (KsC) is the closest spiritual peer; the white space above and left of it is where U-CALM's Three-Cities-corridor positioning sits.</div>
+  </div>
+
+  <h3>Why this matters strategically.</h3>
+  <p>The dominant industry players have all chosen scale. Their economics depend on it — Quintessentially's $202m turnover is across 60+ offices and many thousand members; even Knightsbridge Circle, the most intimate of the major peers, is London-centric and event-led. None of them is positioned to be the named English-speaking concierge for an Italian-resident family whose preferences and household sit on a single dossier the desk has held for fifteen years. That space is structurally underserved.</p>
+
+  <p>The risk is not competitive displacement. The risk is being mistaken for one of the platforms in a member's mind. The brand voice work U-CALM has invested in — "real wealth whispers", restraint as a service, single statement, single voice, named specialist — is the explicit cure for that confusion.</p>
+</section>
+
+<!-- ========== PART IV — AVIATION ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part IV</div>
+    <h2>The aviation crossover.</h2>
+  </div>
+  <p class="lead">UHNWIs do not separate aviation from concierge. They ask the person who arranges the dinner to arrange the flight. The European charter market is growing at 9.89% CAGR, and the membership-card model has matured into the dominant access pattern at the U-CALM member tier.</p>
+
+  <div class="figure no-break">
+    <div class="fig-title">Figure 5 · Europe charter jet services market</div>
+    <svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <rect x="0" y="0" width="700" height="250" fill="#F3EFE8"/>
+      <!-- axes -->
+      <line x1="80" y1="200" x2="650" y2="200" stroke="#1C2B3A" stroke-width="1"/>
+      <line x1="80" y1="40" x2="80" y2="200" stroke="#1C2B3A" stroke-width="1"/>
+      <!-- ticks -->
+      <text x="60" y="200" text-anchor="end" fill="#5C6B7A" font-family="Helvetica" font-size="8">$0</text>
+      <text x="60" y="160" text-anchor="end" fill="#5C6B7A" font-family="Helvetica" font-size="8">$2bn</text>
+      <text x="60" y="120" text-anchor="end" fill="#5C6B7A" font-family="Helvetica" font-size="8">$4bn</text>
+      <text x="60" y="80" text-anchor="end" fill="#5C6B7A" font-family="Helvetica" font-size="8">$6bn</text>
+      <text x="60" y="46" text-anchor="end" fill="#5C6B7A" font-family="Helvetica" font-size="8">$8bn</text>
+
+      <!-- bars: 2025: 4.79, 2026: 5.27, 2027: 5.79, 2028: 6.36, 2029: 6.99, 2030: 7.68 -->
+      <!-- height calculation: 200 - (value/8 * 160) -->
+      <rect x="100" y="104" width="60" height="96" fill="#7FB8C2"/>
+      <text x="130" y="98" text-anchor="middle" fill="#1C2B3A" font-family="Georgia" font-size="11">$4.79</text>
+      <text x="130" y="215" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="8">2025</text>
+
+      <rect x="190" y="95" width="60" height="105" fill="#7FB8C2" opacity="0.9"/>
+      <text x="220" y="89" text-anchor="middle" fill="#1C2B3A" font-family="Georgia" font-size="11">$5.27</text>
+      <text x="220" y="215" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="8">2026</text>
+
+      <rect x="280" y="84" width="60" height="116" fill="#5DA8B3"/>
+      <text x="310" y="78" text-anchor="middle" fill="#1C2B3A" font-family="Georgia" font-size="11">$5.79</text>
+      <text x="310" y="215" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="8">2027</text>
+
+      <rect x="370" y="73" width="60" height="127" fill="#2A8A98"/>
+      <text x="400" y="67" text-anchor="middle" fill="#1C2B3A" font-family="Georgia" font-size="11">$6.36</text>
+      <text x="400" y="215" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="8">2028</text>
+
+      <rect x="460" y="60" width="60" height="140" fill="#2A8A98"/>
+      <text x="490" y="54" text-anchor="middle" fill="#1C2B3A" font-family="Georgia" font-size="11">$6.99</text>
+      <text x="490" y="215" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="8">2029</text>
+
+      <rect x="550" y="46" width="60" height="154" fill="#1F6F7B"/>
+      <text x="580" y="40" text-anchor="middle" fill="#1C2B3A" font-family="Georgia" font-size="11">$7.68</text>
+      <text x="580" y="215" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="8">2030</text>
+
+      <!-- trend line -->
+      <path d="M 130 104 L 220 95 L 310 84 L 400 73 L 490 60 L 580 46" stroke="#C8AC8A" stroke-width="2" fill="none" stroke-dasharray="3,2"/>
+
+      <text x="365" y="235" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">9.89% CAGR projected. London–Paris–Geneva "Golden Triangle" = 35% of European charter volume.</text>
+    </svg>
+    <div class="caption">Source: Mordor Intelligence, Europe Charter Jet Services Market 2025–2030</div>
+  </div>
+
+  <h3>The membership-card economy and where U-Calm Aviation sits in it.</h3>
+  <p>The dominant access pattern at the U-CALM member tier is no longer fractional ownership; it is the membership / jet-card model. Two reference points define the upper end of the market:</p>
+
+  <table>
+    <thead>
+      <tr><th>Provider</th><th>Entry programme</th><th>Annual minimum</th><th>Hourly rate (mid-size)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>NetJets Europe</strong></td><td>Phenom 300 / Citation XLS jet card</td><td class="num">€212,000 / 25 hours</td><td class="num">~€8,500</td></tr>
+      <tr><td><strong>VistaJet</strong></td><td>VJ25 (Challenger 350)</td><td class="num">$130,000 minimum<br>(3-year commit)</td><td class="num">~$15,000</td></tr>
+    </tbody>
+  </table>
+
+  <p>U-Calm Aviation's offer sits adjacent to but distinct from these. The brand does not own aircraft. It does not require commitment-tier deposits. Its value is not access-as-product but the integration of the flight with the rest of the member's day — the car at wheels-down, the housekeeper informed since Wednesday, the restaurant table held, the FBO and ground concurrent rather than sequential. The pricing reference is not "how do we match NetJets per hour" but "what is the coordination premium worth when a member's Friday-to-Tuesday is held end-to-end by one specialist."</p>
+
+  <h3>The Mediterranean charter expansion.</h3>
+  <p>2025 saw private jet flights from Nice and Palma up 137% and flights from London/Farnborough/Samedan also up 137%, driven by Mediterranean summer and Alpine winter demand. This is the U-Calm Aviation operational geography precisely — Samedan (LSZS) is the St Moritz aerodrome the brand explicitly carved out as a winter-season specialism; Nice (LFMN) is the Monaco operational airport. The growth signal validates the destination-management desk's signature-destination coverage.</p>
+
+  <div class="callout">
+    Hutchinson's "chartered a private jet for a dog whose owner was holidaying in France" is not an anomaly. It is a category symptom: UHNWIs increasingly treat aviation as <strong>an arm of the concierge relationship</strong>, not as a separate broker transaction. That is precisely the thesis U-Calm Aviation is built on.
+  </div>
+</section>
+
+<!-- ========== PART V — DEMAND SIGNALS ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part V</div>
+    <h2>Client segmentation and demand signals.</h2>
+  </div>
+  <p class="lead">The most strategically important finding from the entire market read: foreign wealth pays without negotiating; domestic generational wealth is a small and price-sensitive segment. This determines who U-CALM should target, and how.</p>
+
+  <div class="figure no-break">
+    <div class="fig-title">Figure 6 · UK UHNWI concierge client segmentation</div>
+    <svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <rect x="0" y="0" width="700" height="300" fill="#F3EFE8"/>
+
+      <!-- donut chart -->
+      <g transform="translate(150,150)">
+        <!-- 90% foreign wealth -->
+        <circle r="100" fill="none" stroke="#2A8A98" stroke-width="40" stroke-dasharray="565.5 62.8" stroke-dashoffset="0" transform="rotate(-90)"/>
+        <!-- 10% old money -->
+        <circle r="100" fill="none" stroke="#C8AC8A" stroke-width="40" stroke-dasharray="62.8 565.5" stroke-dashoffset="-565.5" transform="rotate(-90)"/>
+        <text y="0" text-anchor="middle" fill="#1C2B3A" font-family="Cormorant Garamond, Georgia" font-size="28" font-weight="500">90%</text>
+        <text y="20" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="9">foreign wealth</text>
+      </g>
+
+      <!-- legend & callouts -->
+      <g transform="translate(310, 60)">
+        <rect width="14" height="14" fill="#2A8A98"/>
+        <text x="22" y="11" fill="#1C2B3A" font-family="Helvetica" font-size="11" font-weight="bold">Foreign wealth</text>
+        <text x="22" y="28" fill="#5C6B7A" font-family="Helvetica" font-size="9">Middle Eastern royalty, Asian families,</text>
+        <text x="22" y="42" fill="#5C6B7A" font-family="Helvetica" font-size="9">overnight tech millionaires, UAE nationals,</text>
+        <text x="22" y="56" fill="#5C6B7A" font-family="Helvetica" font-size="9">post-non-dom London relocators.</text>
+        <text x="22" y="76" fill="#2A8A98" font-family="Helvetica" font-size="9" font-style="italic">Pays without negotiating.</text>
+        <text x="22" y="90" fill="#2A8A98" font-family="Helvetica" font-size="9" font-style="italic">Outlandish requests routine.</text>
+        <text x="22" y="104" fill="#2A8A98" font-family="Helvetica" font-size="9" font-style="italic">Trust + referral driven.</text>
+      </g>
+
+      <g transform="translate(310, 180)">
+        <rect width="14" height="14" fill="#C8AC8A"/>
+        <text x="22" y="11" fill="#1C2B3A" font-family="Helvetica" font-size="11" font-weight="bold">British "old money"</text>
+        <text x="22" y="28" fill="#5C6B7A" font-family="Helvetica" font-size="9">Generational UK wealth.</text>
+        <text x="22" y="42" fill="#5C6B7A" font-family="Helvetica" font-size="9">DIY ethos; reluctant to engage paid help.</text>
+        <text x="22" y="62" fill="#C8AC8A" font-family="Helvetica" font-size="9" font-style="italic">"Old money is so stingy." — A. Hutchinson</text>
+        <text x="22" y="76" fill="#C8AC8A" font-family="Helvetica" font-size="9" font-style="italic">Bargain-hunters: one person, three roles, £50k.</text>
+        <text x="22" y="90" fill="#C8AC8A" font-family="Helvetica" font-size="9" font-style="italic">Small and shrinking market.</text>
+      </g>
+    </svg>
+    <div class="caption">Distribution from Discreet Recruitment client base; consistent with industry observation. Source: Telegraph profile of A. Hutchinson, 11 May 2026.</div>
+  </div>
+
+  <h3>The five demand lines that are growing.</h3>
+
+  <div class="figure no-break">
+    <div class="fig-title">Figure 7 · Service-category growth — relative demand intensity 2024 → 2026</div>
+    <div class="bar-chart">
+      <div class="bar-row"><span class="lbl">Aviation crossover</span><span class="bar-bg"><span class="bar-fill" style="width:99%"></span></span><span class="val">9.9% CAGR</span></div>
+      <div class="bar-row"><span class="lbl">Executive protection</span><span class="bar-bg"><span class="bar-fill" style="width:92%"></span></span><span class="val">rapidly growing</span></div>
+      <div class="bar-row"><span class="lbl">UK school placement/tutor</span><span class="bar-bg"><span class="bar-fill" style="width:90%"></span></span><span class="val">300% client growth*</span></div>
+      <div class="bar-row"><span class="lbl">Destination management</span><span class="bar-bg"><span class="bar-fill" style="width:78%"></span></span><span class="val">~10%</span></div>
+      <div class="bar-row"><span class="lbl">Membership concierge</span><span class="bar-bg"><span class="bar-fill" style="width:67%"></span></span><span class="val">8.7% CAGR</span></div>
+      <div class="bar-row"><span class="lbl">Social-season access</span><span class="bar-bg"><span class="bar-fill" style="width:55%"></span></span><span class="val">stable</span></div>
+    </div>
+    <div class="caption">* Tutors International reports a 300% increase in foreign-wealth client engagement 2022–2025. Six-figure tutor packages now routine.</div>
+  </div>
+
+  <h3>Hutchinson lens: the qualitative shape of demand.</h3>
+  <blockquote>"We had to hire three nannies in a day once for a family coming over from the UAE. But not just any nannies — they had to speak French and be Montessori trained."
+    <cite>Amelia Hutchinson, Discreet Recruitment, Telegraph 11 May 2026</cite>
+  </blockquote>
+  <blockquote>"Close protection is something we're seeing more interest in. Chief product officers, security drivers, residential security — particularly in London."
+    <cite>Amelia Hutchinson, ibid.</cite>
+  </blockquote>
+  <blockquote>"[Foreign wealth] will pay six figures for tutors to get [their children] into the best schools — Eton and such. The amount of cash foreign wealth is willing to splash on turning a son into an English gentleman is remarkable."
+    <cite>Amelia Hutchinson, ibid.</cite>
+  </blockquote>
+  <p>The qualitative evidence reinforces the quantitative read. The demand is not just for "concierge" as an undifferentiated category; it is for a constellation of related services — protection, tutoring, household staff, aviation, social access — held together by trust. The U-CALM file is the connective tissue. Members do not buy the services; they buy the file and the named specialist who holds it.</p>
+</section>
+
+<!-- ========== PART VI — SWOT ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part VI</div>
+    <h2>SWOT analysis.</h2>
+  </div>
+  <p class="lead">U-CALM and U-Calm Aviation as a single house, assessed against the market read in Parts I–V. The two service lines share members and operating principles; assessing them separately would obscure the strategic picture.</p>
+
+  <div class="swot">
+    <div class="swot-cell swot-s">
+      <div class="eyebrow">S · Strengths</div>
+      <h3>What the house already holds.</h3>
+      <ul>
+        <li><strong>Geography no competitor can replicate.</strong> Lugano base + Italian-speaking culture + Swiss governance + English specialist coverage. Knightsbridge Circle is London-only; Quintessentially is everywhere-and-nowhere.</li>
+        <li><strong>13-year multi-decade-relationship track record.</strong> Founded 2013; members are by introduction; no advertising. The trust capital matches Hutchinson's "once you've done one thing well, they come back for more."</li>
+        <li><strong>Brand voice already calibrated.</strong> "Aviation, arranged." / "Consider it done." / restraint principles / "real wealth whispers" — already the register the foreign-wealth segment expects.</li>
+        <li><strong>Operational integration.</strong> One file across aviation, ground, household, protection. One statement at month-end. Distinctive vs. the typical fragmented broker-plus-concierge-plus-protection setup.</li>
+        <li><strong>Four working languages held in-house.</strong> English, Italian, French, German. Matches the linguistic shape of the foreign-wealth corridor.</li>
+        <li><strong>Aviation FBO advantage at LSZA.</strong> Only Swiss city with a private FBO in its own valley; helicopter access to Castagnola/Morcote residences in the same hour.</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell swot-w">
+      <div class="eyebrow">W · Weaknesses</div>
+      <h3>What the house must shore up.</h3>
+      <ul>
+        <li><strong>Sub-scale operationally.</strong> Without published scale numbers, members cannot benchmark; some prospects need a peer count before they engage. Solution: not publish numbers; surface client calibre through introducers instead.</li>
+        <li><strong>Founder-key-person risk.</strong> If one person is U-CALM at the introduction layer, the relationship is exposed. The desk-in-shifts model defends against this on the operational side; introducer cultivation must defend it on the new-member side.</li>
+        <li><strong>No published pricing.</strong> Brand-correct, but creates conversion friction with newer-money prospects who want a number. Solution: a discreet, introducer-mediated pricing reveal — not a public tier card.</li>
+        <li><strong>Adjacent services not yet held in-house.</strong> Tutoring, schooling concierge, female-led protection — all growth lines, currently absent. Either partner-referral now or build later.</li>
+        <li><strong>Marketing surface is narrow.</strong> Three websites, modest social presence, English-only Concierge site. The Aviation site is now four-language but the parent house Concierge site is English-only. Should be reviewed against the Italian-resident English-speaker addressable market.</li>
+        <li><strong>Operational burnout risk.</strong> Hutchinson's "run down, tired, living on phone" is the failure mode for one-person UHNW concierge. Restraint principle helps; shift-desk discipline helps; but capacity limits must be respected as the member roster grows.</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell swot-o">
+      <div class="eyebrow">O · Opportunities</div>
+      <h3>What the market is opening up.</h3>
+      <ul>
+        <li><strong>The London → Milan migration wave.</strong> The single largest addressable cohort in Europe today: long-resident London non-doms newly resident in Milan under the flat-tax regime, retaining London infrastructure. U-CALM is the only house offering English voice + Italian culture + multi-residence file.</li>
+        <li><strong>Lugano's quiet expansion as a wealth hub.</strong> Named by Henley alongside Zug, Dubai, Florida, Lisbon, Milan, Athens Riviera, St Julian's as an "expanding wealth hub". The desk's home advantage compounds with growth.</li>
+        <li><strong>Aviation as concierge integration thesis is being validated by the market.</strong> 9.89% Europe charter CAGR. Members increasingly want one person, not three. U-Calm Aviation is built for exactly this moment.</li>
+        <li><strong>School placement / tutoring as a referral adjacency.</strong> £180k tutor packages are routine. Tutors International reports 300% client growth. Partner-referral model (one specialist, like protection) could open a relationship-deepening service without building in-house.</li>
+        <li><strong>Female principals + female-led protection.</strong> Industry-wide growth segment. Underserved. U-Calm Aviation's single-protection-partner model could surface this capability quickly.</li>
+        <li><strong>Italian-speaking concierge for newly-resident Italian families.</strong> Lugano's home advantage is also a natural fit for wealthy Italian families relocating north for Swiss tax or governance reasons. A small inverse flow but high member-value.</li>
+        <li><strong>Cool CALM as a winter-season offer.</strong> Engadin/Verbier/Gstaad winter household — narrow, distinctive, on-brand. Already part of the architecture.</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell swot-t">
+      <div class="eyebrow">T · Threats</div>
+      <h3>What the market could turn against.</h3>
+      <ul>
+        <li><strong>Knightsbridge Circle moves continental.</strong> The closest spiritual peer expanding from London to Milan/Geneva/Monaco would be the single most direct competitive threat. Mitigation: own the Italian-speaking-cultured Lugano base before they arrive.</li>
+        <li><strong>Quintessentially / Ten launching a "private house" sub-brand.</strong> Mass platforms have repeatedly tried high-tier sub-brands; most fail because the voice is borrowed not native, but the cash for marketing is unlimited.</li>
+        <li><strong>Italian flat-tax regime narrows further.</strong> The €200k → €300k move in 2026 was already a tightening. Further increases could slow the Milan inflow. The grandfathering provision protects the existing addressable base for 15 years from individual entry date.</li>
+        <li><strong>Swiss forfait fiscal under political pressure.</strong> Some cantons have abolished it (Zürich, Basel-Stadt, Schaffhausen). Ticino remains supportive but is not immune to political change.</li>
+        <li><strong>UK non-dom regime partially reinstated.</strong> A Labour-government reversal under fiscal pressure is plausible. Would slow the outflow but not reverse the families that have already moved.</li>
+        <li><strong>Security incidents in target cities.</strong> A high-profile incident affecting a member or the brand's name could damage trust irrevocably. Discretion + NDA + named-only partner-panel structure is the operational defence.</li>
+        <li><strong>Operator-side consolidation in aviation.</strong> If three or four major charter operators consolidate, vetted-panel options narrow and pricing leverage shifts. Mitigation: maintain wide panel + ICAO-rated diversity.</li>
+        <li><strong>AI-mediated concierge platforms.</strong> Mass-market AI concierge will be tried at the lower tiers; will not displace the U-CALM register, but could fragment market awareness about what "concierge" means.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PART VII — RECOMMENDATIONS ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part VII</div>
+    <h2>Strategic recommendations — 12-month horizon.</h2>
+  </div>
+  <p class="lead">Three priorities the data supports, sequenced by leverage. None of them require changing what U-CALM is. All of them deepen what it already is.</p>
+
+  <h3>Priority 1 · Milan English-speaking outreach.</h3>
+  <p>The London-to-Milan migration is the single largest addressable cohort in Europe right now. The brand voice is already calibrated for them; the Three Cities page already names them. The marketing question is not whether to target them but how to surface to them.</p>
+  <p>The wrong answer is advertising (out of brand, low conversion, signal-flattening). The right answer is introducer cultivation through the three institutional layers these families touch on arrival in Milan:</p>
+  <p><strong>(a) International law firms with Italian and English desks</strong> — Studio Legale Bonelli Erede, Chiomenti, Allen &amp; Overy Milan, Bird &amp; Bird, BonelliErede with Lombardi. These firms are the first point of contact for relocating UHNWIs.<br>
+  <strong>(b) Multi-family offices and private banks in Milan and Lugano</strong> — UBS Wealth Management, Julius Bär, Pictet, BNP Paribas Wealth, plus Italian boutiques (Banca Generali Private, Banca Patrimoni). Lugano's banking-house density gives U-CALM a natural sphere of conversation here.<br>
+  <strong>(c) Real-estate advisers</strong> handling the prime-residential side of relocations — Knight Frank Milan, Engel &amp; Völkers Lugano, Italy Sotheby's. Members close the property before they engage the concierge.</p>
+  <p>Action: a small, named, in-person introducer programme. Three lunches per quarter in Milan and Lugano. Not a CRM. Not a campaign. Three people, met properly, who would refer the right kind of member.</p>
+
+  <h3>Priority 2 · The Italian-speaking specialist deepening.</h3>
+  <p>Ticino's Italian-speaking culture is U-CALM's home advantage no London competitor can replicate. The Aviation site already surfaces this on the Three Cities and Team pages. The next move is deepening the in-house Italian-speaking team and the named-fixer network across Italian destinations (Forte dei Marmi, Lake Como, Portofino, Cortina, Capri, Rome).</p>
+  <p>Action: review the in-house Italian-speaking named-specialist coverage. If there is one Italian-speaking specialist on the desk, there should be two by end of 2026 — one Lugano-based, one Milan-based or visiting weekly. Same for the named-fixer roster in the four most-frequented Italian destinations.</p>
+
+  <h3>Priority 3 · Pricing review and member-tier discipline.</h3>
+  <p>The market clears at meaningful annual numbers. Knightsbridge Circle starts at $25,000 and reaches $50,000. Quintessentially's Elite tier sits at £27,500 + VAT. The membership-card aviation programmes start at €130,000–€212,000. U-CALM does not publish tiers, and the founding refusals support this — but the internal pricing structure should reflect the genuinely capacity-constrained nature of the service.</p>
+  <p>The framing should be: <em>each named-specialist relationship is a finite resource. There are only so many files one specialist can hold well. Pricing signals scarcity quietly, not loudly.</em></p>
+  <p>Action: an internal pricing review against the four reference points (NetJets €212k, Knightsbridge Circle $25–50k, Quintessentially Elite £27.5k, VistaJet $130k). Establish a defensible range for U-CALM membership + aviation, anchored in capacity not market-rate copying. Decide where in that range each prospective member sits at first conversation. Never published; always introducer-mediated.</p>
+
+  <h3>Adjacencies worth opening — partner-referral model.</h3>
+  <p>Two adjacent services are growing fast and could be opened on the existing single-trusted-partner model U-Calm Aviation already uses for Executive Protection. Neither requires building capability in-house.</p>
+  <p><strong>UK school placement and elite tutoring.</strong> Foreign wealth pays six figures for tutors. Tutors International is the established London specialist; partnership terms could be explored on a referral basis. The relationship is high-touch, high-trust, and complements the U-CALM file in exactly the way protection does — one specialist partner, one named principal at U-CALM, integrated on the same file.</p>
+  <p><strong>Female-led close protection.</strong> Industry growth segment. Underserved. Could be added to U-Calm Aviation's existing protection-partner roster as an explicit competency.</p>
+
+  <div class="callout deep">
+    <div class="eyebrow">The non-recommendations</div>
+    <strong>Things U-CALM should not do, on the evidence.</strong> Don't publish member numbers (brand-erosive). Don't introduce a public tier card (founding-refusal violation). Don't advertise (signal-flattening for the foreign-wealth segment). Don't expand to additional cities outside the Lugano–Milan–London corridor without a multi-decade-resident family already requesting it. Don't take on the British "old money" bargain-hunter cohort — they will never become long-term members.
+  </div>
+</section>
+
+<!-- ========== PART VIII — PRICING + OPERATIONAL ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part VIII</div>
+    <h2>Pricing benchmarks and operational framework.</h2>
+  </div>
+  <p class="lead">Reference data for internal pricing conversations. Not for publication.</p>
+
+  <h3>Annual concierge / membership reference points.</h3>
+  <div class="price-scale"><span class="tier">Mass</span><span class="desc">Premium credit-card concierge (Amex Platinum, Centurion, private bank cards)</span><span class="pr">£0–£3k bundled</span></div>
+  <div class="price-scale"><span class="tier">Plat</span><span class="desc">Quintessentially "Dedicated" tier</span><span class="pr">£7,000 + VAT</span></div>
+  <div class="price-scale"><span class="tier">Elite</span><span class="desc">Quintessentially "Quintessence" / Elite tier</span><span class="pr">£27,500 + VAT</span></div>
+  <div class="price-scale"><span class="tier">Inv.</span><span class="desc">Knightsbridge Circle (invitation, &lt;60 members, $800m avg net worth)</span><span class="pr">$25k – $50k</span></div>
+  <div class="price-scale"><span class="tier">House</span><span class="desc"><strong>U-CALM membership (recommended range, internal)</strong></span><span class="pr"><strong>tbd · capacity-anchored</strong></span></div>
+
+  <h3>Annual aviation reference points (member tier).</h3>
+  <div class="price-scale"><span class="tier">Card</span><span class="desc">NetJets Europe Phenom 300 / Citation XLS — 25 hours</span><span class="pr">€212,000</span></div>
+  <div class="price-scale"><span class="tier">Card</span><span class="desc">VistaJet VJ25 Challenger 350 — 25 hours (3-year commit)</span><span class="pr">~$375,000</span></div>
+  <div class="price-scale"><span class="tier">Adhoc</span><span class="desc">Bespoke charter Light/Mid jet, intra-European, typical mission</span><span class="pr">€15k – €45k / trip</span></div>
+  <div class="price-scale"><span class="tier">Adhoc</span><span class="desc">Bespoke charter Heavy / Ultra-long-range, transcontinental</span><span class="pr">€80k – €250k / trip</span></div>
+
+  <h3>UK UHNWI staff salary reference (2026 market rates).</h3>
+  <p>Useful for member conversations about household-budget context.</p>
+  <div class="price-scale"><span class="tier">Drv</span><span class="desc">Personal driver / chauffeur</span><span class="pr">£60k – £80k</span></div>
+  <div class="price-scale"><span class="tier">H/K</span><span class="desc">Housekeeper-chef hybrid</span><span class="pr">£90k</span></div>
+  <div class="price-scale"><span class="tier">Nan</span><span class="desc">Norland / language-specific nanny</span><span class="pr">£100k+</span></div>
+  <div class="price-scale"><span class="tier">Tut</span><span class="desc">Top-end tutor (Eton-prep, six-figure packages)</span><span class="pr">up to £180k</span></div>
+  <div class="price-scale"><span class="tier">CP</span><span class="desc">Personal close protection officer (UK rate)</span><span class="pr">£70k – £120k</span></div>
+  <div class="price-scale"><span class="tier">Rec</span><span class="desc">Specialist UHNW recruiter placement fee</span><span class="pr">£15k – £20k / hire</span></div>
+
+  <h3>Operational principles — what restraint protects against.</h3>
+  <p>The single most useful operational signal from the Hutchinson interview was not what she did but what it cost her. "Run down, tired, living on phone" is the documented failure mode of one-person UHNW concierge at scale. The U-CALM restraint principles — max three options proposed, no flooding, named-specialist shift coverage so the 24-hour reachability is genuine — are operational defences against that exact mode. Their value compounds with member growth.</p>
+  <p>Two specific principles to keep in front of mind as the roster grows from a few dozen toward a hundred members:</p>
+  <p><strong>One.</strong> Each named-specialist relationship is a finite resource. The capacity ceiling is not "how many members can U-CALM acquire" but "how many files can one specialist hold well." Industry benchmark: 15–25 active files per specialist before the relationship quality breaks down.</p>
+  <p><strong>Two.</strong> The shift-desk discipline is not optional. The brand promise of "the same names cover twenty-four hours a day, every day" depends on the desk genuinely operating in shifts. If one specialist is the always-on contact for a member, the relationship quality eventually breaks — Hutchinson's case study writ small.</p>
+</section>
+
+<!-- ========== APPENDIX ========== -->
+<section class="report page-break">
+  <div class="section-header">
+    <div class="eyebrow">Appendix</div>
+    <h2>Sources and methodology.</h2>
+  </div>
+
+  <h3>Primary sources.</h3>
+  <ul class="sources">
+    <li>Henley &amp; Partners — Private Wealth Migration Report 2025 (henleyglobal.com)</li>
+    <li>Knight Frank — Wealth Report 2025/26 (knightfrank.com/wealthreport)</li>
+    <li>Knight Frank — European Lifestyle Report 2025 "The great wealth migration"</li>
+    <li>Altrata — World Ultra Wealth Report 2025 (altrata.com)</li>
+    <li>UBS Global — Global Wealth Report 2025</li>
+    <li>Mordor Intelligence — Europe Charter Jet Services Market 2025–2030</li>
+    <li>Coherent Market Insights — Luxury Concierge Service Market 2025</li>
+    <li>Telegraph (LA Robinson) — "What it's really like to be a concierge to the 0.01 per cent" (Amelia Hutchinson profile, 11 May 2026)</li>
+    <li>CNBC — "How Italy's flat tax regime has sparked a super-rich boom in Milan" (Sept 2025)</li>
+    <li>Spear's — "Milan: Inside Milan's rise as a haven for the world's wealthiest" (2025)</li>
+    <li>IMI Daily — "Italy Raises Its Flat Tax to €300,000" (Dec 2025)</li>
+    <li>KPMG Switzerland — "Swiss Lump-Sum Taxation 2026"</li>
+    <li>Engel &amp; Völkers Lugano — Regional Market Brief (Summer 2025)</li>
+    <li>Tutors International / Fortune — "$240k tutor ad for one-year-old to prep for Eton" (Oct 2025)</li>
+    <li>Tutors International — "Super-Tutors are Paid $400,000" (2024)</li>
+    <li>Luxe Digital — "Best Concierge Services in the World" (Knightsbridge Circle pricing data)</li>
+    <li>Private Jet Card Comparisons — NetJets, VistaJet 2025/26 pricing reference</li>
+  </ul>
+
+  <h3>Methodology and caveats.</h3>
+  <p>This report is a strategic intelligence synthesis, not a primary research study. Figures are drawn from published industry reports as of May 2026; where reports differ on definitions (notably the "luxury concierge market" varies from $643M to $1.45B depending on inclusion of B2B2C, premium-card and tier-bundled revenue), the more conservative number has been used in headline statistics and both have been disclosed in the body.</p>
+  <p>UHNWI city counts are from Altrata 2025 ($30M+ threshold). Wealth-migration figures are from Henley 2025 (millionaire = $1M+ liquid assets, broader threshold than UHNWI). Italian flat-tax data is post-Dec 2025 amendment.</p>
+  <p>The Hutchinson observations are first-person and not statistically generalisable, but they triangulate consistently with the quantitative market data and are reported here as illustrative rather than definitive.</p>
+
+  <h3>Internal disclosure.</h3>
+  <p>This document was prepared for internal U-CALM use. It draws on the existing U-CALM and U-Calm Aviation brand documents (Brand Book v2.1, founding refusals, the Three Cities positioning decisions of May 2026) for context. It is intended as a baseline for future strategy conversations — pricing, partnerships, expansion, member acquisition — and should be revisited annually as the migration data updates.</p>
+
+  <div class="divider">· · ·</div>
+  <p style="text-align:center; font-family:Cormorant Garamond, Georgia, serif; font-size:14pt; font-style:italic; color: var(--primary-deep); margin-top: 20pt;">"Real wealth whispers, it doesn't shout."</p>
+  <p style="text-align:center; font-size:9pt; color: var(--grey-text); font-style:italic;">— the operating principle U-CALM was founded on, and the market it describes</p>
+</section>
+
+</body>
+</html>

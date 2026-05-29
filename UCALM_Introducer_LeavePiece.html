@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>U-CALM — A Quiet Introduction</title>
+<style>
+  @page {
+    size: A4;
+    margin: 14mm;
+  }
+
+  :root {
+    --deep-teal: #2A8A98;
+    --mist-teal: #7FB8C2;
+    --champagne: #C8AC8A;
+    --champagne-soft: #E4D4BC;
+    --linen: #F3EFE8;
+    --navy: #1C2B3A;
+    --navy-soft: #2D3F52;
+    --grey: #E5E0D9;
+    --grey-text: #5C6B7A;
+    --cream: #FAF7F2;
+    --primary-deep: #1F6F7B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: Georgia, 'Times New Roman', serif; color: var(--navy); background: var(--cream); line-height: 1.55; font-size: 10.5pt; }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif; font-weight: 300; color: var(--navy); line-height: 1.15; }
+  h1 { font-size: 30pt; letter-spacing: -0.01em; }
+  h2 { font-size: 18pt; }
+  h3 { font-size: 13pt; color: var(--primary-deep); }
+  p { margin: 0 0 7pt 0; }
+
+  .eyebrow {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary-deep);
+    font-weight: 700;
+  }
+
+  .page-break { page-break-before: always; }
+
+  /* PAGE 1 — front */
+  .page1 {
+    height: 269mm;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page1-header {
+    border-bottom: 2px solid var(--primary-deep);
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .brand-mark {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 22pt;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+  .brand-mark .gold { color: var(--champagne); font-style: italic; }
+  .brand-tag {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary-deep);
+    font-weight: 700;
+  }
+
+  .hero {
+    margin: 14pt 0;
+  }
+  .hero .eyebrow-line {
+    margin-bottom: 10pt;
+  }
+  .hero h1 {
+    margin-bottom: 8pt;
+    font-weight: 300;
+    color: var(--navy);
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--primary-deep);
+  }
+  .hero .strap {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    color: var(--primary-deep);
+    font-size: 14pt;
+    margin-top: 6pt;
+  }
+
+  .intro {
+    font-size: 11pt;
+    color: var(--navy-soft);
+    line-height: 1.7;
+    margin: 12pt 0;
+  }
+
+  .what-we-do {
+    background: var(--linen);
+    padding: 14pt 16pt;
+    margin: 14pt 0;
+    border-left: 3px solid var(--champagne);
+  }
+  .what-we-do h3 { margin-bottom: 8pt; }
+  .what-we-do .row { display: flex; padding: 4pt 0; }
+  .what-we-do .row .label { flex: 0 0 110pt; font-family: 'Helvetica Neue', sans-serif; font-size: 8pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary-deep); font-weight: 700; padding-top: 2pt; }
+  .what-we-do .row .text { flex: 1; font-size: 9.5pt; line-height: 1.5; }
+
+  .three-cities {
+    display: flex;
+    margin: 14pt 0;
+  }
+  .three-cities .city {
+    flex: 1;
+    padding: 0 6pt;
+    text-align: center;
+  }
+  .three-cities .city:not(:last-child) {
+    border-right: 1px solid var(--grey);
+  }
+  .three-cities .city-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 17pt;
+    color: var(--navy);
+    margin-bottom: 4pt;
+  }
+  .three-cities .city-role {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 7pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary-deep);
+    font-weight: 700;
+    margin-bottom: 6pt;
+  }
+  .three-cities .city-note {
+    font-size: 8.5pt;
+    color: var(--grey-text);
+    font-style: italic;
+    line-height: 1.45;
+  }
+
+  .difference {
+    margin: 14pt 0;
+  }
+  .difference ul { padding-left: 0; list-style: none; }
+  .difference li {
+    padding: 5pt 0 5pt 18pt;
+    border-bottom: 1px dotted var(--grey);
+    position: relative;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .difference li::before {
+    content: "·";
+    color: var(--champagne);
+    font-size: 18pt;
+    position: absolute;
+    left: 0;
+    top: -2pt;
+  }
+  .difference li strong { color: var(--primary-deep); }
+
+  .page1-footer {
+    margin-top: auto;
+    padding-top: 14pt;
+    border-top: 1px solid var(--grey);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 8pt;
+    color: var(--grey-text);
+  }
+
+  /* PAGE 2 — back */
+  .page2 {
+    page-break-before: always;
+    display: flex;
+    flex-direction: column;
+    height: 269mm;
+  }
+
+  .page2-header {
+    border-bottom: 2px solid var(--primary-deep);
+    padding-bottom: 8pt;
+    margin-bottom: 14pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .market-band {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 14pt 16pt;
+    margin: 0 0 14pt 0;
+  }
+  .market-band .eyebrow { color: var(--champagne); }
+  .market-band h2 { color: var(--cream); margin: 4pt 0 8pt 0; font-size: 17pt; }
+  .market-band p { font-size: 10pt; color: rgba(250,247,242,0.9); line-height: 1.55; }
+
+  .stats {
+    display: flex;
+    margin: 0 0 14pt 0;
+  }
+  .stat {
+    flex: 1;
+    text-align: center;
+    padding: 8pt;
+    background: var(--linen);
+    margin: 0 2pt;
+    border-top: 2px solid var(--primary-deep);
+  }
+  .stat .num {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 20pt;
+    color: var(--primary-deep);
+    display: block;
+    line-height: 1;
+    margin-bottom: 4pt;
+  }
+  .stat .lbl {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 7pt;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--grey-text);
+    line-height: 1.3;
+  }
+
+  .when {
+    margin: 14pt 0;
+  }
+  .when h2 { font-size: 17pt; }
+  .when p { font-size: 10pt; line-height: 1.6; color: var(--navy-soft); }
+  .when .em {
+    font-style: italic;
+    color: var(--primary-deep);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 11pt;
+    border-left: 2px solid var(--champagne);
+    padding-left: 10pt;
+    margin: 8pt 0;
+  }
+
+  .how-to-refer {
+    background: var(--linen);
+    padding: 14pt 16pt;
+    margin: 14pt 0;
+    border-top: 3px solid var(--champagne);
+  }
+  .how-to-refer h2 { font-size: 16pt; margin-bottom: 8pt; }
+  .how-to-refer p { font-size: 9.5pt; }
+  .how-to-refer .quote {
+    background: var(--cream);
+    padding: 8pt 12pt;
+    margin: 8pt 0;
+    border-left: 2px solid var(--primary-deep);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-size: 10pt;
+    color: var(--navy);
+  }
+
+  .contact {
+    margin-top: auto;
+    padding-top: 14pt;
+    border-top: 2px solid var(--primary-deep);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .contact .who {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 14pt;
+    color: var(--navy);
+  }
+  .contact .who .role {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 8pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary-deep);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4pt;
+  }
+  .contact .details {
+    text-align: right;
+    font-size: 9pt;
+    color: var(--navy-soft);
+    line-height: 1.5;
+  }
+  .contact .details .label {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 7pt;
+    color: var(--grey-text);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* CORRIDOR MAP */
+  .corridor-map {
+    margin: 14pt 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== PAGE 1 — Front ========== -->
+<div class="page1">
+
+  <div class="page1-header">
+    <div class="brand-mark">U-CALM <span class="gold">·</span> <span class="gold">a concierge house</span></div>
+    <div class="brand-tag">Lugano · Milan · London</div>
+  </div>
+
+  <div class="hero">
+    <div class="eyebrow eyebrow-line">A QUIET INTRODUCTION</div>
+    <h1>Real wealth whispers.<br><em>So do we.</em></h1>
+    <div class="strap">Consider it done.</div>
+  </div>
+
+  <p class="intro">U-CALM is a small concierge house, founded in Lugano in 2013, holding a limited number of families across Switzerland, Italy and the United Kingdom. We work entirely by introduction. We do not advertise. This page exists so that the right introducer — perhaps you — knows what we are, and when to mention us to a family who would value the relationship.</p>
+
+  <div class="what-we-do">
+    <h3>What the house holds.</h3>
+    <div class="row">
+      <div class="label">The work</div>
+      <div class="text">Aviation, ground, household, protection — coordinated by one named specialist who knows the file. One statement at month-end. Four working languages held in-house: English, Italian, French, German.</div>
+    </div>
+    <div class="row">
+      <div class="label">The aviation line</div>
+      <div class="text">U-Calm Aviation — bespoke charter, on-demand, group lift, destination management, executive protection. Vetted operator panel (ARGUS Platinum / Wyvern Wingman / IS-BAO Stage 2 equivalent). Four-hour notice window for enrolled members.</div>
+    </div>
+    <div class="row">
+      <div class="label">The geography</div>
+      <div class="text">Lugano is the desk's base. The same English-speaking specialists who hold a London arrangement hold a Milan one. The file does not change shape across borders.</div>
+    </div>
+    <div class="row">
+      <div class="label">The relationship</div>
+      <div class="text">Multi-decade by intention. Members come through introduction and tend to stay across generations. The desk is structured around a small number of files held well, not many files held quickly.</div>
+    </div>
+  </div>
+
+  <div class="three-cities">
+    <div class="city">
+      <div class="city-name">Lugano</div>
+      <div class="city-role">Desk base</div>
+      <div class="city-note">The only Swiss city with a private FBO in its own valley. Italian-speaking culture, Swiss governance. Banking centre #3.</div>
+    </div>
+    <div class="city">
+      <div class="city-name">Milan</div>
+      <div class="city-role">English voice, Italian home</div>
+      <div class="city-note">An English-speaking concierge desk for the English-speaking community making Italy home. Linate · Malpensa. The flat-tax cohort.</div>
+    </div>
+    <div class="city">
+      <div class="city-name">London</div>
+      <div class="city-role">Through the parent house</div>
+      <div class="city-note">Mayfair concierge integration via U-CALM. Farnborough · London City · Biggin Hill · Luton. Battersea on request.</div>
+    </div>
+  </div>
+
+  <div class="difference">
+    <div class="eyebrow" style="margin-bottom: 8pt;">WHAT MAKES THE HOUSE DIFFERENT</div>
+    <ul>
+      <li><strong>One named specialist</strong>, not a queue. The same person, holding the file for years. Industry's lowest staff-to-member ratio at the relevant tier.</li>
+      <li><strong>One file across cities.</strong> The Lugano-Milan-London corridor is held in the same English voice. The dossier does not start over at each border.</li>
+      <li><strong>Aviation, ground and protection on one statement.</strong> No separate broker invoice. No second concierge brand. No third inbox.</li>
+      <li><strong>Introduction only.</strong> We have never advertised. The right kind of member is met by introduction, not by application.</li>
+      <li><strong>Restraint as a service.</strong> Three options proposed, not thirty. The file does the thinking; the member sees the answer.</li>
+    </ul>
+  </div>
+
+  <div class="page1-footer">
+    <span>U-CALM · Lugano · founded 2013</span>
+    <span style="font-style: italic; color: var(--primary-deep);">Real wealth whispers, it doesn't shout.</span>
+  </div>
+
+</div>
+
+<!-- ========== PAGE 2 — Back ========== -->
+<div class="page2">
+
+  <div class="page2-header">
+    <div class="brand-mark">U-CALM</div>
+    <div class="brand-tag">When · Why now · How to introduce</div>
+  </div>
+
+  <div class="market-band">
+    <div class="eyebrow">The moment</div>
+    <h2>The largest peacetime wealth migration on record is reshaping Milan and Lugano.</h2>
+    <p>142,000 millionaires relocated across international borders in 2025; 165,000 projected in 2026. The UK lost 16,500 net. Italy gained 3,600. Lugano was named by Henley among the world's expanding wealth hubs. Most of these families retain London infrastructure and want one voice across all three cities. That is the family U-CALM was built for.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="num">142,000</span><span class="lbl">Millionaires relocated, 2025</span></div>
+    <div class="stat"><span class="num">+3,600</span><span class="lbl">New HNWIs into Italy, 2025</span></div>
+    <div class="stat"><span class="num">€300k</span><span class="lbl">Italian flat tax cap, 2026</span></div>
+    <div class="stat"><span class="num">13 yrs</span><span class="lbl">U-CALM in Lugano</span></div>
+  </div>
+
+  <div class="when">
+    <div class="eyebrow">WHEN TO MENTION US</div>
+    <h2>The kind of moment U-CALM fits.</h2>
+    <p>A family is closing on a Milan residence and asking who handles the day-to-day. A London family has just relocated to Lugano and is feeling the fragmentation. A new private client has aviation, household, school logistics and a calendar that doesn't sit comfortably in any one supplier's hands. A family-office principal is being asked, again, "who do you use for these things?"</p>
+    <div class="em">"It might be worth mentioning U-CALM. They sit between the cities and they hold everything on one file."</div>
+    <p>The right kind of introduction is short. The conversation that follows is the work.</p>
+  </div>
+
+  <div class="how-to-refer">
+    <h2>How to introduce.</h2>
+    <p>A single email, copying J-P, with a sentence or two of context about the family. We follow up directly, quietly, at the family's pace. We come to Milan or wherever the conversation needs to happen.</p>
+    <div class="quote">"I've been working with U-CALM in Lugano for years. They run a small house, four languages, and they hold aviation and ground on one file. Worth a quiet conversation when you have the time."</div>
+    <p>That is enough. The first meeting is a coffee, not a pitch. The relationship — if it is one — begins there.</p>
+  </div>
+
+  <div class="contact">
+    <div class="who">
+      <span class="role">PRINCIPAL</span>
+      Jean-Pierre Engele
+    </div>
+    <div class="details">
+      <span class="label">Inquiries</span><br>
+      flyhigh@u-calmaviation.com<br>
+      jp@u-calm.com<br>
+      <span class="label" style="margin-top: 6pt; display: inline-block;">U-Calm Aviation</span><br>
+      u-calmaviation.com<br>
+      <span class="label" style="margin-top: 6pt; display: inline-block;">U-CALM Concierge</span><br>
+      u-calm.com
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

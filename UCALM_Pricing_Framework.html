@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>The Pricing Framework — U-CALM Internal 2026</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 16mm 20mm 16mm;
+    @bottom-right { content: counter(page); font-family: Georgia, serif; font-size: 9pt; color: #5C6B7A; }
+    @bottom-left { content: "U-CALM · Pricing Framework · May 2026 · CONFIDENTIAL — internal"; font-family: Georgia, serif; font-size: 9pt; color: #5C6B7A; font-style: italic; }
+  }
+  @page cover { margin: 0; @bottom-right { content: ""; } @bottom-left { content: ""; } }
+  .cover { page: cover; }
+
+  :root {
+    --deep-teal: #2A8A98;
+    --mist-teal: #7FB8C2;
+    --champagne: #C8AC8A;
+    --champagne-soft: #E4D4BC;
+    --linen: #F3EFE8;
+    --navy: #1C2B3A;
+    --navy-soft: #2D3F52;
+    --grey: #E5E0D9;
+    --grey-text: #5C6B7A;
+    --cream: #FAF7F2;
+    --primary-deep: #1F6F7B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: Georgia, 'Times New Roman', serif; color: var(--navy); background: var(--cream); line-height: 1.55; font-size: 10.5pt; }
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; color: var(--navy); line-height: 1.2; }
+  h1 { font-size: 32pt; }
+  h2 { font-size: 22pt; margin-top: 22pt; margin-bottom: 10pt; }
+  h3 { font-size: 16pt; margin-top: 14pt; margin-bottom: 6pt; color: var(--primary-deep); }
+  h4 { font-size: 11pt; margin-top: 10pt; margin-bottom: 4pt; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--primary-deep); font-family: 'Helvetica Neue', sans-serif; }
+  p { margin: 0 0 8pt 0; }
+  .lead { font-size: 12pt; color: var(--navy-soft); margin-bottom: 14pt; line-height: 1.6; }
+  .eyebrow { font-family: 'Helvetica Neue', sans-serif; font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--primary-deep); font-weight: 700; margin-bottom: 6pt; }
+  .page-break { page-break-before: always; }
+  .no-break { page-break-inside: avoid; }
+
+  .cover { background: linear-gradient(135deg, #1C2B3A 0%, #1F6F7B 60%, #2A8A98 100%); color: var(--cream); page-break-after: always; min-height: 250mm; }
+  .cover-inner { padding: 40mm 20mm 30mm 20mm; }
+  .cover .mark { font-family: 'Helvetica Neue', sans-serif; font-size: 9pt; letter-spacing: 0.25em; text-transform: uppercase; color: var(--champagne); font-weight: 700; }
+  .cover h1 { color: var(--cream); font-size: 44pt; line-height: 1.1; max-width: 78%; margin-top: 18mm; font-weight: 300; }
+  .cover .sub { color: var(--champagne-soft); font-style: italic; font-size: 16pt; margin-top: 14mm; max-width: 70%; }
+  .cover .meta { font-family: 'Helvetica Neue', sans-serif; font-size: 9pt; color: var(--cream); margin-top: 30mm; border-top: 1px solid rgba(250,247,242,0.3); padding-top: 12pt; width: 70%; }
+  .cover .meta div { margin-bottom: 4pt; }
+  .cover .warning { display: inline-block; background: var(--champagne); color: var(--navy); padding: 4pt 10pt; font-family: 'Helvetica Neue', sans-serif; font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; margin-top: 14mm; }
+
+  .section-header { border-top: 3px solid var(--primary-deep); padding-top: 6pt; margin-bottom: 10pt; }
+
+  table { width: 100%; border-collapse: collapse; margin: 10pt 0; font-size: 9.5pt; }
+  th, td { text-align: left; padding: 7pt 8pt; border-bottom: 1px solid var(--grey); vertical-align: top; }
+  th { background: var(--linen); font-family: 'Helvetica Neue', sans-serif; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary-deep); font-weight: 700; border-bottom: 2px solid var(--primary-deep); }
+  td.num { font-family: 'Cormorant Garamond', Georgia, serif; color: var(--primary-deep); font-weight: 500; }
+  tr.highlight { background: rgba(42,138,152,0.08); }
+  tr.highlight td { font-weight: 600; }
+
+  .callout { background: var(--linen); border-left: 3px solid var(--champagne); padding: 10pt 14pt; margin: 12pt 0; font-style: italic; color: var(--navy-soft); }
+  .callout strong { color: var(--primary-deep); font-style: normal; }
+  .callout.deep { background: var(--navy); color: var(--cream); border-left-color: var(--champagne); font-style: normal; }
+  .callout.deep .eyebrow { color: var(--champagne); }
+  .callout.deep strong { color: var(--champagne); }
+  .callout.warning { background: #4D3A2D; color: var(--cream); border-left-color: var(--champagne); font-style: normal; }
+  .callout.warning .eyebrow { color: var(--champagne); }
+
+  /* TIER CARDS */
+  .tiers { display: flex; margin: 12pt -4pt; }
+  .tier-card { flex: 1; margin: 0 4pt; background: var(--linen); padding: 14pt 12pt; border-top: 4px solid var(--primary-deep); page-break-inside: avoid; }
+  .tier-card.featured { background: var(--navy); color: var(--cream); border-top-color: var(--champagne); }
+  .tier-card.featured h3 { color: var(--champagne); }
+  .tier-card.featured .price { color: var(--champagne); }
+  .tier-card h3 { margin-top: 0; font-size: 14pt; }
+  .tier-card .price { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24pt; color: var(--primary-deep); display: block; margin: 6pt 0; line-height: 1.1; }
+  .tier-card .price-sub { font-family: 'Helvetica Neue', sans-serif; font-size: 8pt; color: var(--grey-text); letter-spacing: 0.05em; }
+  .tier-card.featured .price-sub { color: rgba(250,247,242,0.7); }
+  .tier-card ul { padding-left: 14pt; margin-top: 8pt; }
+  .tier-card li { margin-bottom: 4pt; font-size: 9pt; line-height: 1.4; }
+
+  .price-line { display: flex; align-items: center; padding: 7pt 0; border-bottom: 1px dotted var(--grey); font-size: 9.5pt; }
+  .price-line .ent { flex: 1; }
+  .price-line .ent strong { color: var(--primary-deep); }
+  .price-line .ent .sub { font-size: 8pt; color: var(--grey-text); font-style: italic; display: block; margin-top: 2pt; }
+  .price-line .pr { flex: 0 0 130pt; text-align: right; font-family: 'Cormorant Garamond', Georgia, serif; color: var(--primary-deep); font-weight: 500; font-size: 11pt; }
+
+  .figure { background: var(--cream); padding: 6pt; margin: 10pt 0; page-break-inside: avoid; border-top: 1px solid var(--grey); border-bottom: 1px solid var(--grey); }
+  .figure .caption { font-family: 'Helvetica Neue', sans-serif; font-size: 8pt; color: var(--grey-text); font-style: italic; margin-top: 4pt; text-align: center; }
+  .figure .fig-title { font-family: 'Helvetica Neue', sans-serif; font-size: 8pt; letter-spacing: 0.15em; text-transform: uppercase; color: var(--primary-deep); font-weight: 700; margin-bottom: 4pt; text-align: center; }
+
+  blockquote { border-left: 3px solid var(--champagne); padding: 4pt 0 4pt 12pt; margin: 8pt 0; font-style: italic; color: var(--navy-soft); font-family: 'Cormorant Garamond', Georgia, serif; font-size: 12pt; }
+
+  .toc-item { display: flex; padding: 8pt 0; border-bottom: 1px dotted var(--grey); font-family: 'Helvetica Neue', sans-serif; font-size: 10pt; }
+  .toc-item .num { color: var(--primary-deep); font-weight: 700; flex: 0 0 32pt; }
+  .toc-item .title { flex: 1; }
+  .toc-item .page { color: var(--grey-text); font-style: italic; flex: 0 0 40pt; text-align: right; }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-inner">
+    <div class="mark">U-CALM · Pricing Framework</div>
+    <h1>What the relationship is worth, quietly stated.</h1>
+    <p class="sub">An internal framework for U-CALM membership and U-Calm Aviation pricing, anchored in capacity not market-rate, defensible by reference to four named market benchmarks.</p>
+    <span class="warning">Confidential · Internal only · Not for distribution</span>
+    <div class="meta">
+      <div><strong>Prepared for</strong> Jean-Pierre Engele</div>
+      <div><strong>Subject</strong> Membership tiers · Aviation pricing · Conversation framing</div>
+      <div><strong>Date</strong> 12 May 2026</div>
+      <div><strong>Status</strong> Recommendation — for internal review and adoption</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOC -->
+<section>
+  <div class="eyebrow">Contents</div>
+  <h2>What this framework holds.</h2>
+  <p class="lead">A practical pricing structure for U-CALM membership and U-Calm Aviation, with the benchmark data, capacity logic and conversation framing to support it.</p>
+  <div class="toc-item"><span class="num">00</span><span class="title">Executive summary &amp; recommendation</span><span class="page">3</span></div>
+  <div class="toc-item"><span class="num">I</span><span class="title">The pricing landscape — four anchored benchmarks</span><span class="page">4</span></div>
+  <div class="toc-item"><span class="num">II</span><span class="title">The capacity principle — why U-CALM is priced by file, not market</span><span class="page">7</span></div>
+  <div class="toc-item"><span class="num">III</span><span class="title">Recommended membership tier structure</span><span class="page">9</span></div>
+  <div class="toc-item"><span class="num">IV</span><span class="title">U-Calm Aviation — pricing the integration premium</span><span class="page">12</span></div>
+  <div class="toc-item"><span class="num">V</span><span class="title">How to introduce price in a first conversation</span><span class="page">14</span></div>
+  <div class="toc-item"><span class="num">VI</span><span class="title">Member-value framing — six articulations</span><span class="page">16</span></div>
+  <div class="toc-item"><span class="num">VII</span><span class="title">Annual review and revision process</span><span class="page">18</span></div>
+</section>
+
+<!-- EXEC SUMMARY -->
+<section class="page-break">
+  <div class="section-header">
+    <div class="eyebrow">00 · Recommendation</div>
+    <h2>The framework, in one page.</h2>
+  </div>
+  <p class="lead">A three-tier internal structure, never published, never advertised, introducer-mediated only. Anchored in capacity — each named-specialist file is a finite resource — rather than market-rate copying.</p>
+
+  <h3>Recommended structure.</h3>
+  <table>
+    <thead><tr><th>Tier (internal)</th><th>Profile</th><th>Annual range</th><th>Capacity</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Foundation</strong></td><td>Single-residence U-CALM member; aviation occasional</td><td class="num">CHF 35,000–55,000</td><td>20 files / specialist</td></tr>
+      <tr class="highlight"><td><strong>House</strong></td><td>Multi-residence (typically 2 cities); regular aviation; protection</td><td class="num">CHF 65,000–120,000</td><td>12 files / specialist</td></tr>
+      <tr><td><strong>Office</strong></td><td>Full-house relationship — multi-residence, family, school, household, protection, aviation, multi-year file</td><td class="num">CHF 150,000–250,000</td><td>6 files / specialist</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 4pt; font-size: 9pt; color: var(--grey-text); font-style: italic;">Aviation operator pass-through costs are itemised separately on each statement. The membership figures above cover the coordination layer — the named specialist, the file, the integration, the restraint — not the underlying flight or operator costs.</p>
+
+  <h3>The four reference benchmarks this is anchored against.</h3>
+  <table>
+    <thead><tr><th>Benchmark</th><th>Annual price</th><th>What it tells us</th></tr></thead>
+    <tbody>
+      <tr><td>Quintessentially Elite</td><td class="num">£27,500 + VAT</td><td>The floor for any UHNW-credible concierge tier</td></tr>
+      <tr><td>Knightsbridge Circle entry</td><td class="num">£25,000</td><td>Same floor, intimate model</td></tr>
+      <tr><td>Knightsbridge Circle Elite (May 2024)</td><td class="num">£100,000</td><td>Validated price point for personal-office relationship</td></tr>
+      <tr><td>NetJets Europe entry jet card</td><td class="num">€212,000 / 25 hrs</td><td>What members already pay for one service (aviation alone)</td></tr>
+    </tbody>
+  </table>
+
+  <h3>What this framework is not.</h3>
+  <p><strong>Not a price list.</strong> These tiers never appear on the website. They never appear in marketing. They exist only as internal guidance for first conversations.</p>
+  <p><strong>Not a sales tool.</strong> The framework is a discipline against price-following the market. It anchors what U-CALM should charge in <em>operational capacity</em> not in <em>what competitors charge</em>.</p>
+  <p><strong>Not fixed.</strong> Each specific member relationship lands at a point within these ranges based on actual capacity demand, complexity, and introducer context.</p>
+
+  <div class="callout deep">
+    <div class="eyebrow">The thesis in one sentence</div>
+    <strong>U-CALM is priced by the file, not by the market.</strong> The capacity ceiling is not "how many members can U-CALM acquire" but "how many files can one specialist hold well." Industry observation suggests 6–20 active files per specialist before relationship quality breaks down. This framework prices that scarcity quietly.
+  </div>
+</section>
+
+<!-- PART I — LANDSCAPE -->
+<section class="page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part I</div>
+    <h2>The pricing landscape — four anchored benchmarks.</h2>
+  </div>
+  <p class="lead">U-CALM does not need a precise read of every competitor's price card. It needs four anchored benchmarks at the edges of the market that frame the pricing conversation.</p>
+
+  <h3>Benchmark 1 · Quintessentially Elite — the floor for credible UHNW concierge.</h3>
+  <div class="price-line">
+    <div class="ent"><strong>Quintessentially Elite tier</strong><span class="sub">Dedicated lifestyle manager + Quintessence access. Public-record pricing.</span></div>
+    <div class="pr">£27,500 + VAT</div>
+  </div>
+  <p>Why this matters: Quintessentially has 26 years of brand history and 60+ city offices, and Elite is their flagship retail tier. Any UHNW-credible concierge priced below this number is implicitly positioned as "less than Quintessentially Elite" — which is not the U-CALM positioning. <strong>The floor for any U-CALM tier is therefore in the £25,000+ range, even at the lightest entry profile.</strong> Below this floor, the brand register starts to be confused with mid-tier concierge.</p>
+
+  <h3>Benchmark 2 · Knightsbridge Circle entry — same floor, intimate model.</h3>
+  <div class="price-line">
+    <div class="ent"><strong>Knightsbridge Circle membership</strong><span class="sub">By invitation. &lt;60 families. 4:1 staff:member ratio.</span></div>
+    <div class="pr">£25,000 / year</div>
+  </div>
+  <p>The closest spiritual peer to U-CALM has priced its entry membership at £25,000 since founding in 2012, and held that price for 13 years. That stability is itself a signal — the market has tested this number and accepts it. U-CALM's entry-tier (Foundation) sits in the same band, CHF-converted, for the same kind of family.</p>
+
+  <h3>Benchmark 3 · Knightsbridge Circle Elite (May 2024) — the validated upper-tier price point.</h3>
+  <div class="price-line">
+    <div class="ent"><strong>Knightsbridge Circle Elite tier</strong><span class="sub">Launched May 2024. Dedicated one-to-one Personal Manager. Platinum medical care worth £12,000. Personal-office relationship.</span></div>
+    <div class="pr">£100,000 / year</div>
+  </div>
+  <p>This is the most important benchmark in the report. Knightsbridge Circle's May 2024 launch of a £100,000 Elite tier publicly validated that a serious UHNW family will pay six-figure annual fees for a personal-office concierge relationship. That price point was market-tested before launch and has been retained since.</p>
+  <p>The implication for U-CALM: <strong>the upper tier ceiling is not £40,000 (where many in the industry assumed it was). It is £100,000.</strong> The U-CALM Office tier, fully loaded, sits in CHF 150,000–250,000 range — above the Knightsbridge Circle Elite because U-CALM holds aviation, protection and multi-city integration that Knightsbridge Circle does not.</p>
+
+  <h3>Benchmark 4 · NetJets Europe entry — what members already pay for one service alone.</h3>
+  <div class="price-line">
+    <div class="ent"><strong>NetJets Europe Card25</strong><span class="sub">25 hours on Phenom 300 or Citation XLS. Hourly equivalent ~€8,480.</span></div>
+    <div class="pr">€212,000</div>
+  </div>
+  <p>This is the comparator that members find most legible. A UHNW family that already spends €212,000 per year on aviation alone — for hours on a single aircraft type, with no ground integration, no household coordination, no protection — encounters U-CALM's House tier (CHF 65–120k) as a value proposition <em>relative to what they are already paying for less.</em></p>
+
+  <p>The framing in conversation: <em>"You currently pay [aviation provider] €212,000 a year for hours in the air. Our coordination of the rest of your day — the ground, the household, the protection, the file — sits at a fraction of that, and the aviation is itemised on the same statement."</em></p>
+
+  <div class="figure no-break">
+    <div class="fig-title">Figure 1 · The pricing landscape (annual, GBP/CHF/EUR comparables)</div>
+    <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+      <rect x="0" y="0" width="700" height="380" fill="#F3EFE8"/>
+      <line x1="180" y1="40" x2="180" y2="340" stroke="#1C2B3A" stroke-width="1"/>
+
+      <!-- Bands -->
+      <!-- mass concierge -->
+      <text x="40" y="320" fill="#5C6B7A" font-family="Helvetica" font-size="9" font-weight="bold">£0 – £3k</text>
+      <text x="40" y="333" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">card concierge</text>
+      <rect x="195" y="305" width="120" height="30" fill="#7FB8C2" opacity="0.4"/>
+      <text x="330" y="324" fill="#1C2B3A" font-family="Georgia" font-size="9">Amex Centurion, private-bank card concierge</text>
+
+      <!-- Quint General -->
+      <text x="40" y="265" fill="#5C6B7A" font-family="Helvetica" font-size="9" font-weight="bold">£3k – £7k</text>
+      <text x="40" y="278" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">mass-platform tiers</text>
+      <rect x="195" y="250" width="135" height="30" fill="#7FB8C2" opacity="0.6"/>
+      <text x="345" y="269" fill="#1C2B3A" font-family="Georgia" font-size="9">Quintessentially General; Velocity Black</text>
+
+      <!-- Premium platform -->
+      <text x="40" y="210" fill="#5C6B7A" font-family="Helvetica" font-size="9" font-weight="bold">£7k – £28k</text>
+      <text x="40" y="223" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">premium platforms</text>
+      <rect x="195" y="195" width="190" height="30" fill="#C8AC8A" opacity="0.6"/>
+      <text x="400" y="214" fill="#1C2B3A" font-family="Georgia" font-size="9">Quintessentially Dedicated → Elite; Bon Vivant</text>
+
+      <!-- Invitation tier base -->
+      <text x="40" y="155" fill="#5C6B7A" font-family="Helvetica" font-size="9" font-weight="bold">£25k – £55k</text>
+      <text x="40" y="168" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">invitation entry tier</text>
+      <rect x="195" y="140" width="180" height="30" fill="#2A8A98" opacity="0.7"/>
+      <text x="390" y="159" fill="#1C2B3A" font-family="Georgia" font-size="9">KsC entry / U-CALM Foundation</text>
+
+      <!-- U-CALM House -->
+      <text x="40" y="105" fill="#1F6F7B" font-family="Helvetica" font-size="9" font-weight="bold">CHF 65k – 120k</text>
+      <text x="40" y="118" fill="#1F6F7B" font-family="Helvetica" font-size="8" font-style="italic">U-CALM House (rec)</text>
+      <rect x="195" y="90" width="240" height="30" fill="#1F6F7B" opacity="0.85"/>
+      <text x="445" y="109" fill="#1C2B3A" font-family="Georgia" font-size="9">U-CALM House · multi-residence integrated</text>
+
+      <!-- Elite tier -->
+      <text x="40" y="65" fill="#1C2B3A" font-family="Helvetica" font-size="9" font-weight="bold">£100k+</text>
+      <text x="40" y="78" fill="#1C2B3A" font-family="Helvetica" font-size="8" font-style="italic">personal-office tier</text>
+      <rect x="195" y="50" width="280" height="30" fill="#1C2B3A"/>
+      <text x="485" y="69" fill="#FAF7F2" font-family="Georgia" font-size="9">KsC Elite £100k · U-CALM Office CHF 150–250k</text>
+
+      <!-- Title at top -->
+      <text x="365" y="25" text-anchor="middle" fill="#1C2B3A" font-family="Helvetica" font-size="10" font-weight="bold">CONCIERGE INDUSTRY PRICING LANDSCAPE — annual fees, 2026</text>
+
+      <text x="365" y="360" text-anchor="middle" fill="#5C6B7A" font-family="Helvetica" font-size="8" font-style="italic">Bands show market positioning, not direct fee comparisons. Each tier serves a structurally different member profile.</text>
+    </svg>
+    <div class="caption">U-CALM Foundation, House and Office sit in the upper bands of the market. The Office tier extends above Knightsbridge Circle Elite because U-CALM holds aviation, protection and multi-city integration that Knightsbridge Circle does not.</div>
+  </div>
+</section>
+
+<!-- PART II — CAPACITY -->
+<section class="page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part II</div>
+    <h2>The capacity principle.</h2>
+  </div>
+  <p class="lead">U-CALM is not priced by what competitors charge. It is priced by what one specialist can hold well. The capacity ceiling is the unit of pricing, not market rate.</p>
+
+  <h3>Why capacity is the correct anchor.</h3>
+  <p>A mass-platform concierge can absorb additional members at near-zero marginal cost — the next member is a tiny dilution of an already-pooled specialist team. The marginal economics of an extra member at Ten Lifestyle Group are very different from the marginal economics of an extra member at U-CALM, where each member adds load to a named, multi-decade-relationship specialist.</p>
+
+  <p>The natural pricing question for a platform is: <em>"what will the market pay?"</em></p>
+  <p>The natural pricing question for U-CALM is: <em>"what is each remaining named-specialist slot worth?"</em></p>
+
+  <p>These are different questions. The first invites price competition. The second invites scarcity.</p>
+
+  <h3>Industry observation on capacity.</h3>
+  <table>
+    <thead><tr><th>House</th><th>Specialists</th><th>Members</th><th>Ratio</th></tr></thead>
+    <tbody>
+      <tr><td>Ten Lifestyle Group</td><td class="num">~1,200</td><td class="num">375,000</td><td class="num">312:1</td></tr>
+      <tr><td>Quintessentially</td><td class="num">~1,500</td><td class="num">~300,000 (est.)</td><td class="num">~200:1</td></tr>
+      <tr><td>John Paul Group</td><td class="num">~1,000</td><td class="num">large but undisclosed</td><td class="num">~100:1</td></tr>
+      <tr><td>Velocity Black</td><td class="num">AI-mediated</td><td class="num">~100,000+</td><td class="num">algorithmic</td></tr>
+      <tr class="highlight"><td><strong>Knightsbridge Circle</strong></td><td class="num"><strong>~15</strong></td><td class="num"><strong>~60</strong></td><td class="num"><strong>4:1</strong></td></tr>
+      <tr class="highlight"><td><strong>U-CALM (recommended)</strong></td><td class="num"><strong>capacity-anchored</strong></td><td class="num"><strong>6 / 12 / 20 per specialist by tier</strong></td><td class="num"><strong>variable</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>The 6/12/20 rule.</h3>
+  <p>The recommended internal capacity guidelines, by tier:</p>
+  <ul style="padding-left: 14pt; margin: 4pt 0 10pt 0;">
+    <li><strong>Office tier — 6 files per specialist.</strong> Personal-office intensity. Aviation, protection, household, multiple residences, multi-generation family file. This is the Knightsbridge Circle Elite cap (4:1 + some slack).</li>
+    <li><strong>House tier — 12 files per specialist.</strong> Standard multi-residence relationship; aviation regular; protection on file but not constant. Industry middle ground.</li>
+    <li><strong>Foundation tier — 20 files per specialist.</strong> Single-residence concierge with occasional aviation; lighter coordination load.</li>
+  </ul>
+
+  <p>These caps are the most important operational discipline in this framework. They are also the most important pricing input. <strong>When a specialist's roster approaches the cap, the next prospective member's price moves up the range, not down.</strong> If the cap is reached, the next member waits for capacity or is referred away. This is not a sales policy. It is a brand policy.</p>
+
+  <div class="callout">
+    <strong>The Hutchinson failure mode, internalised.</strong> Amelia Hutchinson described herself as "run down, tired, living on phone" — the documented end-state of one-person UHNW concierge without capacity discipline. The 6/12/20 rule is the operational defence against that mode. Pricing must support it; pricing must never undermine it.
+  </div>
+
+  <h3>How capacity translates to pricing.</h3>
+  <p>If a House-tier specialist holds 12 files at an average CHF 90,000, their portfolio generates CHF 1.08m of annual revenue. After operator pass-through, infrastructure, support staff and partner-network costs, this is the unit economic that funds the brand. <strong>If price falls below capacity, the unit economics break — and so does the brand promise.</strong> Holding price is therefore not greed; it is the only way the model works.</p>
+</section>
+
+<!-- PART III — TIER STRUCTURE -->
+<section class="page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part III</div>
+    <h2>Recommended membership tier structure.</h2>
+  </div>
+  <p class="lead">Three tiers, each with a clear member profile, capacity discipline, and price range. Internal-only. Never published. Never advertised.</p>
+
+  <div class="tiers">
+    <div class="tier-card">
+      <h3>Foundation</h3>
+      <span class="price">CHF 35,000<br><span style="font-size:14pt">— 55,000</span></span>
+      <span class="price-sub">per year · 20 files / specialist</span>
+      <h4>Member profile</h4>
+      <ul>
+        <li>Single primary residence in the corridor</li>
+        <li>Occasional aviation (4–8 trips/year)</li>
+        <li>Concierge, ground, light household</li>
+        <li>Protection: file on standby</li>
+      </ul>
+      <h4>What's held</h4>
+      <ul>
+        <li>Named specialist; shared shift coverage</li>
+        <li>One file, one statement</li>
+        <li>Operator-panel access on request</li>
+        <li>Four-language coverage</li>
+      </ul>
+    </div>
+    <div class="tier-card featured">
+      <h3>House</h3>
+      <span class="price">CHF 65,000<br><span style="font-size:14pt">— 120,000</span></span>
+      <span class="price-sub">per year · 12 files / specialist</span>
+      <h4>Member profile</h4>
+      <ul>
+        <li>Multi-residence (typically 2 cities)</li>
+        <li>Regular aviation (12–25 trips/year)</li>
+        <li>Active household + protection on file</li>
+        <li>Family with school logistics</li>
+      </ul>
+      <h4>What's held</h4>
+      <ul>
+        <li>Named primary specialist + shift coverage</li>
+        <li>Multi-residence file</li>
+        <li>Four-hour notice window on eligible aircraft</li>
+        <li>Operator-panel preference set</li>
+        <li>Protection partner introduced and on file</li>
+      </ul>
+    </div>
+    <div class="tier-card">
+      <h3>Office</h3>
+      <span class="price">CHF 150,000<br><span style="font-size:14pt">— 250,000</span></span>
+      <span class="price-sub">per year · 6 files / specialist</span>
+      <h4>Member profile</h4>
+      <ul>
+        <li>Multi-residence + family + protection</li>
+        <li>Aviation high-frequency (35+ trips/year)</li>
+        <li>Personal-office substitute relationship</li>
+        <li>Multi-generation file under one specialist</li>
+      </ul>
+      <h4>What's held</h4>
+      <ul>
+        <li>Dedicated personal manager (1:1, max 6 files)</li>
+        <li>Proactive desk — not reactive booking</li>
+        <li>Full-spectrum integration (aviation + ground + protection + school + medical via partner)</li>
+        <li>Direct private-bank/family-office liaison</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Notes on the tier structure.</h3>
+  <p><strong>The House tier is the centre of gravity.</strong> Most U-CALM members will sit in the House tier, with their actual annual figure landing in the £65–120k range depending on residence count, aviation cadence, and family complexity. This is the natural "default" U-CALM relationship.</p>
+
+  <p><strong>The Foundation tier exists for early-career UHNW members.</strong> A successful tech founder in their late thirties, recently liquid, with one Milan residence and growing aviation needs, may not yet need House. Foundation lets the relationship begin small. Over years, members tend to migrate up — Foundation members become House members as their lives become more complex; House members become Office members at family-office moments.</p>
+
+  <p><strong>The Office tier should remain genuinely scarce.</strong> At most 12 Office-tier files at any time across the entire U-CALM house. This protects the personal-office intensity and the capacity discipline. <strong>Office tier members are a category of relationship, not a category of revenue maximisation.</strong></p>
+
+  <p><strong>Aviation operator costs are itemised separately</strong> on every statement, regardless of tier. The membership figures above are coordination fees only. A member who flies 25 hours per year at NetJets-equivalent rates is paying an additional €212k+ in pass-through operator costs. The membership figure is for the named specialist and the integrated file, not for the aircraft itself.</p>
+
+  <div class="callout deep">
+    <div class="eyebrow">The architecture in one frame</div>
+    <strong>Foundation builds the relationship. House is where members live. Office is where they retire to.</strong> The tiers are not a price ladder; they are a model of how a UHNW relationship matures.
+  </div>
+</section>
+
+<!-- PART IV — AVIATION PRICING -->
+<section class="page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part IV</div>
+    <h2>U-Calm Aviation — pricing the integration premium.</h2>
+  </div>
+  <p class="lead">U-Calm Aviation does not own aircraft. It does not sell hours. It sells the integration of flight with everything else. The pricing question is therefore: what is integration worth?</p>
+
+  <h3>What U-Calm Aviation is not.</h3>
+  <p>It is not NetJets Europe. NetJets sells hours on its own fleet at €8,480/hour with a 25-hour annual minimum (€212,000). NetJets owns the aircraft, employs the crew, controls the operational base, and bears the fleet capital cost. The price reflects all of that.</p>
+
+  <p>It is not VistaJet. VistaJet's VJ25 card on a Challenger 350 sits at approximately $15,000/hour, three-year minimum commitment, $375,000+ first-year cost. Same ownership-and-fleet model as NetJets, different airframe.</p>
+
+  <p>It is not a charter broker. A broker takes a commission on each flight and disappears between flights. The relationship is transactional and the price is loaded into the per-flight margin.</p>
+
+  <p><strong>U-Calm Aviation is the named specialist who knows your week and arranges the aircraft for you.</strong> The aircraft itself is sourced from a vetted operator panel; the operator does the flying; U-Calm Aviation does the coordination. The pricing question is what that coordination is worth, separately and transparently.</p>
+
+  <h3>The integration-premium model.</h3>
+  <table>
+    <thead><tr><th>Charge</th><th>What it covers</th><th>How it's set</th></tr></thead>
+    <tbody>
+      <tr><td><strong>U-Calm Aviation coordination fee</strong></td><td>Named specialist time; aircraft sourcing; FBO and ground; operator pass-through audit; integration with the U-CALM membership file</td><td class="num">Bundled into U-CALM membership tier</td></tr>
+      <tr><td><strong>Operator pass-through</strong></td><td>The actual flight (aircraft + crew + fuel + handling + slot + permits)</td><td class="num">Itemised at operator-quoted rate</td></tr>
+      <tr><td><strong>Ground pass-through</strong></td><td>FBO, fixers, ground transport, household calls</td><td class="num">Itemised at supplier rate</td></tr>
+      <tr><td><strong>No mark-up on operator quote</strong></td><td>U-Calm Aviation does not mark-up the operator price; the coordination value is in the membership, not in the flight margin</td><td class="num">Brand-correct, member-defensible</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Reference points for member conversations.</h3>
+  <div class="price-line">
+    <div class="ent"><strong>Intra-European charter, Light/Mid jet, typical mission</strong><span class="sub">e.g. Lugano → Nice; Milan → London City; Geneva → Ibiza. Round-trip with day-stop.</span></div>
+    <div class="pr">€15,000 – €45,000 / trip</div>
+  </div>
+  <div class="price-line">
+    <div class="ent"><strong>Transcontinental, Heavy / Ultra-Long-Range</strong><span class="sub">e.g. Lugano → Mustique; Milan → New York; London → Dubai.</span></div>
+    <div class="pr">€80,000 – €250,000 / trip</div>
+  </div>
+  <div class="price-line">
+    <div class="ent"><strong>Helicopter transfer, intra-Alpine</strong><span class="sub">e.g. Lugano → St Moritz; Milan → Verbier; Geneva → Gstaad.</span></div>
+    <div class="pr">€3,500 – €8,000 / leg</div>
+  </div>
+  <div class="price-line">
+    <div class="ent"><strong>Group lift, airliner/bizliner (15–60 seats)</strong><span class="sub">Weddings, off-sites, family movements.</span></div>
+    <div class="pr">€100,000 – €400,000+ / mission</div>
+  </div>
+
+  <h3>The four-hour notice window as a member benefit.</h3>
+  <p>Enrolled members in the House and Office tiers have access to a <strong>four-hour notice window on eligible aircraft</strong>. This is not a discount; it is an availability guarantee, achievable only because U-Calm Aviation holds a vetted operator panel with named availability commitments. The cost of holding this availability is folded into the membership fee, not charged per-event.</p>
+  <p>This is the most distinctive single feature of U-Calm Aviation versus charter brokers. Charter brokers cannot offer it because they don't pay to hold availability; they only quote when asked.</p>
+
+  <div class="callout">
+    <strong>The conversation framing for aviation pricing.</strong> "You are already paying €212,000 a year to NetJets for hours in the air on a single aircraft type. Our membership covers the same operational standards across a wider panel, integrated with the rest of your day, with a four-hour notice window — and the operator costs of each flight are pass-through, itemised, no mark-up. You pay us for the file. You pay the operator for the aircraft. One statement."
+  </div>
+</section>
+
+<!-- PART V — INTRODUCING PRICE -->
+<section class="page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part V</div>
+    <h2>How to introduce price in a first conversation.</h2>
+  </div>
+  <p class="lead">The pricing conversation is the single hardest moment in any UHNW relationship. Done well, it confirms the member's instinct that they are in the right room. Done poorly, it converts the conversation into a transaction.</p>
+
+  <h3>The five-step conversation pattern.</h3>
+
+  <p><strong>One · Establish the file before establishing the price.</strong> In a first conversation — typically over a quiet hour somewhere considered — the U-CALM principal asks about the member's life. Where do they live across the year. Who travels with them. What patterns have grown around the family. This is not discovery in the sales sense; it is the beginning of the file. Price does not come up.</p>
+
+  <p><strong>Two · The introducer's frame is the price frame.</strong> When the conversation reaches price, the principal references how the introducer described U-CALM — the family office partner, the lawyer, the private banker. <em>"As [introducer] mentioned, U-CALM is structured around a small number of long-term relationships. The membership reflects that."</em> The introducer's authority does the heavy lifting; U-CALM does not have to defend the number.</p>
+
+  <p><strong>Three · State the range, anchored against capacity not market.</strong> <em>"Membership for a relationship of this shape sits between CHF [lower] and CHF [upper] per year. The number depends on the complexity of the file we hold and the cadence of work — not on a published rate."</em> The capacity language is decisive. The member hears: <em>we are not selling subscription; we are committing capacity.</em></p>
+
+  <p><strong>Four · Place aviation pass-through context immediately after.</strong> The membership figure can sound substantial in isolation. Anchor it against what the member already pays for one service line alone. <em>"For context, a member who flies twenty-five hours a year on a private charter card pays approximately €212,000 to the operator alone. Our membership coordinates everything against that — the flight, the ground, the household, the school — and that figure is itemised separately from the membership."</em></p>
+
+  <p><strong>Five · Close with the file, not the fee.</strong> The conversation does not end on price. It ends on what the file holds — a return to the texture of the relationship the member would have. <em>"What matters is that the relationship is held by one person who knows your year. The membership is what allows us to hold that, well, for a small enough number of families that no one is asked to wait."</em></p>
+
+  <h3>What to avoid in the first pricing conversation.</h3>
+  <ul style="padding-left: 14pt; margin: 4pt 0 8pt 0;">
+    <li><strong>Do not produce a written price card.</strong> Even a discreet leave-piece with prices on it converts the relationship to a brochure interaction.</li>
+    <li><strong>Do not compare U-CALM to Quintessentially.</strong> Members will draw the comparison themselves if they wish; U-CALM introducing it diminishes the brand.</li>
+    <li><strong>Do not negotiate on the first conversation.</strong> The range is the range. If a member tries to negotiate, that is information about whether the relationship is the right fit — not a price discussion.</li>
+    <li><strong>Do not offer discounts for multi-year commitment.</strong> Multi-year is the default expectation, not an upgrade. No member who needs a discount is the right member.</li>
+    <li><strong>Do not name the tiers.</strong> "Foundation, House, Office" are internal categories. Members do not need to know which tier they are in. They are in U-CALM.</li>
+  </ul>
+</section>
+
+<!-- PART VI — VALUE FRAMING -->
+<section class="page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part VI</div>
+    <h2>Member-value framing — six articulations.</h2>
+  </div>
+  <p class="lead">Six ways to articulate what the member is buying. Use depending on the prospect's frame. None of them lead with the word "concierge."</p>
+
+  <h3>Frame 1 · The single statement.</h3>
+  <p><em>"Aviation, ground, household, protection — held by one person on one file, billed on one statement at month-end. The membership is what makes that possible."</em></p>
+  <p>Best for: members who currently use three or four separate suppliers and feel the fragmentation. Bankers, lawyers, multi-residence families.</p>
+
+  <h3>Frame 2 · The named person.</h3>
+  <p><em>"You have a named specialist who knows your family. Not a team. Not a queue. The same person, for as long as the relationship runs. The membership is what allows us to hold the file at that intensity for a small enough number of families that no one waits."</em></p>
+  <p>Best for: members who have been disappointed by Quintessentially or a card-bundled concierge. Direct contrast with platform models.</p>
+
+  <h3>Frame 3 · The capacity-not-rate framing.</h3>
+  <p><em>"We don't price against market rates. We price against capacity — how many files one specialist can hold well. That is what determines whether the relationship works."</em></p>
+  <p>Best for: financially sophisticated members who recognise the difference between a subscription and a commitment. Family-office principals, bankers, founders.</p>
+
+  <h3>Frame 4 · The contrast with what they already pay.</h3>
+  <p><em>"A NetJets Europe entry jet card is €212,000 a year. That's twenty-five hours in the air on one aircraft type, no ground integration, no household. Our membership coordinates everything against that — and the flight cost is itemised separately, pass-through, no mark-up."</em></p>
+  <p>Best for: aviation-heavy members already paying six figures for one service line. The frame makes the U-CALM number look modest.</p>
+
+  <h3>Frame 5 · The personal-office framing.</h3>
+  <p><em>"For families who have considered a personal office — a head of household staff, a chief-of-staff role — U-CALM is the externalised version. One specialist, one file, integration across services. Without the cost and complexity of in-house employment."</em></p>
+  <p>Best for: members thinking about scale of household management as their family grows. Compares well to in-house salaries (£150k–£250k for a head-of-household role plus benefits).</p>
+
+  <h3>Frame 6 · The introducer-quoted framing.</h3>
+  <p><em>"As [introducer] said when they suggested we meet, U-CALM operates by a small number of long-term relationships. That structure determines everything — including how the membership is priced."</em></p>
+  <p>Best for: any conversation in which the introducer is held in high trust. The introducer's authority is the conversation's authority. Use sparingly to preserve the trust.</p>
+
+  <div class="callout deep">
+    <div class="eyebrow">The six frames, in shorthand</div>
+    <strong>Statement · Person · Capacity · Contrast · Office · Introducer.</strong> Each works for a different prospect at a different moment. The principle is constant: lead with what the relationship holds; arrive at the number only after the texture of the relationship is clear in the member's mind.
+  </div>
+</section>
+
+<!-- PART VII — REVIEW -->
+<section class="page-break">
+  <div class="section-header">
+    <div class="eyebrow">Part VII</div>
+    <h2>Annual review and revision process.</h2>
+  </div>
+  <p class="lead">This framework should be reviewed once a year — no more, no less. Pricing stability is itself a brand signal.</p>
+
+  <h3>What to review annually.</h3>
+  <ol style="padding-left: 18pt; margin: 4pt 0;">
+    <li><strong>The four anchor benchmarks.</strong> Have Quintessentially Elite, Knightsbridge Circle entry, KsC Elite, or NetJets Europe Card25 changed price? If yes, by how much? Knightsbridge Circle Elite is the most important to watch — any movement in the £100k figure signals industry-wide repricing.</li>
+    <li><strong>The capacity ratios.</strong> Are the 6/12/20 file caps holding? If any specialist's roster is over-cap, are they showing strain? If under-cap, is the membership growing as expected?</li>
+    <li><strong>The pass-through cost trajectory.</strong> Operator hourly rates, FBO fees, fixer day rates. Inflation, fuel, supply-demand. Membership figures should be reviewed if pass-through structurally rises &gt;15% in a year.</li>
+    <li><strong>The introducer feedback.</strong> What did introducers hear in price conversations? Where did prospective members balk? Where did they accept without hesitation? The introducer voice is the most important pricing signal U-CALM receives.</li>
+    <li><strong>The competitive movement.</strong> Knightsbridge Circle continental expansion. New invitation-tier entrants in Milan or Lugano. Quintessentially Quintessence pricing changes.</li>
+  </ol>
+
+  <h3>What to revise vs. hold steady.</h3>
+  <p><strong>Revise:</strong> the upper bound of each tier range, if the four anchors have moved meaningfully. Pass-through itemisation conventions on statements. Conversation framing language as the market matures.</p>
+  <p><strong>Hold steady:</strong> the three-tier structure (Foundation / House / Office) — this is a brand architecture, not a pricing decision. The 6/12/20 capacity rule. The "no published price card" principle. The introducer-mediated entry pattern.</p>
+
+  <p><strong>Never:</strong> publish the tiers, the prices, or the structure outside of an active member conversation. The internal-only discipline is more important than any individual price within the structure.</p>
+
+  <h3>One paragraph to remember.</h3>
+  <div class="callout deep">
+    <p>U-CALM is priced by the file, not by the market. Each named-specialist relationship is a finite resource. The 6/12/20 capacity rule is the operating discipline; the membership tier is its pricing expression; the conversation framing makes both legible to the member. Hold the discipline, and the pricing holds itself.</p>
+  </div>
+
+  <p style="text-align:center; font-family:Cormorant Garamond, Georgia, serif; font-size:14pt; font-style:italic; color: var(--primary-deep); margin-top: 22pt;">"Real wealth whispers. Real pricing does too."</p>
+</section>
+
+</body>
+</html>
