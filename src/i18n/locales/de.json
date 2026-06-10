@@ -9,6 +9,7 @@
     "home": "Start",
     "services": "Leistungen",
     "arrival": "Arrival",
+    "openMenu": "Menü öffnen",
     "whoWeServe": "Wen wir betreuen",
     "coolCalm": "Cool CALM",
     "about": "Über uns",
@@ -74,7 +75,7 @@
       "corporate": { "title": "Firmen", "blurb": "Vorstandssitzungen, Besuche leitender Angestellter, Off-Sites. Der Sitzungssaal ist vorbereitet, die Lobby ist ruhig, der Gast wird vom Bordstein an betreut." },
       "travelEvents": { "title": "Reisen & Anlässe", "blurb": "Ein gedeckter Tisch, ein reserviertes Zimmer, ein eingehaltener Zeitplan. Ein Abendessen zu zweit, ein Familienwochenende, eine private Veranstaltung — der Plan wird gehalten, Sie müssen es nicht." },
       "inFull": { "title": "Leistungen, im Ganzen", "blurb": "Die ganze Breite unter dieser Seite, schlicht aufgeführt — Tage und Besorgungen, Haus und Haushalt, Familie und Fürsorge, Geschäftstage und der Korridor. Die Karte dessen, was eine Nummer hält.", "cta": "Die ganze Liste lesen" },
-      "aviation": { "title": "Aviation (Submarke)", "blurb": "Die Fahrt zum Vorfeld, die Übergabe am Flugzeug, das Auto am anderen Ende. U-CALM Aviation ist unsere Schwestermarke für Flüge und Transfers." },
+      "aviation": { "title": "Aviation (Submarke)", "blurb": "Die Fahrt zum Vorfeld, die Übergabe am Flugzeug, das Auto am anderen Ende. U-CALM Aviation ist unsere Schwestermarke für Flüge und Transfers.", "cta": "Zu U-Calm Aviation", "ariaLabel": "{{title}} — zu U-Calm Aviation (öffnet in einem neuen Tab)" },
       "coolCalm": { "title": "Cool CALM (Winter)", "blurb": "Der alpine Winterhaushalt — Chalet-Vorbereitung, trocknende Skischuhe, heiße Getränke in behandschuhten Händen. Unsere saisonale Winter-Concierge-Betreuung." }
     },
     "disruption": {
@@ -140,7 +141,8 @@
       "eyebrow": "Die Schwestermarken",
       "aviation": {
         "title": "In der Luft — U-Calm Aviation",
-        "line": "Flüge und Transfers, mit derselben Zurückhaltung arrangiert — die Fahrt zum Vorfeld, die Übergabe am Flugzeug, der Wagen am anderen Ende."
+        "line": "Flüge und Transfers, mit derselben Zurückhaltung arrangiert — die Fahrt zum Vorfeld, die Übergabe am Flugzeug, der Wagen am anderen Ende.",
+        "ariaLabel": "U-Calm Aviation (öffnet in einem neuen Tab)"
       },
       "coolCalm": {
         "title": "Cool CALM — der Winterhaushalt",
@@ -259,6 +261,18 @@
     "intro": "Erzählen Sie uns kurz, was Sie brauchen. Wir antworten persönlich, nicht aus einer Warteschlange.",
     "emailLabel": "E-Mail",
     "emailValue": "hello@u-calm.com",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Was dürfen wir auf Ihrer Liste schließen?",
+      "sending": "Wird gesendet…",
+      "error": "Etwas ist nicht durchgegangen: {{errorMsg}}. Bitte versuchen Sie es erneut, oder schreiben Sie direkt an {{email}}.",
+      "success": {
+        "eyebrow": "Danke",
+        "headline": "Wir melden uns.",
+        "body": "Ihre Nachricht ist eingegangen. Ein Spezialist antwortet innerhalb eines Arbeitstages."
+      }
+    },
     "opening": {
       "eyebrow": "08:40, Mitte März",
       "headline": "Die Tür geht einfach auf. Das Gespräch beginnt.",

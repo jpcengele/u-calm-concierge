@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 const LOCALES = ["en", "de", "fr", "it"] as const;
 
 export const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const active = (LOCALES as readonly string[]).includes(i18n.language)
     ? i18n.language
     : i18n.resolvedLanguage ?? "en";
@@ -23,7 +23,7 @@ export const LanguageSwitcher = () => {
   return (
     <div
       role="group"
-      aria-label="Language"
+      aria-label={t("language.label")}
       className="flex items-center gap-1 text-xs uppercase tracking-[0.12em]"
     >
       {LOCALES.map((lng, i) => (

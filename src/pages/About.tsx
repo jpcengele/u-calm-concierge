@@ -13,7 +13,7 @@ const About = () => {
   useDocumentMeta({
     title: "About — A house in Lugano | U-CALM Concierge",
     description:
-      "U-CALM was founded in Lugano in 2013 around a single proposition: that the membership relationship between a member and their concierge should be the only relationship a member has to think about. The acronym is the architecture: Considered, Anticipated, Looked-after, Mannered.",
+      "U-CALM was founded in Lugano in 2013 on a single proposition: one named concierge should be the only relationship a member has to think about.",
     canonical: canonical("/about"),
     jsonLd: [
       ORGANIZATION_JSONLD,

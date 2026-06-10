@@ -83,13 +83,13 @@ const Contact = () => {
           <BrandImage id={SEASONAL_BANK.springMagnolia} className="w-full rounded-lg overflow-hidden" />
           <div>
             <p className="eyebrow text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              08:40, mid-March
+              {t("contact.opening.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              The door just opens. The conversation begins.
+              {t("contact.opening.headline")}
             </h2>
             <p className="mt-4 text-foreground/80 leading-relaxed">
-              A pale magnolia bud on a bare branch, the Serene Teal threshold catching first light. Members come to U-CALM at the moment their list feels heaviest, and leave the first call with it already shorter.
+              {t("contact.opening.body")}
             </p>
           </div>
         </div>
@@ -101,13 +101,13 @@ const Contact = () => {
         {state === "success" ? (
           <div className="mt-10 rounded-lg border border-border bg-card p-8 shadow-whisper">
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-champagne">
-              Thank you
+              {t("contact.form.success.eyebrow")}
             </p>
             <p className="mt-3 font-serif text-2xl text-primary-deep">
-              We will be in touch.
+              {t("contact.form.success.headline")}
             </p>
             <p className="mt-3 text-foreground/80 leading-relaxed">
-              Your note has been received. A specialist will respond within one working day.
+              {t("contact.form.success.body")}
             </p>
           </div>
         ) : (
@@ -117,7 +117,7 @@ const Contact = () => {
           >
             <div>
               <label htmlFor="contact-name" className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground block">
-                Name
+                {t("contact.form.name")}
               </label>
               <input
                 id="contact-name"
@@ -132,7 +132,7 @@ const Contact = () => {
 
             <div>
               <label htmlFor="contact-email" className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground block">
-                Email
+                {t("contact.form.email")}
               </label>
               <input
                 id="contact-email"
@@ -147,7 +147,7 @@ const Contact = () => {
 
             <div>
               <label htmlFor="contact-message" className="text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground block">
-                What can we close on your list?
+                {t("contact.form.message")}
               </label>
               <textarea
                 id="contact-message"
@@ -162,7 +162,7 @@ const Contact = () => {
 
             {state === "error" && (
               <p className="text-sm text-destructive">
-                Something did not go through: {errorMsg}. Please try again, or email {brand.inquiryEmail} directly.
+                {t("contact.form.error", { errorMsg, email: brand.inquiryEmail })}
               </p>
             )}
 
@@ -171,7 +171,7 @@ const Contact = () => {
               disabled={state === "submitting"}
               className="rounded-full bg-primary-deep px-8 py-3 text-background font-medium hover:bg-primary transition-colors disabled:opacity-60"
             >
-              {state === "submitting" ? "Sending..." : "Open a conversation"}
+              {state === "submitting" ? t("contact.form.sending") : t("cta.openConversation")}
             </button>
           </form>
         )}
@@ -184,13 +184,13 @@ const Contact = () => {
           </div>
           <div className="md:order-1">
             <p className="eyebrow text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              How we start
+              {t("contact.firstConversation.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              One door, one notebook, one quiet conversation.
+              {t("contact.firstConversation.headline")}
             </h2>
             <p className="mt-4 text-foreground/80 leading-relaxed">
-              We start with a 30-minute call. You tell us what has been on your list for too long. We tell you how we would close it. Nothing is rushed; nothing is promised we cannot keep.
+              {t("contact.firstConversation.body")}
             </p>
           </div>
         </div>
@@ -201,13 +201,13 @@ const Contact = () => {
           <BrandImage id={SEASONAL_BANK.returningHome} className="w-full rounded-lg overflow-hidden" />
           <div>
             <p className="eyebrow text-xs font-bold uppercase tracking-[0.15em] text-muted-foreground">
-              18:30, early November
+              {t("contact.closing.eyebrow")}
             </p>
             <h2 className="mt-4 font-serif text-3xl md:text-4xl font-normal text-foreground">
-              Shoulders, a millimetre.
+              {t("contact.closing.headline")}
             </h2>
             <p className="mt-4 text-foreground/80 leading-relaxed">
-              The test of this whole house: when a member steps through the door at dusk and sees the apartment already warm, the lamps lit, the quiet note on the console; do their shoulders lower a millimetre? If they do, we have done our job.
+              {t("contact.closing.body")}
             </p>
           </div>
         </div>

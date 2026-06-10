@@ -9,6 +9,7 @@
     "home": "Home",
     "services": "Services",
     "arrival": "Arrival",
+    "openMenu": "Open the menu",
     "whoWeServe": "Who we serve",
     "coolCalm": "Cool CALM",
     "about": "About",
@@ -74,7 +75,7 @@
       "corporate": { "title": "Corporate", "blurb": "Board meetings, visiting executives, off-sites. The boardroom is prepared, the lobby is calm, the guest is looked after from the kerb inwards." },
       "travelEvents": { "title": "Travel & events", "blurb": "A table laid, a room booked, a schedule held. Dinner for two, a family weekend, a private event — the plan is kept, you don't have to." },
       "inFull": { "title": "Services, in full", "blurb": "The whole breadth beneath this page, plainly listed — days and errands, house and household, family and care, business days, and the corridor. The map of what one number holds.", "cta": "Read the full list" },
-      "aviation": { "title": "Aviation (sub-brand)", "blurb": "The drive to the apron, the handoff at the aircraft, the car at the far end. U-CALM Aviation is our sister brand for flights and transfers." },
+      "aviation": { "title": "Aviation (sub-brand)", "blurb": "The drive to the apron, the handoff at the aircraft, the car at the far end. U-CALM Aviation is our sister brand for flights and transfers.", "cta": "Visit U-Calm Aviation", "ariaLabel": "{{title}} — visit U-Calm Aviation (opens in a new tab)" },
       "coolCalm": { "title": "Cool CALM (winter)", "blurb": "The Alpine winter household — chalet preparation, ski boots drying, hot drinks in gloved hands. Our seasonal winter-concierge treatment." }
     },
     "disruption": {
@@ -140,7 +141,8 @@
       "eyebrow": "The sister brands",
       "aviation": {
         "title": "In the air — U-Calm Aviation",
-        "line": "Flights and transfers, arranged with the same restraint — the drive to the apron, the handoff at the aircraft, the car at the far end."
+        "line": "Flights and transfers, arranged with the same restraint — the drive to the apron, the handoff at the aircraft, the car at the far end.",
+        "ariaLabel": "U-Calm Aviation (opens in a new tab)"
       },
       "coolCalm": {
         "title": "Cool CALM — the winter household",
@@ -259,6 +261,18 @@
     "intro": "Tell us briefly what you need. We will respond personally, and we will not pass you to a queue.",
     "emailLabel": "Email",
     "emailValue": "hello@u-calm.com",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "What can we close on your list?",
+      "sending": "Sending…",
+      "error": "Something did not go through: {{errorMsg}}. Please try again, or email {{email}} directly.",
+      "success": {
+        "eyebrow": "Thank you",
+        "headline": "We will be in touch.",
+        "body": "Your note has been received. A specialist will respond within one working day."
+      }
+    },
     "opening": {
       "eyebrow": "08:40, mid-March",
       "headline": "The door just opens. The conversation begins.",

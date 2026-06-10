@@ -10,7 +10,7 @@ const WhoWeServe = () => {
   useDocumentMeta({
     title: "Who we serve — Members of the house | U-CALM Concierge",
     description:
-      "Four registers of member: the expatriate making Switzerland home; the established Ticinese family; the corporate executive between cities; the visitor staying long. One desk, four working languages, one continuous arrangement.",
+      "Four lives the house recognises: the expatriate making Switzerland home, the Ticinese family, the executive between cities, the visitor staying long.",
     canonical: canonical("/who-we-serve"),
     jsonLd: [ORGANIZATION_JSONLD],
   });

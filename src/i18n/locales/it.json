@@ -9,6 +9,7 @@
     "home": "Home",
     "services": "Servizi",
     "arrival": "Arrival",
+    "openMenu": "Aprire il menu",
     "whoWeServe": "A chi ci rivolgiamo",
     "coolCalm": "Cool CALM",
     "about": "Chi siamo",
@@ -74,7 +75,7 @@
       "corporate": { "title": "Aziende", "blurb": "Consigli, dirigenti in visita, incontri fuori sede. La sala è pronta, la hall è calma, l'ospite è accolto dal marciapiede in avanti." },
       "travelEvents": { "title": "Viaggi & eventi", "blurb": "Un tavolo apparecchiato, una camera prenotata, un programma tenuto. Cena per due, weekend in famiglia, evento privato — il piano regge, non deve farlo lei." },
       "inFull": { "title": "I servizi, per intero", "blurb": "Tutta l'ampiezza sotto questa pagina, elencata con semplicità — giornate e commissioni, casa e governo della casa, famiglia e cura, giornate di lavoro e il corridoio. La mappa di ciò che un solo numero tiene.", "cta": "Leggere l'elenco completo" },
-      "aviation": { "title": "Aviation (sottomarchio)", "blurb": "Il tragitto fino al piazzale, la consegna all'aeromobile, l'auto all'arrivo. U-CALM Aviation è il nostro marchio affine per voli e trasferimenti." },
+      "aviation": { "title": "Aviation (sottomarchio)", "blurb": "Il tragitto fino al piazzale, la consegna all'aeromobile, l'auto all'arrivo. U-CALM Aviation è il nostro marchio affine per voli e trasferimenti.", "cta": "Visitare U-Calm Aviation", "ariaLabel": "{{title}} — visitare U-Calm Aviation (si apre in una nuova scheda)" },
       "coolCalm": { "title": "Cool CALM (inverno)", "blurb": "La casa d'inverno alpina — preparazione chalet, scarponi che asciugano, bevande calde in mani guantate. Il nostro servizio di concierge invernale stagionale." }
     },
     "disruption": {
@@ -140,7 +141,8 @@
       "eyebrow": "Le case sorelle",
       "aviation": {
         "title": "In volo — U-Calm Aviation",
-        "line": "Voli e trasferimenti, sistemati con lo stesso riserbo — il tragitto fino al piazzale, il passaggio all'aereo, l'auto all'altro capo."
+        "line": "Voli e trasferimenti, sistemati con lo stesso riserbo — il tragitto fino al piazzale, il passaggio all'aereo, l'auto all'altro capo.",
+        "ariaLabel": "U-Calm Aviation (si apre in una nuova scheda)"
       },
       "coolCalm": {
         "title": "Cool CALM — la casa d'inverno",
@@ -259,6 +261,18 @@
     "intro": "Ci dica brevemente di cosa ha bisogno. Risponderemo personalmente, mai da una coda.",
     "emailLabel": "E-mail",
     "emailValue": "hello@u-calm.com",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Che cosa possiamo chiudere sulla sua lista?",
+      "sending": "Invio in corso…",
+      "error": "Qualcosa non è andato a buon fine: {{errorMsg}}. Riprovi, oppure scriva direttamente a {{email}}.",
+      "success": {
+        "eyebrow": "Grazie",
+        "headline": "Ci faremo sentire.",
+        "body": "La sua nota è stata ricevuta. Uno specialista risponderà entro un giorno lavorativo."
+      }
+    },
     "opening": {
       "eyebrow": "08:40, metà marzo",
       "headline": "La porta si apre, semplicemente. La conversazione comincia.",

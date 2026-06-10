@@ -73,6 +73,14 @@ const Footer = () => {
             <Link to="/services-in-full" className="hover:text-foreground transition-colors">
               {t("footer.servicesInFull")}
             </Link>
+            <a
+              href="https://u-calmaviation.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              U-Calm Aviation
+            </a>
             <Link to="/contact" className="hover:text-foreground transition-colors">
               {t("nav.contact")}
             </Link>

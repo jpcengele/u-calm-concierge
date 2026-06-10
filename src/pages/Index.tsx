@@ -16,7 +16,7 @@ const Home = () => {
   useDocumentMeta({
     title: "U-CALM Concierge — Consider it done. | Lifestyle management, Lugano",
     description:
-      "U-CALM is a quiet concierge and lifestyle-management house. The flight, the household, the table, the school run, the Tuesday supper — all arranged by one named concierge, on one itinerary, in one voice. From Lugano, in four working languages.",
+      "U-CALM is a quiet concierge and lifestyle-management house in Lugano. One named concierge arranges the household, the table, the travel — in four languages.",
     canonical: canonical("/"),
     jsonLd: [
       ORGANIZATION_JSONLD,

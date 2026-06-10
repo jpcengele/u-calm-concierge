@@ -20,7 +20,7 @@ const Services = () => {
   useDocumentMeta({
     title: "Services — Considered, thorough, quiet | U-CALM Concierge",
     description:
-      "The breadth of work the desk arranges: phone-line concierge, ground and household, relocations and first nights, corporate, travel and events, aviation (through U-Calm Aviation), and Cool CALM. One named concierge, one file, one statement.",
+      "The breadth the desk arranges: phone-line concierge, household, relocations, corporate, travel and events — with aviation through U-Calm Aviation.",
     canonical: canonical("/services"),
     jsonLd: [ORGANIZATION_JSONLD],
   });
@@ -76,7 +76,7 @@ const Services = () => {
                 </p>
                 {isAviation && (
                   <span className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary-deep px-5 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-primary-deep group-hover:bg-primary-deep group-hover:text-background transition-colors">
-                    Visit U-Calm Aviation
+                    {t("services.tiles.aviation.cta")}
                     <ArrowUpRight
                       className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                       strokeWidth={1.75}
@@ -110,7 +110,7 @@ const Services = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-deep focus-visible:ring-offset-4 rounded-lg"
-                  aria-label={`${tile.title} — visit U-Calm Aviation (opens in a new tab)`}
+                  aria-label={t("services.tiles.aviation.ariaLabel", { title: tile.title })}
                 >
                   {inner}
                 </a>
@@ -121,6 +121,18 @@ const Services = () => {
                 <Link
                   key={tile.slug}
                   to="/services-in-full"
+                  className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-deep focus-visible:ring-offset-4 rounded-lg"
+                  aria-label={tile.title}
+                >
+                  {inner}
+                </Link>
+              );
+            }
+            if (tile.slug === "coolCalm") {
+              return (
+                <Link
+                  key={tile.slug}
+                  to="/cool-calm"
                   className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-deep focus-visible:ring-offset-4 rounded-lg"
                   aria-label={tile.title}
                 >

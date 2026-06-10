@@ -8,7 +8,8 @@ const NotFound = () => {
     title: "Page not found — U-CALM Concierge",
     description:
       "The page you were looking for has moved, or never existed. Return to U-CALM, or open a quiet conversation with the desk.",
-    canonical: canonical("/"),
+    canonical: canonical(window.location.pathname),
+    robots: "noindex",
   });
 
   const { t } = useTranslation();

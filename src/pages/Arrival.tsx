@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { byId } from "@/brand/imagery";
-import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD, ARRIVAL_SERVICE_JSONLD } from "@/lib/useDocumentMeta";
 
 // Hero + closing pull from the shared brand bank; module scenes reuse
 // existing enabled slots (no new imagery required to ship the page).
@@ -27,7 +27,8 @@ const Arrival = () => {
     description:
       "U-CALM Arrival is a settlement mandate for families moving to Lugano and Ticino: permits, the comune, home-finding, health insurance, schools and the fiscal liaison — held on one file by one named specialist.",
     canonical: canonical("/arrival"),
-    jsonLd: [ORGANIZATION_JSONLD],
+    ogImage: "https://u-calm.com/brand/07-seasonal/seasonal-spring-magnolia-threshold.jpg",
+    jsonLd: [ORGANIZATION_JSONLD, ARRIVAL_SERVICE_JSONLD],
   });
 
   const { t } = useTranslation();

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ArrowUpRight } from "lucide-react";
 import { BrandImage } from "@/components/brand/BrandImage";
 import { byId } from "@/brand/imagery";
-import { useDocumentMeta, canonical, ORGANIZATION_JSONLD } from "@/lib/useDocumentMeta";
+import { useDocumentMeta, canonical, ORGANIZATION_JSONLD, SERVICES_OFFERCATALOG_JSONLD } from "@/lib/useDocumentMeta";
 
 // All slots reuse existing enabled brand imagery (no new assets needed to
 // ship). The upgrade visuals are specified in
@@ -27,7 +27,8 @@ const ServicesInFull = () => {
     description:
       "The breadth beneath the desk, plainly listed: days and errands, house and household, family and care, arrival and relocations, business days, and the corridor — one named concierge, one file.",
     canonical: canonical("/services-in-full"),
-    jsonLd: [ORGANIZATION_JSONLD],
+    ogImage: "https://u-calm.com/brand/01-brand-heroes/hero-villa-terrace-dawn.jpg",
+    jsonLd: [ORGANIZATION_JSONLD, SERVICES_OFFERCATALOG_JSONLD],
   });
 
   const { t } = useTranslation();
@@ -121,7 +122,7 @@ const ServicesInFull = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-champagne rounded-lg"
-              aria-label="U-Calm Aviation (opens in a new tab)"
+              aria-label={t("inFull.sisters.aviation.ariaLabel")}
             >
               <h3 className="font-serif text-2xl font-normal text-background inline-flex items-center gap-2">
                 {t("inFull.sisters.aviation.title")}
