@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowUpRight } from "lucide-react";
 import { BrandImage } from "@/components/brand/BrandImage";
@@ -51,6 +52,13 @@ const Services = () => {
 
       <section className="container py-16 max-w-3xl">
         <p className="text-lg text-foreground/85 leading-relaxed">{t("services.intro")}</p>
+        <Link
+          to="/services-in-full"
+          className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.15em] text-primary-deep hover:text-primary transition-colors"
+        >
+          {t("services.inFullLink")}
+          <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.75} aria-hidden="true" />
+        </Link>
       </section>
 
       <section className="container pb-24">

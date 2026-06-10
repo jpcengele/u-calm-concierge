@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SharedLayout from "@/components/layout/SharedLayout";
 import Home from "./pages/Index";
 import Services from "./pages/Services";
+import ServicesInFull from "./pages/ServicesInFull";
+import Arrival from "./pages/Arrival";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CoolCalm from "./pages/CoolCalm";
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route path="services" element={<Services />} />
+            <Route path="services-in-full" element={<ServicesInFull />} />
+            <Route path="arrival" element={<Arrival />} />
             <Route path="who-we-serve" element={<WhoWeServe />} />
             <Route path="expat" element={<PersonaExpat />} />
             <Route path="ticinese" element={<PersonaTicinese />} />

@@ -2,7 +2,9 @@
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "brand": {
     "name": "U-CALM",
-    "acronym": "Concierge And Lifestyle Management",
+    "acronym": "Ultimate Concierge and Lifestyle Management",
+    "acronymRule": "Decided 2026-06-10 (founder): the full expansion appears only where the acronym is spelled out — brand mark, header strapline, About echo. Running copy, descriptors and document marks use the descriptor; the no-superlatives rule holds everywhere else.",
+    "descriptor": "Concierge and Lifestyle Management",
     "tagline": "Consider it done.",
     "soul": "Restored peace of mind.",
     "differentiator": "The only concierge in Ticino designed around peace of mind, not status.",

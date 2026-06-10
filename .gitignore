@@ -38,3 +38,8 @@ Ascent-Aviation-Claude-Design-*.zip
 .i18n-cache.json
 vite.config.ts.timestamp-*
 *.save
+
+# Internal business docs — never publish
+UCALM_*.html
+UCALM_*.pdf
+UCALM_Portfolio/
