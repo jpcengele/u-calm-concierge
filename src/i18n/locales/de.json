@@ -67,6 +67,7 @@
     "eyebrow": "Was wir tun",
     "headline": "Lebensführung, abgenommen.",
     "intro": "Von der täglichen Organisation bis zu monatelangen Projekten — die Arbeit liegt in einer Hand, bei einer Person, die Ihr Konto kennt. Der Rest geschieht im Hintergrund.",
+    "inFullLink": "Die ganze Breite, schlicht aufgeführt",
     "tiles": {
       "phone": { "title": "Telefon-Concierge", "blurb": "Eine einzige ruhige Leitung. Der Anruf, den Sie vor sich herschieben, wird getätigt; das Formular unterschrieben; die Frage beantwortet — ohne dass es je Ihren Tag erreicht." },
       "ground": { "title": "Präsenz-Concierge", "blurb": "Abholungen, Lieferungen, Termine, Haushaltsbesorgungen. Die Tür wird geöffnet, das Paket angenommen, die Vorbereitung steht, sobald Sie eintreffen." },
@@ -85,6 +86,107 @@
       "eyebrow": "19:45, Ende April",
       "headline": "Von der Tür zum Tisch.",
       "body": "Drei Gedecke auf wolkenweißem Leinen, frischer Spargel in einer Keramikschale, die Katze auf dem Fensterbrett, die Straße beobachtend. Ein Stuhl bereits zurückgezogen. Jeder U-CALM-Dienst endet in einem Raum wie diesem — nichts Triumphales, alles geordnet."
+    }
+  },
+  "inFull": {
+    "eyebrow": "Leistungen · im Ganzen",
+    "headline": "Was wir halten — im Ganzen.",
+    "lead": "Ein benannter Concierge, ein Dossier — und darunter die ganze Breite des Alltags. Diese Seite führt sie schlicht auf, damit Sie wissen, worum Sie bitten können. Enthalten, nie abschließend: Was zu einem gut geführten Leben gehört, gehört auf das Dossier.",
+    "shape": {
+      "eyebrow": "Die Form",
+      "headline": "Sechs Familien von Arbeit, eine Arbeitsweise",
+      "body": "Jede Bitte landet bei derselben benannten Person, geht in dasselbe Dossier ein und kommt erledigt zurück. Die Familien unten sind unsere Ordnung der Breite — nicht die Form, in der Sie fragen müssen. Sie bitten in einem Satz; wir legen es dorthin, wo es hingehört."
+    },
+    "includingLabel": "Darunter —",
+    "families": {
+      "desk": {
+        "title": "Der Concierge-Desk — Tage und Besorgungen",
+        "promise": "Einmal gebeten, ordentlich erledigt.",
+        "body": "Die laufende Liste einer Woche, Ihnen abgenommen: Besorgungen gemacht und Rückgaben erledigt, Schlangen gestanden, während Sie woanders sind, Sendungen entgegengenommen, Termine vereinbart und gehalten, Informationen gefunden und geprüft, bevor sie Sie erreichen.",
+        "including": "Besorgungen · Warten und Schlangen · Abholungen und Rückgaben · Termine · Reservierungen · Recherche, geprüft · das Kleingedruckte, gelesen"
+      },
+      "household": {
+        "title": "Haus und Haushalt",
+        "promise": "Ein Haus, das läuft, ohne gebeten zu werden.",
+        "body": "Das Zuhause auf Standard gehalten, durch Ihre Tage und Ihre Abwesenheiten: Unterhalt und Handwerker geführt, Personal gefunden und eingeteilt, Lieferungen entgegengenommen, Garderoben gepflegt, der saisonale Wechsel des Hauses erledigt, bevor die Saison beginnt — und das Papierjahr in Ordnung gehalten, an der Seite Ihrer Berater.",
+        "including": "Hausführung · Haushüten und Abwesenheiten · Unterhalt und Handwerker · Hauspersonal · Lieferungen · Personal Shopping und Garderobe · Verlängerungen und das Papierjahr"
+      },
+      "family": {
+        "title": "Familie und Fürsorge",
+        "promise": "Die Menschen in Ihrem Leben, um Sie herum versorgt.",
+        "body": "Schuljahre über die Jahre gehalten und Tutoren vermittelt; Geburtstage und Meilensteine leise aufgebaut; Eltern besucht und begleitet; die Woche der Kinder machbar gemacht; die Tiere ausgeführt, gepflegt und beim Tierarzt vorgestellt. Die Anliegen, die eine Familie wirklich hat — mit derselben Diskretion behandelt wie alles andere.",
+        "including": "Schul-Liaison · Tutoren vermittelt · Meilensteine und Geburtstage · Fürsorge für Eltern · Kinderlogistik · die Tiere"
+      },
+      "arrival": {
+        "title": "Ankommen und Umzüge",
+        "promise": "Ein Umzug, Ihnen abgenommen.",
+        "body": "Für Familien, die im Ticino ankommen, hält ein Mandat mit festem Umfang die gesamte Landung — Bewilligungen und Aufenthalt, das Comune, Haussuche und die erste Nacht, Krankenversicherung und Ärzte, Schulplatzierung, die fiskalische Liaison im Takt gehalten, und die leisere Arbeit des Ankommens.",
+        "link": "Mehr über U-CALM Arrival"
+      },
+      "business": {
+        "title": "Geschäftstage",
+        "promise": "Der Arbeitstag, bereitgestellt.",
+        "body": "Sitzungen gelandet, mit Räumen, Wagen und Zeitplan im Takt; Gäste abgeholt, untergebracht und betreut; Vorstellungen gemacht, wo sie helfen; das Homeoffice am Laufen gehalten; Schlüsselpersonen mit derselben Sorgfalt umgezogen wie Familien.",
+        "including": "Sitzungen und Boardrooms · Gäste und Delegationen · Vorstellungen · das Homeoffice · Executive-Umzüge"
+      },
+      "corridor": {
+        "title": "Reisen, Tische und der Korridor",
+        "promise": "Reisen und Abende, als ein Dossier gehalten.",
+        "body": "Reisen von Anfang bis Ende geplant und überwacht, während Sie fort sind; Tische für die Saison und Feiern leise aufgebaut; Karten und Zugang ohne Aufhebens arrangiert. Für Familien, die zwischen Lugano, Mailand und London leben, wird der Korridor als ein durchgehendes Dossier geführt — und die Luft gehört dazu.",
+        "including": "Reisen von Tür zu Tür · Tische und Reservierungen · Feiern und Anlässe · Karten und Zugang · der Korridor Lugano–Mailand–London"
+      }
+    },
+    "sisters": {
+      "eyebrow": "Die Schwestermarken",
+      "aviation": {
+        "title": "In der Luft — U-Calm Aviation",
+        "line": "Flüge und Transfers, mit derselben Zurückhaltung arrangiert — die Fahrt zum Vorfeld, die Übergabe am Flugzeug, der Wagen am anderen Ende."
+      },
+      "coolCalm": {
+        "title": "Cool CALM — der Winterhaushalt",
+        "line": "Die alpine Saison, warm und bereit gehalten: das Chalet vorbereitet, die Schuhe trocknend, der Haushalt laufend, während der Schnee fällt."
+      }
+    },
+    "closing": {
+      "eyebrow": "Wie es beginnt",
+      "headline": "Bitten Sie um eine Sache.",
+      "body": "Die meisten Dossiers beginnen mit einer einzigen Besorgung, ordentlich erledigt. Was immer die erste Bitte ist — sie wird der Anfang des Dossiers. Und das Dossier ist, wo die Ruhe wohnt."
+    }
+  },
+  "arrival": {
+    "eyebrow": "Ankommen im Ticino",
+    "headline": "Angekommen, vom ersten Morgen an.",
+    "lead": "Ein Umzug nach Lugano ist hundert kleine, präzise Dinge, die meisten auf Italienisch, alle auf einmal. U-CALM Arrival ist der ruhige Weg hindurch — eine benannte Person hält das Ganze, und Ihre Familie kommt einfach an.",
+    "whatItIs": {
+      "eyebrow": "Was Arrival ist",
+      "headline": "Die Hälfte des Umzugs, die den ersten Monat aufreibt.",
+      "body": "Ein Umzug hat zwei Hälften. Die sichtbare — das Haus, die Schule, die Stadt — ist die, für die Sie gekommen sind. Die unsichtbare — die Bewilligung, das Comune, die Versicherung, der Import, das Dutzend Formulare mit den unnachgiebigen Fristen — ist die, die den ersten Monat aufreibt. Arrival ist, wie U-CALM Ihnen die zweite Hälfte abnimmt. Wir halten das Dossier, setzen die Reihenfolge, wahren die Termine und führen die Gespräche. Die Facharbeit leisten Menschen, denen wir vertrauen und denen wir Sie vorstellen."
+    },
+    "pillars": {
+      "eyebrow": "Wie es funktioniert",
+      "headline": "Ein Dossier, in der richtigen Reihenfolge.",
+      "oneFile": { "title": "Ein Dossier", "body": "Alles, was geschehen muss, liegt in einem einzigen Dossier — gehalten von einem benannten Spezialisten, der Ihren ganzen Umzug kennt." },
+      "order": { "title": "Die richtige Reihenfolge", "body": "Bewilligung, Adresse, Anmeldung, Versicherung, Schule — so gereiht, dass nichts auf anderes warten muss." },
+      "language": { "title": "In Ihrer Sprache", "body": "Sie sprechen Englisch; das Ticino spricht Italienisch. Wir sitzen dazwischen, damit die Lücke nie Ihre ist." },
+      "statement": { "title": "Eine Abrechnung", "body": "Partnerkosten werden durchgereicht und einzeln ausgewiesen, ohne Aufschlag. Sie bezahlen uns für das Dossier; jeden Spezialisten für seine Arbeit." }
+    },
+    "modulesIntro": {
+      "eyebrow": "Was wir halten",
+      "headline": "Sieben leise Dinge, erledigt."
+    },
+    "modules": {
+      "permits": { "title": "Bewilligungen & Aufenthalt", "promise": "Die Papiere, die Sie bleiben lassen — erledigt, geordnet, rechtzeitig.", "body": "Aufenthalts- und Arbeitsbewilligungen, Familiennachzug, die Dokumente und die Fristen. Wir koordinieren mit einem Anwalt für Migrationsrecht, dem wir vertrauen, und halten jeden Schritt im Takt mit Ihrem Zuhause und Ihrer Anmeldung." },
+      "comune": { "title": "Anmeldung beim Comune & der Admin-Desk", "promise": "Die kleine, präzise, italienischsprachige Verwaltung — einfach erledigt.", "body": "Der Comune-Termin vereinbart und wahrgenommen; die Anmeldung beim ersten Mal korrekt eingereicht; das Gaskonto, die Hausverwaltung, der Anruf, den Sie vor sich herschieben. Einzeln trivial, zusammen eine zweite Arbeitsstelle. Wir erledigen es — und berichten in einer Zeile." },
+      "home": { "title": "Haussuche & erste Nacht", "promise": "Ein Zuhause gefunden — und eine erste Nacht, die sich nach Zuhause anfühlt.", "body": "Mit einer vertrauten lokalen Agentur finden und sichern wir das richtige Zuhause und richten es vor Ihrer Ankunft ein — die Lampen an, der Kühlschrank gefüllt, das Bett gemacht. Sie treten durch die Tür in ein Haus, das gehalten wurde." },
+      "health": { "title": "Krankenversicherung & Ärzte", "promise": "Versichert, Ärzte eingetragen — bevor die Frist abläuft.", "body": "Die Grundversicherung muss innerhalb von drei Monaten nach Ankunft stehen. Ein englischsprachiger Berater, dem wir vertrauen, empfiehlt die richtige Deckung; wir melden die Familie an und registrieren Sie bei Arzt und Zahnarzt in der Nähe." },
+      "school": { "title": "Schulplatzierung", "promise": "Der richtige Schulplatz, früh und ruhig gesichert.", "body": "Wir erstellen die Auswahl passender Schulen, führen die Bewerbungen und halten die Gespräche mit den Aufnahmebüros — damit der September ein erster Schultag ist, kein Gerangel." },
+      "fiscal": { "title": "Fiskal- & Pauschal-Liaison", "promise": "Ihre Steuerposition, koordiniert — von uns gehalten, von Spezialisten beraten.", "body": "Wir beraten nicht in Steuerfragen. Wir halten den Faden: Wir stellen Sie einem Fiskalisten für Pauschalbesteuerung und Strukturierung vor und halten dessen Arbeit im Takt mit Ihrer Bewilligung, Ihrem Zuhause und Ihrem Jahr." },
+      "belonging": { "title": "Dazugehören", "promise": "Der Teil, in dem ein neuer Ort anfängt, Ihrer zu werden.", "body": "Der gute Tisch zur richtigen Stunde, der Club, der See, die Vorstellungen, die aus einer Stadt ein Leben machen. Dazugehören ist, wo Arrival leise zur alltäglichen U-CALM-Beziehung wird." }
+    },
+    "leads": {
+      "eyebrow": "Wohin es führt",
+      "headline": "Eine Ankunft, die zur Mitgliedschaft wird.",
+      "body": "Mit Arrival beginnen viele U-CALM-Beziehungen. Wenn die Kisten ausgepackt sind und der erste Winter ruhig ist, ist dieselbe Person, die Sie angesiedelt hat, die natürliche, um den Haushalt weiterzuführen. In Ihrem Tempo, nie gedrängt."
     }
   },
   "about": {
@@ -231,6 +333,7 @@
   },
   "footer": {
     "tagline": "Erledigt.",
+    "servicesInFull": "Leistungen, im Ganzen",
     "description": "Eine einzige ruhige Leitung, und die Liste wird kürzer. Beginnen Sie ein erstes Gespräch — 30 Minuten, keine Annahmen, ganz in Ihrem Tempo.",
     "rights": "© {{year}} U-CALM Concierge. Alle Rechte vorbehalten.",
     "registeredInfo": "Eine Marke des U-CALM-Hauses.",

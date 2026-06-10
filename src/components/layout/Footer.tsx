@@ -70,6 +70,9 @@ const Footer = () => {
             >
               {brand.inquiryEmail}
             </a>
+            <Link to="/services-in-full" className="hover:text-foreground transition-colors">
+              {t("footer.servicesInFull")}
+            </Link>
             <Link to="/contact" className="hover:text-foreground transition-colors">
               {t("nav.contact")}
             </Link>

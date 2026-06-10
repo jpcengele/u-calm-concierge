@@ -61,7 +61,8 @@ DEEPL_TARGETS = {"de": "DE", "fr": "FR", "it": "IT"}
 # them in <ignore> tags before sending to DeepL.
 DO_NOT_TRANSLATE = [
     "U-CALM", "U-Calm", "Cool CALM", "U-CALM Concierge",
-    "U-CALM Aviation", "Ascent Aviation", "Consider it done.",
+    "U-CALM Aviation", "U-Calm Aviation", "U-CALM Arrival",
+    "Ascent Aviation", "Consider it done.",
     "Ultimate Concierge and Lifestyle Management",
     "Lugano", "Paradiso", "Gandria", "Saanen", "Ticino",
     "TASIS", "Franklin University Switzerland",
@@ -69,6 +70,11 @@ DO_NOT_TRANSLATE = [
     "Parco Ciani", "Valle Verzasca", "Collina d'Oro", "Serene Teal",
     "Via Nassa", "Castagnola",
 ]
+
+# Match longest terms first so multi-word names (e.g. "U-Calm Aviation")
+# are tagged whole before their prefixes ("U-Calm") can split them —
+# otherwise DeepL translates the orphaned remainder ("Aviation").
+DO_NOT_TRANSLATE.sort(key=len, reverse=True)
 
 # -----------------------------------------------------------------------------
 # Helpers
