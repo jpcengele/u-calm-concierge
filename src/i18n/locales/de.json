@@ -67,13 +67,13 @@
     "eyebrow": "Was wir tun",
     "headline": "Lebensführung, abgenommen.",
     "intro": "Von der täglichen Organisation bis zu monatelangen Projekten — die Arbeit liegt in einer Hand, bei einer Person, die Ihr Konto kennt. Der Rest geschieht im Hintergrund.",
-    "inFullLink": "Die ganze Breite, schlicht aufgeführt",
     "tiles": {
       "phone": { "title": "Telefon-Concierge", "blurb": "Eine einzige ruhige Leitung. Der Anruf, den Sie vor sich herschieben, wird getätigt; das Formular unterschrieben; die Frage beantwortet — ohne dass es je Ihren Tag erreicht." },
       "ground": { "title": "Präsenz-Concierge", "blurb": "Abholungen, Lieferungen, Termine, Haushaltsbesorgungen. Die Tür wird geöffnet, das Paket angenommen, die Vorbereitung steht, sobald Sie eintreffen." },
       "relocations": { "title": "Umzug & Einleben", "blurb": "Von der ersten leeren Wohnung bis zu dem Morgen, an dem alles eingerichtet ist. Der Papierkram, das Einrichten, die ruhigen Rituale eines gut geführten neuen Lebens." },
       "corporate": { "title": "Firmen", "blurb": "Vorstandssitzungen, Besuche leitender Angestellter, Off-Sites. Der Sitzungssaal ist vorbereitet, die Lobby ist ruhig, der Gast wird vom Bordstein an betreut." },
       "travelEvents": { "title": "Reisen & Anlässe", "blurb": "Ein gedeckter Tisch, ein reserviertes Zimmer, ein eingehaltener Zeitplan. Ein Abendessen zu zweit, ein Familienwochenende, eine private Veranstaltung — der Plan wird gehalten, Sie müssen es nicht." },
+      "inFull": { "title": "Leistungen, im Ganzen", "blurb": "Die ganze Breite unter dieser Seite, schlicht aufgeführt — Tage und Besorgungen, Haus und Haushalt, Familie und Fürsorge, Geschäftstage und der Korridor. Die Karte dessen, was eine Nummer hält.", "cta": "Die ganze Liste lesen" },
       "aviation": { "title": "Aviation (Submarke)", "blurb": "Die Fahrt zum Vorfeld, die Übergabe am Flugzeug, das Auto am anderen Ende. U-CALM Aviation ist unsere Schwestermarke für Flüge und Transfers." },
       "coolCalm": { "title": "Cool CALM (Winter)", "blurb": "Der alpine Winterhaushalt — Chalet-Vorbereitung, trocknende Skischuhe, heiße Getränke in behandschuhten Händen. Unsere saisonale Winter-Concierge-Betreuung." }
     },

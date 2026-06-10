@@ -11,6 +11,7 @@ const TILE_SLUGS = [
   "relocations",
   "corporate",
   "travelEvents",
+  "inFull",
   "aviation",
   "coolCalm",
 ] as const;
@@ -52,19 +53,13 @@ const Services = () => {
 
       <section className="container py-16 max-w-3xl">
         <p className="text-lg text-foreground/85 leading-relaxed">{t("services.intro")}</p>
-        <Link
-          to="/services-in-full"
-          className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.15em] text-primary-deep hover:text-primary transition-colors"
-        >
-          {t("services.inFullLink")}
-          <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.75} aria-hidden="true" />
-        </Link>
       </section>
 
       <section className="container pb-24">
         <div className="grid md:grid-cols-2 gap-10">
           {tiles.map((tile) => {
             const isAviation = tile.slug === "aviation";
+            const isInFull = tile.slug === "inFull";
             const inner = (
               <>
                 <div className="overflow-hidden rounded-lg">
@@ -89,11 +84,22 @@ const Services = () => {
                     />
                   </span>
                 )}
+                {isInFull && (
+                  <span className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary-deep px-5 py-2.5 text-xs font-bold uppercase tracking-[0.15em] text-primary-deep group-hover:bg-primary-deep group-hover:text-background transition-colors">
+                    {t("services.tiles.inFull.cta")}
+                    <ArrowUpRight
+                      className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      strokeWidth={1.75}
+                      aria-hidden="true"
+                    />
+                  </span>
+                )}
               </>
             );
 
             // Aviation is the sister brand and lives at its own site —
             // the whole tile becomes an external link to u-calmaviation.com.
+            // The "in full" tile deepens the journey on this site.
             // Other tiles are static descriptions; the concierge handles
             // those requests directly, so no per-tile link is needed.
             if (isAviation) {
@@ -108,6 +114,18 @@ const Services = () => {
                 >
                   {inner}
                 </a>
+              );
+            }
+            if (isInFull) {
+              return (
+                <Link
+                  key={tile.slug}
+                  to="/services-in-full"
+                  className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-deep focus-visible:ring-offset-4 rounded-lg"
+                  aria-label={tile.title}
+                >
+                  {inner}
+                </Link>
               );
             }
             return (

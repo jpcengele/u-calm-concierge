@@ -67,13 +67,13 @@
     "eyebrow": "Cosa facciamo",
     "headline": "La vita, custodita.",
     "intro": "Dalla logistica quotidiana ai progetti che durano un mese, il lavoro è seguito da una sola persona che conosce la sua posizione. Il resto avviene in secondo piano.",
-    "inFullLink": "Tutta l'ampiezza, elencata con semplicità",
     "tiles": {
       "phone": { "title": "Concierge telefonico", "blurb": "Una sola linea, discreta. La telefonata che rimandavi è fatta, il modulo firmato, la domanda risposta — senza che raggiunga mai la sua giornata." },
       "ground": { "title": "Concierge di presenza", "blurb": "Ritiri, consegne, appuntamenti, commissioni di casa. La porta è aperta, il pacco è ritirato, l'arrangiamento è semplicemente lì al suo arrivo." },
       "relocations": { "title": "Trasferimenti", "blurb": "Dal primo appartamento vuoto al mattino in cui tutto è sistemato. Le pratiche, l'allestimento, i riti discreti di una nuova vita ben condotta." },
       "corporate": { "title": "Aziende", "blurb": "Consigli, dirigenti in visita, incontri fuori sede. La sala è pronta, la hall è calma, l'ospite è accolto dal marciapiede in avanti." },
       "travelEvents": { "title": "Viaggi & eventi", "blurb": "Un tavolo apparecchiato, una camera prenotata, un programma tenuto. Cena per due, weekend in famiglia, evento privato — il piano regge, non deve farlo lei." },
+      "inFull": { "title": "I servizi, per intero", "blurb": "Tutta l'ampiezza sotto questa pagina, elencata con semplicità — giornate e commissioni, casa e governo della casa, famiglia e cura, giornate di lavoro e il corridoio. La mappa di ciò che un solo numero tiene.", "cta": "Leggere l'elenco completo" },
       "aviation": { "title": "Aviation (sottomarchio)", "blurb": "Il tragitto fino al piazzale, la consegna all'aeromobile, l'auto all'arrivo. U-CALM Aviation è il nostro marchio affine per voli e trasferimenti." },
       "coolCalm": { "title": "Cool CALM (inverno)", "blurb": "La casa d'inverno alpina — preparazione chalet, scarponi che asciugano, bevande calde in mani guantate. Il nostro servizio di concierge invernale stagionale." }
     },

@@ -67,13 +67,13 @@
     "eyebrow": "Ce que nous faisons",
     "headline": "Une vie, tenue.",
     "intro": "De la logistique quotidienne aux projets qui durent un mois, le travail est porté par une seule personne qui connaît votre dossier. Le reste se passe en arrière-plan.",
-    "inFullLink": "Toute l'étendue, simplement énumérée",
     "tiles": {
       "phone": { "title": "Conciergerie téléphonique", "blurb": "Une seule ligne, discrète. L'appel que vous remettiez à plus tard est passé, le formulaire signé, la question répondue — sans que cela n'atteigne jamais votre journée." },
       "ground": { "title": "Conciergerie terrain", "blurb": "Retraits, livraisons, rendez-vous, courses du foyer. La porte est ouverte, le colis est pris, la préparation est simplement là à votre arrivée." },
       "relocations": { "title": "Installation", "blurb": "Du premier appartement vide au matin où tout est installé. Les papiers, l'aménagement, les rituels tranquilles d'une nouvelle vie bien tenue." },
       "corporate": { "title": "Entreprises", "blurb": "Conseils d'administration, dirigeants en visite, séminaires. La salle est prête, le hall est calme, l'invité est pris en charge du trottoir vers l'intérieur." },
       "travelEvents": { "title": "Voyages & événements", "blurb": "Une table dressée, une chambre réservée, un calendrier tenu. Dîner à deux, week-end en famille, événement privé — le plan tient, vous n'avez pas à le faire." },
+      "inFull": { "title": "Les services, en entier", "blurb": "Toute l'étendue sous cette page, simplement énumérée — les journées et les courses, la maison et l'intendance, la famille et les soins, les journées d'affaires et le corridor. La carte de ce qu'un seul numéro tient.", "cta": "Lire la liste entière" },
       "aviation": { "title": "Aviation (sous-marque)", "blurb": "La route vers l'aire, le passage à l'avion, la voiture à l'arrivée. U-CALM Aviation est notre marque sœur pour les vols et les transferts." },
       "coolCalm": { "title": "Cool CALM (hiver)", "blurb": "Le foyer d'hiver alpin — préparation du chalet, chaussures de ski qui sèchent, boissons chaudes dans des mains gantées. Notre conciergerie d'hiver saisonnière." }
     },

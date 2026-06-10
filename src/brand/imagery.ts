@@ -571,6 +571,7 @@ export const SERVICES_SCENES = {
   relocations:  16,
   corporate:    17,
   travelEvents: 18,
+  inFull:       26, // interim (linen press, "House, prepared") — swaps to slot 58 when the 13-services-in-full batch lands
   aviation:     19,
   coolCalm:     20,
 } as const;

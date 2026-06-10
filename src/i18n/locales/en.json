@@ -67,13 +67,13 @@
     "eyebrow": "What we do",
     "headline": "Lifestyle, handled.",
     "intro": "From daily logistics to month-long projects, the work is carried by one person who knows your account. The rest happens in the background.",
-    "inFullLink": "The full breadth, plainly listed",
     "tiles": {
       "phone": { "title": "Phone concierge", "blurb": "A single quiet line. The call you've been putting off is made, the form is signed, the question is answered — without it ever reaching your day." },
       "ground": { "title": "Ground concierge", "blurb": "Pickups, deliveries, appointments, household errands. The door is opened, the package is collected, the arrangement is simply there when you arrive." },
       "relocations": { "title": "Relocations", "blurb": "From the first empty apartment to the morning everything is settled. The paperwork, the set-up, the quiet rituals of a new life run well." },
       "corporate": { "title": "Corporate", "blurb": "Board meetings, visiting executives, off-sites. The boardroom is prepared, the lobby is calm, the guest is looked after from the kerb inwards." },
       "travelEvents": { "title": "Travel & events", "blurb": "A table laid, a room booked, a schedule held. Dinner for two, a family weekend, a private event — the plan is kept, you don't have to." },
+      "inFull": { "title": "Services, in full", "blurb": "The whole breadth beneath this page, plainly listed — days and errands, house and household, family and care, business days, and the corridor. The map of what one number holds.", "cta": "Read the full list" },
       "aviation": { "title": "Aviation (sub-brand)", "blurb": "The drive to the apron, the handoff at the aircraft, the car at the far end. U-CALM Aviation is our sister brand for flights and transfers." },
       "coolCalm": { "title": "Cool CALM (winter)", "blurb": "The Alpine winter household — chalet preparation, ski boots drying, hot drinks in gloved hands. Our seasonal winter-concierge treatment." }
     },
