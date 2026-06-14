@@ -345,6 +345,15 @@
       "suite": { "eyebrow": "Room 214, 15:00", "headline": "The suite, settled.", "body": "A leather suitcase opened, folded linen inside, a cream note on the desk. The table for two is booked for eight. The afternoon is yours." }
     }
   },
+  "journal": {
+    "navLabel": "The Journal",
+    "eyebrow": "The U-CALM Journal",
+    "title": "Settling in Ticino, written plainly.",
+    "lead": "Considered notes on making a life in Ticino — the tax, the comune, the schools, the corridor. Fewer pieces, each genuinely useful, each ending in a quiet conversation rather than a sell.",
+    "more": "More entries are in preparation.",
+    "backToJournal": "Back to the Journal",
+    "minRead": "{{min}} min read"
+  },
   "footer": {
     "tagline": "Consider it done.",
     "servicesInFull": "Services, in full",

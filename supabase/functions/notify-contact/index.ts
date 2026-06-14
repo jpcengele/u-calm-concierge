@@ -9,11 +9,20 @@
 import { serve } from "https://deno.land/std@0.208.0/http/server.ts";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-const NOTIFY_EMAIL = "jp@u-calm.com";
-// Until u-calm.com is verified as a sending domain in Resend, use the default
-// onboarding@resend.dev sender. Reply-To is set to the inquirer so J-P can reply
-// directly from Gmail and reach the original submitter.
-const FROM_EMAIL = "U-CALM Concierge <onboarding@resend.dev>";
+const NOTIFY_EMAIL = Deno.env.get("NOTIFY_EMAIL") || "jp@u-calm.com";
+// Sender domain is config-driven (matches the U-Calm Aviation function), so the
+// sender can be switched WITHOUT a code change once a domain is verified in Resend:
+//   • default — Resend's shared onboarding@resend.dev (rate-limited, increasingly
+//     filtered by Gmail; a stopgap only).
+//   • set the FROM_DOMAIN secret in Supabase → Edge Functions → Secrets to a
+//     Resend-verified domain (e.g. "u-calm.com" or "send.u-calm.com") and the
+//     sender becomes hello@<that domain> — authenticated and reliable.
+// Reply-To is the inquirer either way, so replying from Gmail reaches the submitter.
+const FROM_DOMAIN = Deno.env.get("FROM_DOMAIN") || "resend.dev";
+const FROM_EMAIL =
+  FROM_DOMAIN === "resend.dev"
+    ? "U-CALM Concierge <onboarding@resend.dev>"
+    : `U-CALM Concierge <hello@${FROM_DOMAIN}>`;
 
 interface InquiryRecord {
   id?: string;

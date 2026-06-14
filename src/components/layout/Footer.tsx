@@ -73,6 +73,9 @@ const Footer = () => {
             <Link to="/services-in-full" className="hover:text-foreground transition-colors">
               {t("footer.servicesInFull")}
             </Link>
+            <Link to="/journal" className="hover:text-foreground transition-colors">
+              {t("journal.navLabel")}
+            </Link>
             <a
               href="https://u-calmaviation.com"
               target="_blank"

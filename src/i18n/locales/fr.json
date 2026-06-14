@@ -345,6 +345,15 @@
       "suite": { "eyebrow": "Chambre 214, 15 h 00", "headline": "La suite, installée.", "body": "Une valise en cuir ouverte, du linge plié à l'intérieur, un mot crème sur le bureau. La table pour deux est réservée pour huit heures. L'après-midi est à vous." }
     }
   },
+  "journal": {
+    "navLabel": "Le Journal",
+    "eyebrow": "Le Journal U-CALM",
+    "title": "S'installer au Ticino, dit simplement.",
+    "lead": "Des notes posées sur l'art de se faire une vie au Ticino — l'impôt, la comune, les écoles, le corridor. Peu de textes, chacun vraiment utile, chacun s'achevant sur une conversation tranquille plutôt qu'une vente.",
+    "more": "D'autres textes sont en préparation.",
+    "backToJournal": "Retour au Journal",
+    "minRead": "{{min}} min de lecture"
+  },
   "footer": {
     "tagline": "Considérez que c'est fait.",
     "servicesInFull": "Les services, en entier",

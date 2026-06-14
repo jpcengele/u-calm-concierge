@@ -345,6 +345,15 @@
       "suite": { "eyebrow": "Zimmer 214, 15:00", "headline": "Die Suite, eingerichtet.", "body": "Ein Lederkoffer geöffnet, gefaltetes Leinen darin, eine cremefarbene Notiz auf dem Schreibtisch. Der Tisch für zwei ist für acht Uhr gebucht. Der Nachmittag gehört Ihnen." }
     }
   },
+  "journal": {
+    "navLabel": "Journal",
+    "eyebrow": "Das U-CALM Journal",
+    "title": "In Ticino ankommen, schlicht erzählt.",
+    "lead": "Bedachte Notizen über ein Leben in Ticino — die Steuer, die Comune, die Schulen, der Korridor. Wenige Beiträge, jeder wirklich nützlich, jeder endet in einem ruhigen Gespräch statt in einem Verkauf.",
+    "more": "Weitere Beiträge sind in Vorbereitung.",
+    "backToJournal": "Zurück zum Journal",
+    "minRead": "{{min}} Min. Lektüre"
+  },
   "footer": {
     "tagline": "Erledigt.",
     "servicesInFull": "Leistungen, im Ganzen",

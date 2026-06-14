@@ -7,6 +7,8 @@ import SharedLayout from "@/components/layout/SharedLayout";
 import Home from "./pages/Index";
 import Services from "./pages/Services";
 import ServicesInFull from "./pages/ServicesInFull";
+import Journal from "./pages/Journal";
+import JournalPost from "./pages/JournalPost";
 import Arrival from "./pages/Arrival";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -31,6 +33,8 @@ const App = () => (
             <Route index element={<Home />} />
             <Route path="services" element={<Services />} />
             <Route path="services-in-full" element={<ServicesInFull />} />
+            <Route path="journal" element={<Journal />} />
+            <Route path="journal/:slug" element={<JournalPost />} />
             <Route path="arrival" element={<Arrival />} />
             <Route path="who-we-serve" element={<WhoWeServe />} />
             <Route path="expat" element={<PersonaExpat />} />

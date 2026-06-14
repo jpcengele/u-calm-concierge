@@ -345,6 +345,15 @@
       "suite": { "eyebrow": "Camera 214, 15:00", "headline": "La suite, sistemata.", "body": "Una valigia di pelle aperta, lino piegato dentro, un biglietto crema sulla scrivania. Il tavolo per due è prenotato per le otto. Il pomeriggio è suo." }
     }
   },
+  "journal": {
+    "navLabel": "Note",
+    "eyebrow": "Le note U-CALM",
+    "title": "Stabilirsi in Ticino, detto con semplicità.",
+    "lead": "Note pacate sul costruirsi una vita in Ticino — l'imposta, il Comune, le scuole, il corridoio. Pochi testi, ciascuno davvero utile, ciascuno che si chiude con una conversazione tranquilla anziché una vendita.",
+    "more": "Altri testi sono in preparazione.",
+    "backToJournal": "Torna alle note",
+    "minRead": "{{min}} min di lettura"
+  },
   "footer": {
     "tagline": "Consideralo fatto.",
     "servicesInFull": "I servizi, per intero",
