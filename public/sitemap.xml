@@ -150,4 +150,22 @@
     <changefreq>yearly</changefreq>
     <priority>0.70</priority>
   </url>
+  <url>
+    <loc>https://u-calm.com/journal/italy-new-resident-regime-milan</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://u-calm.com/journal/moving-to-milan-settled-landing</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://u-calm.com/journal/milan-admin-codice-permesso-anagrafe</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
 </urlset>

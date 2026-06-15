@@ -189,6 +189,18 @@ const ROUTES = [
     description: "Relocation agent, lawyer, lifestyle manager — what is a concierge actually for in a move to Ticino? A plain account of the part that holds the rest together.",
     ogImage: `${ORIGIN}/brand/01-brand-heroes/hero-concierge-note.jpg`,
     jsonLd: [ORG, article("what-a-concierge-does-relocation", "What a concierge actually does in a relocation", "Not the tasks but the holding — the sequence and handovers no specialist owns. How a concierge differs from a directory, and becomes U-CALM membership.", "2026-06-13", "relocation concierge Switzerland, what does a concierge do, lifestyle management relocation, concierge vs relocation agent")] },
+  { path: "/journal/italy-new-resident-regime-milan", title: "Italy's regime for new residents — the quiet version | U-CALM Journal",
+    description: "What Italy's flat-tax regime for new residents really involves for a family making Milan home — and the part a concierge holds, so you don't have to.",
+    ogImage: `${ORIGIN}/brand/01-brand-heroes/hero-study-lamplit-considered.jpg`,
+    jsonLd: [ORG, article("italy-new-resident-regime-milan", "Italy's regime for new residents — the quiet version", "Italy's new-resident regime for a family making Milan home — the relief, the sequence, and the part U-CALM holds with a commercialista. No figures; not tax advice.", "2026-06-08", "Italy flat tax, moving to Milan tax, Italy new resident regime, relocating to Milan")] },
+  { path: "/journal/moving-to-milan-settled-landing", title: "Moving to Milan: what a settled landing looks like | U-CALM Journal",
+    description: "Not a checklist for moving to Milan, but a picture of what it feels like when the landing is handled — the visa, the home, the Italian admin, quietly.",
+    ogImage: `${ORIGIN}/brand/01-brand-heroes/hero-mediterranean-villa-dusk.jpg`,
+    jsonLd: [ORG, article("moving-to-milan-settled-landing", "Moving to Milan: what a settled landing looks like", "What it feels like when a Milan landing is handled — visa, codice fiscale, permesso, the residenza — held on one file by U-CALM, in your language.", "2026-06-07", "moving to Milan, relocating to Milan, settling in Milan, Milan relocation")] },
+  { path: "/journal/milan-admin-codice-permesso-anagrafe", title: "Codice fiscale, permesso, anagrafe: the Milan admin nobody warns you about | U-CALM Journal",
+    description: "The precise, Italian-language administration of landing in Milan — the codice fiscale, the permesso, the anagrafe — what it involves, in what order, and how a bilingual desk takes it off your hands.",
+    ogImage: `${ORIGIN}/brand/01-brand-heroes/hero-concierge-note.jpg`,
+    jsonLd: [ORG, article("milan-admin-codice-permesso-anagrafe", "Codice fiscale, permesso, anagrafe: the Milan admin nobody warns you about", "The codice fiscale, the permesso di soggiorno and the anagrafe — Milan's Italian-language landing admin, in the right order, taken off your hands.", "2026-06-05", "codice fiscale, permesso di soggiorno Milan, iscrizione anagrafica, Milan residency registration")] },
 ];
 
 const DEFAULT_OG = `${ORIGIN}/og/default.png`;
@@ -225,6 +237,7 @@ function rewrite(shell, route) {
   set("og:url", url);
   set("og:image", og);
   set("og:image:alt", route.title);
+  set("og:type", route.path.startsWith("/journal/") ? "article" : "website");
   set("twitter:title", route.title, false);
   set("twitter:description", route.description, false);
   set("twitter:image", og, false);
